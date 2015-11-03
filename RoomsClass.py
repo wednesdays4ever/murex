@@ -1,20 +1,37 @@
+import Ship_Awaken
+
 class MurexRoom(object):
-	def __init__(self, intro, clue):
+	def __init__(self, intro, observation):
 		self.intro = intro
-		self.clue = clue
+		self.clue = observation
 		intro = "You shiver."
 		clue = "Nothing of note"
 
+	def scan_input(self, raw):
+		lowered = raw.lower()
+		scanned_input = lowered.split(' ')
+		return scanned_input 
 
-class GoldRoom(MurexRoom):
+class Start(MurexRoom):
 	def __init__(self):
 		super(MurexRoom, self).__init__()
 
-	clue = "The gold is worth millions"
-	intro = "The room is shimmering"
+	intro = """
+	Welcome to the world of SECRETS OF THE MUREX
+	Unveil our mystery. Carry our tradition. Answer our call.
+	We depend on you.
 
+
+	"Enter BEGIN to approach the island."
+	"""
 	print intro
-	choice = raw_input("> ")
+	choice =raw_input("> ")
 
-	if "clue" in choice: 
-		print clue
+	key = ['begin']
+
+	if "yes" in choice:
+		ShipAwaken()
+	else:
+		ShipAwaken()
+
+Start()
