@@ -165,10 +165,32 @@ Your great-grandfather's handwriting stands out in green ink that almost glows a
 		dock_arrivei()
 
 def visit_memory():
-	pass
+	print "The man's face is a shadow, but you recall your mother in an intense argument with him."
+	print "You were very young,"
+	print "Sent upstairs, but you disobeyed. You sat just behind the kitchen door, trying to make sense of their yelling."
+	print "SHE IS THE ONE I'VE BEEN WAITING FOR! and YOU'RE CRAZY! are the only two phrases that have stuck with you."
+	print "You remember not being able to sleep that night, wondering if you were being held back from some great adventure."
+	print "Perhaps that's why you didn't tell your mother when you received the letter,"
+	print "or when you bought your ticket."
+	print "Well, you've made your decision, and there's nothing she can do to prevent you now."
+	print "You feel the ship's bow knock against the island's dock."
+	print "You've arrived."
+	print "No one is here to meet you, but your eyes catch the note nailed to the dock post, and see a path leading to the rest of the island ahead."
+
+	choice = scan_input(raw_input("> "))
+
+
+	if "note" in choice or "nailed" in choice:
+		dock_note()
+	elif "path" in choice or "island" in choice:
+		pathi()
+	else:
+		dock_fill()
 
 def mother_story():
-	pass
+	print "Your mother would only speak about her grandfather Taymor when she was really pushed to do it."
+	print "When you did push her to the limit, something changed in her eyes."
+	print "She wasn't your mother anymore, she was a scared and confused young woman."
 
 def wait_dock():
 	print """ You stare at the island as the ship approaches.
