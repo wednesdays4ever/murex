@@ -16,6 +16,7 @@ def match_input(scanned_input, key):
 	else:
 		return False
 
+import rooms_intro
 ################
 #### Items #####
 ################
@@ -37,12 +38,7 @@ Do you push to remember his childhood visit? Or revisit the stories your mother 
 ##Start of Game#
 ################
 def start():
-	print """
-	Welcome to the world of SECRETS OF THE MUREX
-	Unveil our mystery. Carry our tradition. Answer our call.
-	We depend on you.
-
-	"""
+	rooms_intro.start_intro()
 	#sleep(1) #This waits a moment between printing messages
 	print "Enter BEGIN to approach the island."
 
