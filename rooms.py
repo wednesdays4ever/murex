@@ -2,21 +2,13 @@
 ##Housekeeping##
 ################
 from time import sleep
+import housekeeping
+import rooms_intro
 
 notebook = []
 
-def scan_input(raw):
-	lowered = raw.lower()
-	scanned_input = lowered.split(' ')
-	return scanned_input 
 
-def match_input(scanned_input, key):
-	if set(scanned_input) & set(key) == set([]):
-		return True
-	else:
-		return False
 
-import rooms_intro
 ################
 #### Items #####
 ################
@@ -42,11 +34,16 @@ def start():
 	#sleep(1) #This waits a moment between printing messages
 	print "Enter BEGIN to approach the island."
 
-	choice = scan_input(raw_input("> "))
+	choice = housekeeping.scan_input(raw_input("> "))
 
-	key = ['begin']
+	key1 = ['begin']
+	key2 = ['begin']
+	key3 = ['begin']
+	key4 = ['begin']
+	key5 = ['begin']
+	key6 = ['begin']
 
-	if match_input == True:
+	if housekeeping.match_input == "door1":
 		ship_awaken()
 	else:
 		ship_awaken()
@@ -56,13 +53,17 @@ def ship_awaken():
 	
 	notebook.append(["The adventure has begun."])
 
-	key = ['run', 'away','leave']
+	key1 = ['apologize', 'say sorry']
+	key2 = ['run', 'away',' leave']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
 
-	choice = scan_input(raw_input("> "))
+	choice = housekeeping.scan_input(raw_input("> "))
 
-	if "apologize" in choice:
+	if housekeeping.match_input == 'door1':
 		captain_i()
-	elif match_input == True:
+	elif housekeeping.match_input == 'door2':
 		captain_ii()
 	else:
 		captain_iii()
@@ -70,36 +71,64 @@ def ship_awaken():
 def captain_i():
 	rooms_intro.captain_i()
 
-	choice = scan_input(raw_input("> "))
+	key1 = ['read', 'letter','open']
+	key2 = ['watch', 'letter', 'sea']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
 
-	if "read" in choice or "letter" in choice or "open" in choice:
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		read_letteri()
-	elif "watch" in choice or "sea" in choice or "wait" in choice:
+	elif housekeeping.match_input == "door2":
 		wait_dock()
 	else:
 		read_letterii()
 
 def captain_ii():
+<<<<<<< HEAD
+	print """I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, you hear the sad and ugly captain call as you run to the other side of the ship.
+You catch your breath here and feel the breeze in your hair. It eases the pain of your headache."
+You go back over in your mind the Captain's words, and the rest of the laconic crew's attitude during the entirety of the trip.
+What are they afraid of you learning? Do they even know?
+You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
+You've read it over and over so many times, but still, nothing makes much sense.
+Do you read it again? Or watch the sea and wait to dock? """
+	
+	key1 = ['read', 'letter','open']
+	key2 = ['watch', 'letter', 'sea']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+=======
 	rooms_intro.captain_ii()
 
 	choice = scan_input(raw_input("> "))
+>>>>>>> origin/robert-branch
 
-	if "read" in choice or "letter" in choice or "open" in choice:
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		read_letteri()
-	elif "watch" in choice or "sea" in choice or "wait" in choice:
+	elif housekeeping.match_input == "door2":
 		wait_dock()
 	else:
 		read_letterii()
 
 def captain_iii():
 	rooms_intro.captain_iii()
+	key1 = ['read', 'letter','open']
+	key2 = ['watch', 'letter', 'sea']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
 
-	choice = scan_input(raw_input("> "))
+	choice = housekeeping.scan_input(raw_input("> "))
 
-
-	if "read" in choice or "letter" in choice or "open" in choice:
+	if housekeeping.match_input == "door1":
 		read_letteri()
-	elif "watch" in choice or "sea" in choice or "wait" in choice:
+	elif housekeeping.match_input == "door2":
 		wait_dock()
 	else:
 		read_letterii()
@@ -109,11 +138,18 @@ def read_letteri():
 You slide your finger across the dark blue wax seal, stamped with the shape of a strange and spiny, spiral seashell.
 Your great-grandfather's handwriting stands out in green ink that almost glows against the thick, cream paper. """
 	print letter 
-	choice = scan_input(raw_input("> "))
 
-	if "childhood" in choice or "visit" in choice:
+	key1 = ['childhood','visit']
+	key2 = ['stories', 'revisit','story','mother']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		visit_memory()
-	elif "stories" in choice or "revisit" in choice or "story" in choice or "mother" in choice:
+	elif housekeeping.match_input == "door2":
 		mother_story()
 	else:
 		dock_arrivei()
@@ -121,11 +157,18 @@ Your great-grandfather's handwriting stands out in green ink that almost glows a
 def read_letterii():
 	rooms_intro.read_letteri()
 	print letter
-	choice = scan_input(raw_input("> "))
+	
+	key1 = ['childhood','visit']
+	key2 = ['stories', 'revisit','story','mother']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
 
-	if "childhood" in choice or "visit" in choice:
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		visit_memory()
-	elif "stories" in choice or "story" in choice or "mother" in choice:
+	elif housekeeping.match_input == "door2":
 		mother_story()
 	else:
 		dock_arrivei()
@@ -133,12 +176,18 @@ def read_letterii():
 def visit_memory():
 	rooms_intro.visit_memory()
 
-	choice = scan_input(raw_input("> "))
+	key1 = ["note","nailed"]
+	key2 = ["path", "island"]
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
 
 
-	if "note" in choice or "nailed" in choice:
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		dock_note()
-	elif "path" in choice or "island" in choice:
+	elif housekeeping.match_input == "door2":
 		pathi()
 	else:
 		dock_fill()
@@ -148,12 +197,18 @@ def mother_story():
 
 def wait_dock():
 	rooms_intro.wait_dock()
-	
-	choice = scan_input(raw_input("> "))
 
-	if "note" in choice or "nailed" in choice:
+	key1 = ["note","nailed"]
+	key2 = ["letter", "great-grandfather"]
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		dock_note()
-	elif "letter" in choice or "great-grandfather" in choice:
+	elif housekeeping.match_input == "door2":
 		read_letteriii()
 	else:
 		dock_fill()
@@ -162,52 +217,66 @@ def dock_note():
 	rooms_intro.dock_note()
 
 def read_letteriii():
-	rooms_intro.read_letteriii()
-	
+	rooms_intro.read_letteriii()	
 	print letter
 
-	choice = scan_input(raw_input("> "))
+	key1 = ["note","nailed"]
+	key2 = ["path","island"]
+	key3 = ["childhood","visit"]
+	key4 = ["stories", "story", "mother"]
+	key5 = ['no way'] #add a key here?
 
+	choice = housekeeping.scan_input(raw_input("> "))
 
-	if "note" in choice or "nailed" in choice:
+	if housekeeping.match_input == "door1":
 		dock_note()
-	elif "path" in choice or "island" in choice:
+	elif housekeeping.match_input == "door2":
 		pathi()
-	elif "childhood" in choice or "visit" in choice:
+	elif housekeeping.match_input == "door3":
 		visit_memory()
-	elif "stories" in choice or "story" in choice or "mother" in choice:
+	elif housekeeping.match_input == "door4":
 		mother_story()
 	else:
 		dock_fill()
 
 def dock_fill():
 	rooms_intro.dock_fill()
-	print """ You were supposed to meet someone here. 
-Perhaps there is more information in the note on the dock or something you missed in the letter you came with. """
-	
-	choice = scan_input(raw_input("> "))
 
-	if "note" in choice or "nailed" in choice:
+	key1 = ['note','nailed']
+	key2 = ['letter','great-grandfather']
+	key3 = ['path','island']
+	key4 = ['childhood','visit']
+	key5 = ['stories','story','mother']
+
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		dock_note()
-	elif "letter" in choice or "great-grandfather" in choice:
+	elif housekeeping.match_input == "door2":
 		read_letteriii()
-	elif "path" in choice or "island" in choice:
+	elif housekeeping.match_input == "door3":
 		pathi()
-	elif "childhood" in choice or "visit" in choice:
+	elif housekeeping.match_input == "door4":
 		visit_memory()
-	elif "stories" in choice or "story" in choice or "mother" in choice:
+	elif housekeeping.match_input == "door5":
 		mother_story()
 	else:
 		dock_fill()
 
 def dock_arrivei():
 	rooms_intro.dock_arrivei()
-	
-	choice = scan_input(raw_input("> "))
 
-	if "note" in choice or "nailed" in choice:
+	key1 = ['note','nailed']
+	key2 = ['letter','great-grandfather']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	choice = housekeeping.scan_input(raw_input("> "))
+
+	if housekeeping.match_input == "door1":
 		dock_note()
-	elif "letter" in choice or "great-grandfather" in choice:
+	elif housekeeping.match_input == "door2":
 		read_letteriii()
 	else:
 		dock_fill()
