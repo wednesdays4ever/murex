@@ -1,3 +1,5 @@
+from time import sleep
+
 def start_intro():
 	print """
 	Welcome to the world of SECRETS OF THE MUREX
@@ -7,12 +9,15 @@ def start_intro():
 	"""
 
 def ship_awaken():
-	print """ For days you've dreamed of the sight of land,
-but the tiny island that lies on the horizon does nothing to quell the uneasy feeling you've had this entire trip.
-Seasickness has kept your mouth sour for the week you've been on the boat, and this morning is no different.
+	print """For days you've dreamed of the sight of land,"""
+	sleep(1)
+	print """but the tiny island that lies on the horizon does nothing to quell the uneasy feeling you've had this entire trip."""
+	sleep(1)
+	print """Seasickness has kept your mouth sour for the week you've been on the boat, and this morning is no different.
 Some distant spire catches the sun and glints impossibly bright, making your headache even worse.
-You close your eyes and recoil, stepping back from your vantage point and directly into the ship's captain.
-He glares down at you. Do you apologize? Or run away? """
+You close your eyes and recoil, stepping back from your vantage point and directly into the ship's captain."""
+	sleep(0.5)
+	print """He glares down at you. Do you apologize? Or run away?"""
 
 def captain_i():
 	print """ The Captain sighs at your apology.
