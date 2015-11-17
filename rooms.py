@@ -2,6 +2,7 @@
 ##Housekeeping##
 ################
 from time import sleep
+import os
 import housekeeping
 import rooms_intro
 
@@ -26,6 +27,8 @@ ELSA,
 You barely remember him, and everything you've heard mentioned is so vague.
 Do you push to remember his childhood visit? Or revisit the stories your mother told? Or wait to see him yourself? """
 
+clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+
 ################
 ##Start of Game#
 ################
@@ -44,8 +47,10 @@ def start():
 	key6 = ['begin']
 
 	if housekeeping.match_input == "door1":
+		print clear_screen
 		ship_awaken()
 	else:
+		print clear_screen
 		ship_awaken()
 
 def ship_awaken():
@@ -87,25 +92,14 @@ def captain_i():
 		read_letterii()
 
 def captain_ii():
-<<<<<<< HEAD
-	print """I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, you hear the sad and ugly captain call as you run to the other side of the ship.
-You catch your breath here and feel the breeze in your hair. It eases the pain of your headache."
-You go back over in your mind the Captain's words, and the rest of the laconic crew's attitude during the entirety of the trip.
-What are they afraid of you learning? Do they even know?
-You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
-You've read it over and over so many times, but still, nothing makes much sense.
-Do you read it again? Or watch the sea and wait to dock? """
-	
+	rooms_intro.captain_ii()
+
 	key1 = ['read', 'letter','open']
 	key2 = ['watch', 'letter', 'sea']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
-=======
 	rooms_intro.captain_ii()
-
-	choice = scan_input(raw_input("> "))
->>>>>>> origin/robert-branch
 
 	choice = housekeeping.scan_input(raw_input("> "))
 
@@ -181,7 +175,6 @@ def visit_memory():
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
-
 
 	choice = housekeeping.scan_input(raw_input("> "))
 
