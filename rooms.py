@@ -6,9 +6,7 @@ import os
 import housekeeping
 import rooms_intro
 
-notebook = []
-
-
+clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
 
 ################
 #### Items #####
@@ -27,8 +25,6 @@ ELSA,
 You barely remember him, and everything you've heard mentioned is so vague.
 Do you push to remember his childhood visit? Or revisit the stories your mother told? Or wait to see him yourself? """
 
-clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
-
 ################
 ##Start of Game#
 ################
@@ -37,7 +33,7 @@ def start():
 	#sleep(1) #This waits a moment between printing messages
 	print "Enter BEGIN to approach the island."
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	key1 = ['begin']
 	key2 = ['begin']
@@ -56,15 +52,15 @@ def start():
 def ship_awaken():
 	rooms_intro.ship_awaken()
 	
-	notebook.append(["The adventure has begun."])
+	housekeeping.notebook.append(["The adventure has begun."])
+
+	housekeeping.ask_input()
 
 	key1 = ['apologize', 'say sorry']
 	key2 = ['run', 'away',' leave']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
-
-	choice = housekeeping.scan_input(raw_input("> "))
 
 	if housekeeping.match_input == 'door1':
 		captain_i()
@@ -82,7 +78,7 @@ def captain_i():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		read_letteri()
@@ -101,7 +97,7 @@ def captain_ii():
 	key5 = ['no way'] #add a key here?
 	rooms_intro.captain_ii()
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		read_letteri()
@@ -118,7 +114,7 @@ def captain_iii():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		read_letteri()
@@ -139,7 +135,7 @@ Your great-grandfather's handwriting stands out in green ink that almost glows a
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		visit_memory()
@@ -158,7 +154,7 @@ def read_letterii():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		visit_memory()
@@ -176,7 +172,7 @@ def visit_memory():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		dock_note()
@@ -197,7 +193,7 @@ def wait_dock():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		dock_note()
@@ -219,7 +215,7 @@ def read_letteriii():
 	key4 = ["stories", "story", "mother"]
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		dock_note()
@@ -241,7 +237,7 @@ def dock_fill():
 	key4 = ['childhood','visit']
 	key5 = ['stories','story','mother']
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		dock_note()
@@ -265,7 +261,7 @@ def dock_arrivei():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	choice = housekeeping.scan_input(raw_input("> "))
+	housekeeping.ask_input()
 
 	if housekeeping.match_input == "door1":
 		dock_note()
