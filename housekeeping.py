@@ -1,4 +1,5 @@
 notebook = []
+clue = 'Nothing of note.'
 
 def scan_input(raw):
 	lowered = raw.lower()
@@ -30,6 +31,10 @@ def ask_input():
 			print notebook
 			print "#"*10
 			print "This is all you have learned."
+		ask_input()
+		return choice
+	if choice == ['look','around']:
+		print clue
 		ask_input()
 		return choice
 	else: 
