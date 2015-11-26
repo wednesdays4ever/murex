@@ -1,4 +1,4 @@
-notebook = []
+notebook = ""
 clue = 'Nothing of note.'
 
 def scan_input(raw):
