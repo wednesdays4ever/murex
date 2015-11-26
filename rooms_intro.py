@@ -2,45 +2,72 @@ from time import sleep
 
 def start_intro():
 	print """
+   __   __  __   __  ______    _______  __   __ 
+  |  |_|  ||  | |  ||    _ |  |       ||  |_|  |
+  |       ||  | |  ||   | ||  |    ___||       |
+  |       ||  |_|  ||   |_||_ |   |___ |       |
+  |       ||       ||    __  ||    ___| |     | 
+  | ||_|| ||       ||   |  | ||   |___ |   _   |
+  |_|   |_||_______||___|  |_||_______||__| |__|
+
 	Welcome to the world of SECRETS OF THE MUREX
 	Unveil our mystery. Carry our tradition. Answer our call.
 	We depend on you.
 
 	"""
+	print "Enter BEGIN to approach the island."
+	print "Type HELP MENU for further instructions."
+
+def help_menu():
+	print "Murex is a game of exploration and investigation."
+	print "Type \'CHECK NOTEBOOK\' to review what you've learned."
+	print "Remember to regularly survey your surroundings."
+	print "Secrets may be anywhere."
+	print "Type LOOK AROUND to expose the truth."
 
 def ship_awaken():
 	print """For days you've dreamed of the sight of land,"""
 	sleep(2)
-	print """but the tiny island that lies on the horizon does nothing to quell the uneasy feeling you've had this entire trip."""
+	print """but the tiny island that lies on the horizon does nothing 
+to quell the uneasy feeling you've had this entire trip."""
 	sleep(2)
-	print """Seasickness has kept your mouth sour for the week you've been on the boat, and this morning is no different."""
+	print """Seasickness has kept your mouth sour for the week you've been on the boat,
+and this morning is no different."""
 	sleep(2)
-	print """Some distant spire catches the sun and glints impossibly bright, making your headache even worse."""
-	sleep(2)
-	print """You close your eyes and recoil, stepping back from your vantage point and directly into the ship's captain."""
+	print """Some distant spire catches the sun and glints impossibly bright, 
+making your headache even worse."""
+	sleep(3)
+	print """You close your eyes and recoil, stepping back from your vantage point 
+and directly into the ship's captain."""
 	sleep(2)
 	print """He glares down at you. Do you apologize? Or run away?"""
 
 def captain_i():
 	print """ The Captain sighs at your apology.
 I WAS BORN WITH A HARD FACE AND THE WEATHER HAS NOT BEEN KIND TO IT.
-IT IS MY CURSE TO BE FOREVER FRIGHTENING TO STRANGERS, WHEN ALL I MIGHT LIKE IS TO LET THEM KNOW THE WARMTH I HAVE TO OFFER.
+IT IS MY CURSE TO BE FOREVER FRIGHTENING TO STRANGERS, 
+WHEN ALL I MIGHT LIKE IS TO LET THEM KNOW THE WARMTH I HAVE TO OFFER.
 You are rendered speechless by the Captain's confession.
 He looks up at the sky as if he's forgotten you're there.
-THAT THE SKY CAN BE SO BRIGHT AND CLEAR AND BEAUTIFUL WITH SO MANY TERRIBLE THINGS SWIRLING AROUND BENEATH IT.
+THAT THE SKY CAN BE SO BRIGHT AND CLEAR AND BEAUTIFUL 
+WITH SO MANY TERRIBLE THINGS SWIRLING AROUND BENEATH IT.
 IT'S PAINFUL.
 THAT'S A QUOTE FROM SOMEWHERE.
-He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, and he can sense the shift.
-BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, leaving you alone again.
+He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, 
+and he can sense the shift.
+BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, 
+leaving you alone again.
 Was that a threat? What are you getting yourself into?
 You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
 You've read it over and over so many times, but still, nothing makes much sense.
 Do you read it again? Or watch the sea and wait to dock? """
 
 def captain_ii():
-	print """I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, you hear the sad and ugly captain call as you run to the other side of the ship.
+	print """I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
+you hear the sad and ugly captain call as you run to the other side of the ship.
 You catch your breath here and feel the breeze in your hair. It eases the pain of your headache."
-You go back over in your mind the Captain's words, and the rest of the laconic crew's attitude during the entirety of the trip.
+You go back over in your mind the Captain's words, 
+and the rest of the laconic crew's attitude during the entirety of the trip.
 What are they afraid of you learning? Do they even know?
 You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
 You've read it over and over so many times, but still, nothing makes much sense.
@@ -48,16 +75,20 @@ Do you read it again? Or watch the sea and wait to dock? """
 
 def captain_iii():
 	print """ He sighs.
-It is unlikely that he has had any recent contact with a young girl like you, and appears to read all of your actions as nonsense.
-BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, leaving you alone again."
+It is unlikely that he has had any recent contact with a young girl like you, 
+and appears to read all of your actions as nonsense.
+BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, 
+leaving you alone again."
 Was that a threat? What are you getting yourself into?
 You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
 You've read it over and over so many times, but still, nothing makes much sense.
 Do you read it again? Or watch the sea and wait to dock? """
 
 def read_letteri():
-	print """ You can't help but open the well worn envelope one more time before you dock. Something about it is irresistible.
-You slide your finger across the dark blue wax seal, stamped with the shape of a strange and spiny, spiral seashell.
+	print """ You can't help but open the well worn envelope one more time before you dock. 
+Something about it is irresistible.
+You slide your finger across the dark blue wax seal, 
+stamped with the shape of a strange and spiny, spiral seashell.
 Your great-grandfather's handwriting stands out in green ink that almost glows against the thick, cream paper. """
 
 def visit_memory():
@@ -70,8 +101,10 @@ Perhaps that's why you didn't tell your mother when you received the letter,
 or when you bought your ticket.
 Well, you've made your decision, and there's nothing she can do to prevent you now.
 ou feel the ship's bow knock against the island's dock.
-You've arrived.
-No one is here to meet you, but your eyes catch the note nailed to the dock post, and see a path leading to the rest of the island ahead."""
+You've arrived."""
+sleep(2)
+"""No one is here to meet you, but your eyes catch the note nailed to the dock post, 
+and see a path leading to the rest of the island ahead."""
 
 def mother_story():
 	print """Your mother would only speak about her grandfather Taymor when she was really pushed to do it."
@@ -82,7 +115,8 @@ HE'S AN EVIL MAN.
 WHEN I WAS A YOUNG GIRL, HE RAN OFF WITH A STRANGE GROUP OF PEOPLE.
 CULTISTS. DARK MESSENGERS.
 PREACHING SOME NONSENSE ABOUT THE TRUTH BELOW.
-HE ASKED US, OUR WHOLE FAMILY, TO JOIN HIM, AND WHEN WE SAID NOW, WHEN WE TOLD HIM HE WAS BEING RIDICULOUS,
+HE ASKED US, OUR WHOLE FAMILY, TO JOIN HIM, AND WHEN WE SAID NO, 
+WHEN WE TOLD HIM HE WAS BEING RIDICULOUS,
 HE TOOK ME WITH HIM IN THE MIDDLE OF THE NIGHT.
 I WAS PACKED IN A WOODEN TRUNK.
 THEY WHISPERED TO ME. HORRIBLE THINGS THAT WERE MEANT TO BE REASSURING.
@@ -101,7 +135,8 @@ PLEASE.
 
 You feel the ship's bow knock against the island's dock.
 You've arrived, and there is nothing more she can tell you now.
-No one is here to meet you, but your eyes catch the note nailed to the dock post, and see a path leading to the rest of the island ahead.
+No one is here to meet you, but your eyes catch the note nailed to the dock post, 
+and see a path leading to the rest of the island ahead.
 """
 
 def wait_dock():
@@ -109,7 +144,8 @@ def wait_dock():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship bump against the dock with a hard wooden knock.
-Before you realize what is happening, the crew has shuffled you off the deck, thrown your bag at your feet, and set sail once more.
+Before you realize what is happening, 
+the crew has shuffled you off the deck, thrown your bag at your feet, and set sail once more.
 The letter that sent you here in the first pokes against your ribs from inside your pocket. 
 A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
@@ -131,7 +167,8 @@ def dock_note():
 
 def read_letteriii():
 	print """ Now that you're actually here, all alone, a small panic hits you.
-Thinking that there might be something to glean from one more read, you pull your great-grandfather's letter from your pocket.
+Thinking that there might be something to glean from one more read, 
+you pull your great-grandfather's letter from your pocket.
 You slide your finger across the dark blue wax seal, stamped with the shape of a strange and spiny, spiral seashell.
 Your great-grandfather's handwriting stands out in green ink that almost glows against the thick, cream paper. """
 
@@ -144,7 +181,8 @@ def dock_arrivei():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship bump against the dock with a hard wooden knock.
-Before you realize what is happening, the crew has shuffled you off the deck, thrown your bag at your feet, and set sail once more.
+Before you realize what is happening, the crew has shuffled you off the deck, 
+thrown your bag at your feet, and set sail once more.
 The letter that sent you here in the first pokes against your ribs from inside your pocket. 
 A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """

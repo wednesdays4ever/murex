@@ -11,6 +11,9 @@ clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \
 ################
 #### Items #####
 ################
+
+#notebook = ""
+
 letter = """
 ELSA,
 	YOU WERE TOO YOUNG TO REMEMBER OUR ONLY MEETING, BUT I ASSUME YOU'VE HEARD OF ME. 
@@ -30,8 +33,27 @@ Do you push to remember his childhood visit? Or revisit the stories your mother 
 ################
 def start():
 	rooms_intro.start_intro()
-	#sleep(1) #This waits a moment between printing messages
-	print "Enter BEGIN to approach the island."
+
+	housekeeping.ask_input()
+
+	key1 = ['help menu']
+	key2 = ['begin']
+	key3 = ['begin']
+	key4 = ['begin']
+	key5 = ['begin']
+	key6 = ['begin']
+
+	if housekeeping.match_input == "door1":
+		help_menu()
+	elif housekeeping.match_input == "door2":
+		print clear_screen
+		ship_awaken()
+	else:
+		print clear_screen
+		ship_awaken()
+
+def help_menu():
+	rooms_intro.help_menu()
 
 	housekeeping.ask_input()
 
@@ -49,10 +71,14 @@ def start():
 		print clear_screen
 		ship_awaken()
 
+
 def ship_awaken():
 	rooms_intro.ship_awaken()
 	
-	housekeeping.notebook.append(["The adventure has begun."])
+	item = "* The adventure has begun. \n"
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
 
 	housekeeping.ask_input()
 
@@ -77,6 +103,11 @@ def captain_i():
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
+
+	item = "* The captain hands you a letter. \n"
+	
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
 
 	housekeeping.ask_input()
 
