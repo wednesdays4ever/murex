@@ -4,6 +4,7 @@
 from time import sleep
 import os
 import housekeeping
+import housekeeping_test
 import rooms_intro
 
 clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
@@ -34,18 +35,18 @@ Do you push to remember his childhood visit? Or revisit the stories your mother 
 def start():
 	rooms_intro.start_intro()
 
-	housekeeping.ask_input()
-
-	key1 = ['help menu']
+	key1 = ['help', 'menu']
 	key2 = ['begin']
-	key3 = ['begin']
-	key4 = ['begin']
-	key5 = ['begin']
-	key6 = ['begin']
+	key3 = ['stop']
+	key4 = ['madness']
+	key5 = ['please']
+	key6 = ['work']
 
-	if housekeeping.match_input == "door1":
+	scanned_input = housekeeping_test.ask_input()
+
+	if housekeeping_test.match_input(scanned_input, key1, key2, key3, key4, key5) == "door1":
 		help_menu()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping_test.match_input(scanned_input, key1, key2, key3, key4, key5) == "door2":
 		print clear_screen
 		ship_awaken()
 	else:
@@ -82,7 +83,7 @@ def ship_awaken():
 
 	housekeeping.ask_input()
 
-	key1 = ['apologize', 'say sorry']
+	key1 = ['apologize', 'sorry']
 	key2 = ['run', 'away',' leave']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
@@ -104,7 +105,7 @@ def captain_i():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	item = "* The captain hands you a letter. \n"
+	item = "* The captain is a strange one. \n"
 	
 	if item not in housekeeping.notebook: 
 		housekeeping.notebook += item
