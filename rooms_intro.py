@@ -32,10 +32,10 @@ def ship_awaken():
 	sleep(2)
 	print """but the tiny island that lies on the horizon does nothing 
 to quell the uneasy feeling you've had this entire trip."""
-	sleep(2)
+	sleep(4)
 	print """Seasickness has kept your mouth sour for the week you've been on the boat,
 and this morning is no different."""
-	sleep(2)
+	sleep(4)
 	print """Some distant spire catches the sun and glints impossibly bright, 
 making your headache even worse."""
 	sleep(3)
@@ -57,8 +57,8 @@ IT'S PAINFUL.
 THAT'S A QUOTE FROM SOMEWHERE.
 He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, 
 and he can sense the shift.
-BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, 
-leaving you alone again.
+BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
+he says before he clomps away, leaving you alone again.
 Was that a threat? What are you getting yourself into?
 You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
 You've read it over and over so many times, but still, nothing makes much sense.

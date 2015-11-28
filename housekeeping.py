@@ -20,6 +20,17 @@ def match_input(scanned_input, key1, key2, key3, key4, key5):
 	else:
 		return "door6"
 
+	#The below is an attempt to put this into a loop.
+	# n = 1
+	# keys = [key1, key2, key3, key4, key5]
+	# for key in keys:
+	# 	if set(scanned_input) & set(key) != set([]):
+	# 	    pass
+	# 	else: 
+	# 	    n += 1
+	# door = "door" + str(n)
+	# return door
+
 def ask_input():
 	choice = scan_input(raw_input("> "))
 	if choice == ['check','notebook']:
