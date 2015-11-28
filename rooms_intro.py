@@ -19,21 +19,23 @@ def start_intro():
 	print "Type HELP MENU for further instructions."
 
 def help_menu():
-	print "Murex is a game of exploration and investigation."
+	print '*' * 15
+	print "\n Murex is a game of exploration and investigation."
 	print "Type \'CHECK NOTEBOOK\' to review what you've learned."
 	print "Remember to regularly survey your surroundings."
-	print "Secrets may be anywhere."
-	print "Type LOOK AROUND to expose the truth."
+	print "		Secrets may be anywhere.     "
+	print "Type LOOK AROUND to expose the truth. \n"
+	print '*' * 15
 
 def ship_awaken():
 	print """For days you've dreamed of the sight of land,"""
 	sleep(2)
 	print """but the tiny island that lies on the horizon does nothing 
 to quell the uneasy feeling you've had this entire trip."""
-	sleep(2)
+	sleep(4)
 	print """Seasickness has kept your mouth sour for the week you've been on the boat,
 and this morning is no different."""
-	sleep(2)
+	sleep(4)
 	print """Some distant spire catches the sun and glints impossibly bright, 
 making your headache even worse."""
 	sleep(3)
@@ -55,15 +57,16 @@ IT'S PAINFUL.
 THAT'S A QUOTE FROM SOMEWHERE.
 He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, 
 and he can sense the shift.
-BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, 
-leaving you alone again.
+BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
+he says before he clomps away, leaving you alone again.
 Was that a threat? What are you getting yourself into?
 You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
 You've read it over and over so many times, but still, nothing makes much sense.
 Do you read it again? Or watch the sea and wait to dock? """
 
 def captain_ii():
-	print """I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
+	print """
+I HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
 you hear the sad and ugly captain call as you run to the other side of the ship.
 You catch your breath here and feel the breeze in your hair. It eases the pain of your headache."
 You go back over in your mind the Captain's words, 
@@ -74,7 +77,8 @@ You've read it over and over so many times, but still, nothing makes much sense.
 Do you read it again? Or watch the sea and wait to dock? """
 
 def captain_iii():
-	print """ He sighs.
+	print """ 
+He sighs.
 It is unlikely that he has had any recent contact with a young girl like you, 
 and appears to read all of your actions as nonsense.
 BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, he says before he clomps away, 

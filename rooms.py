@@ -34,18 +34,20 @@ Do you push to remember his childhood visit? Or revisit the stories your mother 
 def start():
 	rooms_intro.start_intro()
 
-	housekeeping.ask_input()
-
-	key1 = ['help menu']
+	key1 = ['help', 'menu']
 	key2 = ['begin']
-	key3 = ['begin']
-	key4 = ['begin']
-	key5 = ['begin']
-	key6 = ['begin']
+	key3 = ['stop']
+	key4 = ['madness']
+	key5 = ['please']
+	key6 = ['work']
 
-	if housekeeping.match_input == "door1":
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		help_menu()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+								  key2, key3, key4, key5) == "door2":
 		print clear_screen
 		ship_awaken()
 	else:
@@ -55,7 +57,7 @@ def start():
 def help_menu():
 	rooms_intro.help_menu()
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
 	key1 = ['begin']
 	key2 = ['begin']
@@ -80,17 +82,19 @@ def ship_awaken():
 	if item not in housekeeping.notebook: 
 		housekeeping.notebook += item
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	key1 = ['apologize', 'say sorry']
+	key1 = ['apologize', 'sorry']
 	key2 = ['run', 'away',' leave']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	if housekeeping.match_input == 'door1':
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		captain_i()
-	elif housekeeping.match_input == 'door2':
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		captain_ii()
 	else:
 		captain_iii()
@@ -104,16 +108,18 @@ def captain_i():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	item = "* The captain hands you a letter. \n"
+	item = "* The captain is a strange one. \n"
 	
 	if item not in housekeeping.notebook: 
 		housekeeping.notebook += item
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		read_letteri()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		wait_dock()
 	else:
 		read_letterii()
@@ -122,17 +128,19 @@ def captain_ii():
 	rooms_intro.captain_ii()
 
 	key1 = ['read', 'letter','open']
-	key2 = ['watch', 'letter', 'sea']
+	key2 = ['watch', 'letter', 'sea', 'wait']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 	rooms_intro.captain_ii()
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		read_letteri()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		wait_dock()
 	else:
 		read_letterii()
@@ -145,11 +153,13 @@ def captain_iii():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		read_letteri()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		wait_dock()
 	else:
 		read_letterii()
@@ -166,11 +176,13 @@ Your great-grandfather's handwriting stands out in green ink that almost glows a
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		visit_memory()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		mother_story()
 	else:
 		dock_arrivei()
@@ -185,11 +197,13 @@ def read_letterii():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		visit_memory()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		mother_story()
 	else:
 		dock_arrivei()
@@ -203,11 +217,13 @@ def visit_memory():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		dock_note()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		pathi()
 	else:
 		dock_fill()
@@ -226,9 +242,11 @@ def wait_dock():
 
 	housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		dock_note()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		read_letteriii()
 	else:
 		dock_fill()
@@ -248,13 +266,17 @@ def read_letteriii():
 
 	housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		dock_note()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		pathi()
-	elif housekeeping.match_input == "door3":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
 		visit_memory()
-	elif housekeeping.match_input == "door4":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door4":
 		mother_story()
 	else:
 		dock_fill()
@@ -270,15 +292,20 @@ def dock_fill():
 
 	housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		dock_note()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		read_letteriii()
-	elif housekeeping.match_input == "door3":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
 		pathi()
-	elif housekeeping.match_input == "door4":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door4":
 		visit_memory()
-	elif housekeeping.match_input == "door5":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door5":
 		mother_story()
 	else:
 		dock_fill()
@@ -294,9 +321,11 @@ def dock_arrivei():
 
 	housekeeping.ask_input()
 
-	if housekeeping.match_input == "door1":
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
 		dock_note()
-	elif housekeeping.match_input == "door2":
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
 		read_letteriii()
 	else:
 		dock_fill()
