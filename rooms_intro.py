@@ -31,38 +31,43 @@ def ship_awaken():
 	print """For days you've dreamed of the sight of land,"""
 	sleep(2)
 	print """but the tiny island that lies on the horizon does nothing 
-to quell the uneasy feeling you've had this entire trip."""
+to quell the uneasy feeling you've had this entire trip. \n"""
 	sleep(4)
 	print """Seasickness has kept your mouth sour for the week you've been on the boat,
-and this morning is no different."""
+and this morning is no different. \n"""
 	sleep(4)
 	print """Some distant spire catches the sun and glints impossibly bright, 
-making your headache even worse."""
+making your headache even worse. \n"""
 	sleep(3)
 	print """You close your eyes and recoil, stepping back from your vantage point 
-and directly into the ship's captain."""
+and directly into the ship's captain. \n"""
 	sleep(2)
 	print """He glares down at you. Do you apologize? Or run away?"""
 
 def captain_i():
-	print """ The Captain sighs at your apology.
-I WAS BORN WITH A HARD FACE AND THE WEATHER HAS NOT BEEN KIND TO IT.
-IT IS MY CURSE TO BE FOREVER FRIGHTENING TO STRANGERS, 
-WHEN ALL I MIGHT LIKE IS TO LET THEM KNOW THE WARMTH I HAVE TO OFFER.
-You are rendered speechless by the Captain's confession.
-He looks up at the sky as if he's forgotten you're there.
-THAT THE SKY CAN BE SO BRIGHT AND CLEAR AND BEAUTIFUL 
-WITH SO MANY TERRIBLE THINGS SWIRLING AROUND BENEATH IT.
-IT'S PAINFUL.
-THAT'S A QUOTE FROM SOMEWHERE.
-He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, 
-and he can sense the shift.
-BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, 
-he says before he clomps away, leaving you alone again.
-Was that a threat? What are you getting yourself into?
-You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
-You've read it over and over so many times, but still, nothing makes much sense.
-Do you read it again? Or watch the sea and wait to dock? """
+	print """ The Captain sighs at your apology."""
+	sleep(2)
+	print """
+	I WAS BORN WITH A HARD FACE AND THE WEATHER HAS NOT BEEN KIND TO IT.
+	IT IS MY CURSE TO BE FOREVER FRIGHTENING TO STRANGERS, 
+	WHEN ALL I MIGHT LIKE IS TO LET THEM KNOW THE WARMTH I HAVE TO OFFER.
+	You are rendered speechless by the Captain's confession.
+	He looks up at the sky as if he's forgotten you're there.
+	THAT THE SKY CAN BE SO BRIGHT AND CLEAR AND BEAUTIFUL 
+	WITH SO MANY TERRIBLE THINGS SWIRLING AROUND BENEATH IT.
+	IT'S PAINFUL.
+	THAT'S A QUOTE FROM SOMEWHERE. \n"""
+	sleep(6)
+	print """ He sighs again. Your sympathy for this sad man has turned to boredom bordering on disgust, 
+	and he can sense the shift."""
+	sleep(3)
+	print """ BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, \n
+	he says before he clomps away, leaving you alone again.
+	Was that a threat? What are you getting yourself into? \n"""
+	sleep(3)
+	print """ You thumb the edges of the thick envelope the letter from your late great-grandfather came in.
+	You've read it over and over so many times, but still, nothing makes much sense.
+	Do you read it again? Or watch the sea and wait to dock? """
 
 def captain_ii():
 	print """
@@ -129,8 +134,8 @@ REBORN IN ITS LIGHT THEY SAID OVER AND OVER AGAIN.
 THEIR LAUGHTER AND THE SMELL. GOD, THE SMELL.
 SOUR. SEWAGE. PICKLED HELL.
 I DON'T KNOW WHERE THEY TOOK ME OR WHAT THEY WERE PLANNING TO DO.
-I JUST REMEMBER THE POLICE PRYING OPEN THE TOPE OF MY TRUNK, AND STEPPING OUT INTO AN EMPTY BASEMENT,
-AND THE WALLS WERE CARVED WITH WAVES. ENDLESS. THOUSANDS OF THEM.
+I JUST REMEMBER THE POLICE PRYING OPEN THE TOP OF MY TRUNK, AND STEPPING OUT INTO AN EMPTY BASEMENT,
+THE WALLS WERE CARVED WITH WAVES. ENDLESS. THOUSANDS OF THEM.
 
 Her eyes went far away then, and they didn't take you with them.
 
@@ -139,9 +144,9 @@ PLEASE.
 
 You feel the ship's bow knock against the island's dock.
 You've arrived, and there is nothing more she can tell you now.
-No one is here to meet you, but your eyes catch the note nailed to the dock post, 
-and see a path leading to the rest of the island ahead.
 """
+#THE LAST TWO LINES NEED TO BE FIXED. 
+#THEY SAY THAT THE BOAT HAS ARRIVED, THEN IT SAYS THAT IT HASN'T YET.
 
 def wait_dock():
 	print """ You stare at the island as the ship approaches.
@@ -190,3 +195,42 @@ thrown your bag at your feet, and set sail once more.
 The letter that sent you here in the first pokes against your ribs from inside your pocket. 
 A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
+
+def still_on_dock():
+	print """ You look around your new surroundings. The path lies in front of you. 
+Do you look back at the note or the letter or do you forge on ahead? """
+
+
+def path_from_dock():
+	print """ You can see the tip of what must be the Great Pyramid far off in the distance, beyond a giant stone wall. 
+The path ahead leads away from the dock and splits in three directions.
+One straight ahead toward a door in the stone island fortress.
+Another forks to the left toward a sparse wood, removed from the stone walls and hugging the rocky shore.
+The path to the right drops off and out of sight. There may be cliffs ahead.
+The waves crash and the wind whistles at your back. You know you must proceed, but in which direction?"""
+
+def default_from_dock():
+	print """ 
+This new world is confusing, but you must carry on.
+\n 
+Is left, right, or straight the way to begin?"""
+
+def door_with_no_knob():
+	print """ What appeared to be a door from a distance has no handle.
+Carved in to the surface is a single, enormous closed eye, 
+perched atop a massive, winding shell, taller than a man, 
+with spines longer than your legs stretching out from it at every angle.
+Your great-grandfather and the reason you're here wait somewhere behind this wall, 
+but there is no obvious way to open it."""
+
+def push_or_pull_door():
+	print """ The giant eye springs open, impossibly.
+Beneath the stone lid, there is the real shining eye of some living creature.
+It glistens like a man's would in this light. It reflects back the waves behind you, flipped and magnified.
+You are in shock and lost in the world of the eye that is larger than the car you drive to work, 
+when you see it narrow into a glare and hear a thin voice enter your mind from no obvious origin.
+SMALL CREATURE. WHY DO YOU COME? """
+
+def default_door():
+	print """ That did not seem to work. You remain locked out 
+and unenlightened.""" 
