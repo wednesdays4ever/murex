@@ -132,7 +132,6 @@ def captain_ii():
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
-	rooms_intro.captain_ii()
 
 	scanned_input = housekeeping.ask_input()
 
@@ -230,6 +229,7 @@ def visit_memory():
 
 def mother_story():
 	rooms_intro.mother_story()
+	wait_dock()
 
 def wait_dock():
 	rooms_intro.wait_dock()
@@ -240,7 +240,7 @@ def wait_dock():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
@@ -254,6 +254,8 @@ def wait_dock():
 def dock_note():
 	rooms_intro.dock_note()
 
+	still_on_dock()
+
 def read_letteriii():
 	rooms_intro.read_letteriii()	
 	print letter
@@ -264,7 +266,7 @@ def read_letteriii():
 	key4 = ["stories", "story", "mother"]
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
@@ -290,7 +292,7 @@ def dock_fill():
 	key4 = ['childhood','visit']
 	key5 = ['stories','story','mother']
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
@@ -319,7 +321,7 @@ def dock_arrivei():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
-	housekeeping.ask_input()
+	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
@@ -329,5 +331,101 @@ def dock_arrivei():
 		read_letteriii()
 	else:
 		dock_fill()
+
+def still_on_dock(): 
+	rooms_intro.still_on_dock()
+
+	key1 = ['note','nailed', 'read']
+	key2 = ['letter', 'open']
+	key3 = ['forge on', 'forge', 'ahead', 'forward']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		dock_note()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		read_letteriii()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+	    path_from_dock()
+	else:
+		still_on_dock
+
+def path_from_dock(): 
+	rooms_intro.path_from_dock()
+
+	key1 = ['left','turn left']
+	key2 = ['right', 'turn right']
+	key3 = ['straight','forward', 'right', 'ahead']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		dock_path_left()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		dock_path_right()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+	    door_with_no_knob()
+	else:
+		default_from_dock()
+
+
+def default_from_dock():
+	rooms_intro.default_from_dock()
+
+	key1 = ['left','turn left']
+	key2 = ['right', 'turn right']
+	key3 = ['forward', 'right', 'ahead', 'straight']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		dock_path_left()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		dock_path_right()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+	    door_with_no_knob()
+	else:
+		default_from_dock()
+
+def door_with_no_knob(): 
+	rooms_intro.door_with_no_knob()
+
+	key1 = ['push', 'pull','touch','stroke']
+	key2 = ['no way'] #add a key here?
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		push_or_pull_door()
+	else:
+		default_door()
+
+def default_door():
+	rooms_intro.default_door()
+	#Finish this
+
+def push_or_pull_door():
+	rooms_intro.push_or_pull_door()
+	#Finish this
+
 
 start()
