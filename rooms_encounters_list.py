@@ -55,22 +55,28 @@ With that, the eye snaps shut,
 and you are left alone again with a stone door that cannot be opened by human hands. """
 
 def path_left():
-	print """ The sand and rocks near the shore give way almost immediately to a firm, well-worn dirt path.
+	print """ The sand and rocks near the shore give way almost immediately to a firm, 
+	well-worn dirt path.
 It gets narrower as it winds into a thick, overgrown forest.
-It is obvious that, while it has seen much use, not much care has been taken with its upkeep recently.
+It is obvious that, while it has seen much use, not much care 
+has been taken with its upkeep recently.
 Do you head further into the forest? """
 
 def forest_enter():
 	print """ Dense and overgrown, it becomes harder and harder to follow the path.
 Something about the thick air and large damp leaves reminds you of something.
-Your mind goes back to a favorite film from your childhood, a nature tape about South America and its rainforests. 
+Your mind goes back to a favorite film from your childhood, 
+a nature tape about South America and its rainforests. 
 You cannot remember its title now, but it was narrated by a cheerful, British voice, 
-expounding on the countless layers of animal mystery in every centimeter of these remote areas of the world.
-He encouraged you, while out in the world, to take a moment and listen to all that surrounds you.
+expounding on the countless layers of animal mystery in every centimeter of these 
+remote areas of the world.
+He encouraged you, while out in the world, 
+to take a moment and listen to all that surrounds you.
 You do this now, and your stomach sinks. 
 This is a silent forest. 
 You have left behind even the sound of the waves.
-It lacks the life of your nature tape, of any other place you've ever set foot in this world.
+It lacks the life of your nature tape, 
+of any other place you've ever set foot in this world.
 You suddenly become aware of the swift thump of your heart. 
 It is the only perceivable sound and it is less than comforting.
 To proceed is to descend even further into silence, into dread.
@@ -78,8 +84,10 @@ To turn back is to learn nothing.
 Indecision is not an option. """
 
 def forest_ruins():
-	print """ Moments after it felt as though the path would end in overgrowth, it breaks open into a large, man made clearing.
-A series of platforms and huts, elevated in the trees and strung together by rope bridges, sit above a central fire pit.
+	print """ Moments after it felt as though the path would end in overgrowth, 
+	it breaks open into a large, man made clearing.
+A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
+sit above a central fire pit.
 These signs of life bring you a moment of joy.
 But then you realize, the silence persists.
 Across the clearing, the path picks back up.
@@ -87,15 +95,59 @@ To your left, a rope ladder leads up to a tree house. """
 
 def tree_house ():
 	print """ This is not at all what you were expecting from the disarray in the clearing.
-	This finished interior would be more fitting in an Ivy League library than a makeshift building in the South Pacific.
+	This finished interior would be more fitting in an Ivy League library 
+	than a makeshift building in the South Pacific.
 	But the formerly beautiful room is in tatters.
 	Some violence has happened here.
 	Leatherbound books lay ripped apart and scorched on the dark, polished mahogany floor.
-	A small side table with accompanying chess set lies overturned next to a finely upholstered chair.
+	A small side table with accompanying chess set lies overturned 
+	next to a finely upholstered chair.
 	This place must somehow be related to the compound.
 	Could this have been Taymor's den? 
 	Were you too late to respond to his letter?
+	The room fills you with sadness,
+	but if you're here to learn about your relative, this seems like a place to start.
 	"""
+
+def tree_house_inspect ():
+	print """ Upon closer inspection, you notice a few things that seem out of the ordinary:
+	The corner of a hardcover book peeking out from under the chair's cushion,
+	The initials G.L. embossed on the back of the chair,
+	and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
+	THE END IS THE ONLY OUTCOME. WE WILL PREVAIL."""
+
+def diary ():
+	print """ The book is a diary. 
+	A fine one, with a golden embossed G.L. on the cover,
+	 that has seen much wear and tear.
+	 Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
+	 But how can you know unless you ask?"""
+	 
+
+def open_diary ():
+	print """ As soon as you open the cover, dust and ash drift out from between musty, 
+	yellowing pages, and the spine creaks at the effort.
+	It looks as though someone has carried it through a fire, 
+	and smells as though it was dragged through a gutter right after.
+	The odors of piss and smoke fill your nostrils, and it is deeply unpleasant.
+	Do you try to read it for clues, or discard the worthless piece of garbage?"""
+
+def read_diary ():
+	#automatically take diary pages wheen you pick it up
+	#these are the pages that you can look back to
+	print """ Most of the pages have stuck together, are covered in illegible, bleeding ink, or been ripped out.
+	The few pages you can make out can be folded into your notebook
+
+
+
+	"""
+def discard_diary ():
+	print """ Your great grand-grandfather's initials weren't GL anyway.
+	You're here for one reason and everything else is distraction."""
+
+def rope_bridge ():
+	#out the back door
+
 ##multiple things to inspect
 #can find diary
 #find redacted statement of purpose of initial brotherhood
@@ -106,8 +158,7 @@ def path_right():
 #rocky outcroppings and a path that diverges from the one that loops the wall, heads between the cliffs to a red beach
 #the red sand is strange and unearthly in the same way that the stones making up the wall are
 #footsteps are in the process of being washed away, but lead to an opening that is exposed at low tide
-def path_left():
-#winds away from the dock and shore.
+def path_left():the dock and shore.
 #trees appear immediately (look up what trees would be in the South Pacific) 
 #choice to follow the wall or head into the forest (you see a structure in the tallest tree there)
 
@@ -139,3 +190,7 @@ def walking_path_moment():
 #maybe this can just be a constant option, but it's observe basically
 #you see your ship retreating. The sea was flat and wind wouldn't catch for days. 
 #But now you see the sails are full. They move with speed and firm intention far, far away from here.
+
+
+#sanity hit after talking to the door with no knob? like if you take a second to reflect on it, 
+#you feel your mind melt and decide to forge on, that the rules here are different than the ones you know
