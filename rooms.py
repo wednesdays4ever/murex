@@ -438,12 +438,45 @@ def default_door():
 
 def push_or_pull_door():
 	rooms_intro.push_or_pull_door()
+
+	key1 = ['push', 'pull', 'touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key2 = ['Taymor', 'letter', 'search'] #add a key here?
+	key3 = ['who', 'your', 'name'] #add a key here?
+	key4 = ['need', 'let', 'dobbins'] #add a key here?
+	key5 = ['no way'] #add a key here?
 	#Finish this
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		door_eye_other()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		door_eye_attempt_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_eye_name()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door4":
+		door_eye_answer()
+	else:
+		door_eye_answer()
 
 def door_eye_answer():
 	rooms_intro.door_eye_answer()
 	#Finish this
 
+def door_eye_other():
+	rooms_intro.door_eye_other()
+	#Finish this (all paths lead to door_eye_not_chosen, perhaps need to add extra sentence to end of it)
+def door_eye_name():
+	rooms_intro.door_eye_name()
+
+def door_eye_attempt_enter():
+	rooms_intro.door_eye_attempt_enter()
+
+def door_eye_not_chosen():
+	rooms_intro.door_eye_not_chosen()
 
 
 
