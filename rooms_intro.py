@@ -233,4 +233,17 @@ SMALL CREATURE. WHY DO YOU COME? """
 
 def default_door():
 	print """ That did not seem to work. You remain locked out 
-and unenlightened.""" 
+and unenlightened."""
+
+def door_eye_answer():
+	print """ LONG AGO, ENTRANCE WAS FOR ALL, BUT HERETICS HAVE CLOSED OUR DOORS.
+THE SECRETS INSIDE ARE SAFE BEHIND ME. I WILL OPEN ONLY FOR THE CHOSEN ONES AND THEIR SERVANTS.
+ARE YOU MEANT TO ENTER?"""
+
+def path_left():
+	print """ The sand and rocks near the shore give way almost immediately to a firm, well-worn dirt path.
+It gets narrower as it winds into a thick, overgrown forest.
+It is obvious that, while it has seen much use, not much care has been taken with its upkeep recently.
+Do you head further into the forest? """
+
+
