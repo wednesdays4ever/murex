@@ -405,7 +405,7 @@ def default_from_dock():
 def door_with_no_knob(): 
 	rooms_intro.door_with_no_knob()
 
-	key1 = ['push', 'pull','touch','stroke']
+	key1 = ['push', 'pull', 'touch', 'stroke']
 	key2 = ['no way'] #add a key here?
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
@@ -421,11 +421,30 @@ def door_with_no_knob():
 
 def default_door():
 	rooms_intro.default_door()
-	#Finish this
+	
+	key1 = ['push', 'pull', 'touch', 'stroke', 'tap', 'knock']
+	key2 = ['no way'] #add a key here?
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		push_or_pull_door()
+	else:
+		default_door()
 
 def push_or_pull_door():
 	rooms_intro.push_or_pull_door()
 	#Finish this
+
+def door_eye_answer():
+	rooms_intro.door_eye_answer()
+	#Finish this
+
+
 
 
 start()
