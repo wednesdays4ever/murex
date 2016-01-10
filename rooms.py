@@ -474,8 +474,8 @@ def push_or_pull_door():
 def door_eye_answer():
 	rooms_intro.door_eye_answer()
 
-	key1 = ['servant', 'chosen', 'let', 'know' 'secrets']
-	key2 = ['touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key1 = ['yes', 'servant', 'chosen', 'let', 'know' 'secrets']
+	key2 = ['no', 'touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
 	key3 = ['leave', 'away', 'path', 'paths']
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
@@ -493,7 +493,6 @@ def door_eye_answer():
 	else:
 		door_waits()
 
-	#Finish this
 
 def door_eye_other():
 	rooms_intro.door_eye_other()
@@ -560,8 +559,28 @@ def door_eye_attempt_enter():
 		door_shut_eye()
 	else:
 		wait_after_door()
+
 def door_eye_not_chosen():
 	rooms_intro.door_eye_not_chosen()
+
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		wait_after_door()
 
 def door_waits():
 	rooms_intro.door_waits()
@@ -588,11 +607,90 @@ def door_waits():
 def leave_door():
 	rooms_intro.leave_door()
 
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		wait_after_door()
+
 def door_shut_eye():
 	rooms_intro.door_shut_eye()
 
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		wait_after_door()
+
 def wait_after_door():
 	rooms_intro.wait_after_door()
+
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		hopeless_wait()
+
+def hopeless_wait():
+	rooms_intro.hopeless_wait()
+
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		hopeless_wait()
 
 def path_left():
 	rooms_intro.path_left()
@@ -600,8 +698,6 @@ def path_left():
 def path_right():
 	rooms_intro.path_right()
 
-
-#need to add leave  or walk away and a default for that as a possible option in all door rooms
 
 
 start()
