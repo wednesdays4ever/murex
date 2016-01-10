@@ -406,7 +406,7 @@ def door_with_no_knob():
 	rooms_intro.door_with_no_knob()
 
 	key1 = ['push', 'pull', 'touch', 'stroke']
-	key2 = ['no way'] #add a key here?
+	key2 = ['leave', 'away', 'path', 'paths']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
@@ -416,6 +416,9 @@ def door_with_no_knob():
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
 		push_or_pull_door()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		leave_door()
 	else:
 		default_door()
 
@@ -423,7 +426,7 @@ def default_door():
 	rooms_intro.default_door()
 	
 	key1 = ['push', 'pull', 'touch', 'stroke', 'tap', 'knock']
-	key2 = ['no way'] #add a key here?
+	key2 = ['leave', 'away', 'path', 'paths']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
@@ -433,6 +436,9 @@ def default_door():
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
 		push_or_pull_door()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		leave_door()
 	else:
 		default_door()
 
@@ -440,11 +446,11 @@ def push_or_pull_door():
 	rooms_intro.push_or_pull_door()
 
 	key1 = ['push', 'pull', 'touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
-	key2 = ['Taymor', 'letter', 'search'] #add a key here?
-	key3 = ['who', 'your', 'name'] #add a key here?
-	key4 = ['need', 'let', 'dobbins'] #add a key here?
-	key5 = ['no way'] #add a key here?
-	#Finish this
+	key2 = ['Taymor', 'letter', 'search'] 
+	key3 = ['who', 'your', 'name'] 
+	key4 = ['need', 'let', 'dobbins'] 
+	key5 = ['leave', 'away', 'path', 'paths']
+	
 	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
@@ -459,25 +465,143 @@ def push_or_pull_door():
 	elif  housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door4":
 		door_eye_answer()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door5":
+		leave_door()
 	else:
 		door_eye_answer()
 
 def door_eye_answer():
 	rooms_intro.door_eye_answer()
+
+	key1 = ['servant', 'chosen', 'let', 'know' 'secrets']
+	key2 = ['touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key3 = ['leave', 'away', 'path', 'paths']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+	
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		door_eye_other()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		door_eye_attempt_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		leave_door()
+	else:
+		door_waits()
+
 	#Finish this
 
 def door_eye_other():
 	rooms_intro.door_eye_other()
-	#Finish this (all paths lead to door_eye_not_chosen, perhaps need to add extra sentence to end of it)
+
+	key1 = ['servant', 'chosen', 'let', 'know' 'secrets']
+	key2 = ['touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key3 = ['leave', 'away', 'path', 'paths']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		door_eye_attempt_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		door_eye_not_chosen()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		leave_door()
+	else:
+		door_waits()
+	#Finish this (all paths lead to door_eye_not_chosen or door_eye_attempt_enter, perhaps need to add extra sentence to end of it)
 def door_eye_name():
 	rooms_intro.door_eye_name()
+
+	key1 = ['servant', 'chosen', 'let', 'know' 'secrets']
+	key2 = ['touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key3 = ['leave', 'away', 'path', 'paths']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		door_eye_attempt_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		door_eye_not_chosen()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		leave_door()
+	else:
+		door_waits()
 
 def door_eye_attempt_enter():
 	rooms_intro.door_eye_attempt_enter()
 
+	key1 = ['left', 'forest']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['door', 'knock']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		path_left()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		door_shut_eye()
+	else:
+		wait_after_door()
 def door_eye_not_chosen():
 	rooms_intro.door_eye_not_chosen()
 
+def door_waits():
+	rooms_intro.door_waits()
+
+	key1 = ['servant', 'chosen', 'let', 'know' 'secrets']
+	key2 = ['touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
+	key3 = ['leave', 'away', 'path', 'paths']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		door_eye_attempt_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		door_eye_not_chosen()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		leave_door()
+	else:
+		door_eye_not_chosen()
+
+def leave_door():
+	rooms_intro.leave_door()
+
+def door_shut_eye():
+	rooms_intro.door_shut_eye()
+
+def wait_after_door():
+	rooms_intro.wait_after_door()
+
+def path_left():
+	rooms_intro.path_left()
+
+def path_right():
+	rooms_intro.path_right()
+
+
+#need to add leave  or walk away and a default for that as a possible option in all door rooms
 
 
 start()

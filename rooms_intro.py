@@ -240,10 +240,80 @@ def door_eye_answer():
 THE SECRETS INSIDE ARE SAFE BEHIND ME. I WILL OPEN ONLY FOR THE CHOSEN ONES AND THEIR SERVANTS.
 ARE YOU MEANT TO ENTER?"""
 
+def door_eye_other():
+	print """ IF THIS IS SOME SORT OF JOKE IT IS UNACCEPTABLE.
+I WAS AWAKENED BY THE CHOSEN TO GUARD HIS SECRETS, NOT ENTERTAIN HIS VISITORS.
+DISTURB ME AGAIN AT YOUR OWN PERIL.
+
+The eye is a slit now, it waits for your next move."""
+
+def door_eye_name():
+	print """ I AM YORHAM.
+I ASSUME, IF YOU ARE HERE HONORABLY, THAT YOU KNOW MY PURPOSE.
+I ASK AGAIN, ARE YOU MEANT TO ENTER? """
+
+def door_eye_attempt_enter():
+	print """ IT IS TRUE, YOUR BLOOD SMELLS PURE, 
+BUT YOUR INTENTIONS REMAIN A MYSTERY.
+THERE IS A FEAR IN YOU THAT HAS YET TO BE SNUFFED BY THE GREAT ONE.
+STEEL YOUR HEART BEFORE HE COMES.
+RETURN PURE OR DO NOT RETURN AT ALL.
+DELIVERANCE LIES BEHIND MY WALLS ALONE. 
+
+With that, the eye snaps shut, 
+and you are left alone again with a stone door 
+that cannot be opened by human hands.
+
+Paths stretch to the left, off into a forest
+and to the right, away from the walls and rocky cliffs."""
+
+def door_eye_not_chosen():
+	print """ I DO NOT WASTE TIME WITH THOSE WHO DO NOT WALK OUR PATH.
+BE GONE.
+FIND THE GLOW AND PROVE YOUR PURITY OR NEVER RETURN.
+
+With that, the eye snaps shut, 
+and you are left alone again with a stone door 
+that cannot be opened by human hands. 
+
+Paths stretch to the left, off into a forest
+and to the right, away from the walls and rocky cliffs."""
+
+def door_waits():
+	print """ The door eyes you suspiciously. 
+	This is a moment for action.
+	Satisfy the creature or remain unenlightened."""
+
+def door_shut_eye():
+	print """ The stone lid does not move. 
+	It's as if it was never animated. 
+	If you are to get in this way, you must return with answers."""
+
+def leave_door():
+	print """ You step away from the seeing door, 
+	understanding even less than you did upon arrival.
+	You are not certain if answers are to be found on the island,
+	but you do know that you are here to look.
+	Paths stretch to the left, off into a forest
+	and to the right, away from the walls and rocky cliffs."""
+
+def wait_after_door():
+	print """ The wind whistles and blows. 
+	Everything has confused you so far, and you can feel a sense of hopelessness drawing in on your mind. 
+	To survive in an unfamiliar world, you must forge on.
+
+	Paths stretch to the left, off into a forest
+and to the right, away from the walls and rocky cliffs."""
 def path_left():
-	print """ The sand and rocks near the shore give way almost immediately to a firm, well-worn dirt path.
-It gets narrower as it winds into a thick, overgrown forest.
-It is obvious that, while it has seen much use, not much care has been taken with its upkeep recently.
-Do you head further into the forest? """
+	print """ The sand and rocks near the shore give way almost immediately 
+	to a firm, well-worn dirt path.
+	It gets narrower as it winds into a thick, overgrown forest.
+	It is obvious that, while it has seen much use, 
+	not much care has been taken with its upkeep recently.
+	Do you head further into the forest? """
+
+def path_right():
+	pass
+	### do something at all with the right path
 
 
