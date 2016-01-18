@@ -1,3 +1,9 @@
+################
+#### Items #####
+################
+
+clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+
 notebook = ""
 clue = 'Nothing of note.'
 
@@ -22,7 +28,9 @@ diary = """
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
 
-		
+###################
+## Key Functions ##
+###################		
 
 def scan_input(raw):
 	lowered = raw.lower()

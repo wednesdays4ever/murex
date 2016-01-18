@@ -6,13 +6,6 @@ import os
 import housekeeping
 import rooms_intro
 
-clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
-
-################
-#### Items #####
-################
-
-#notebook = ""
 
 ################
 ##Start of Game#
@@ -34,10 +27,10 @@ def start():
 		help_menu()
 	elif housekeeping.match_input(scanned_input, key1, 
 								  key2, key3, key4, key5) == "door2":
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 	else:
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 
 def help_menu():
@@ -53,10 +46,10 @@ def help_menu():
 	key6 = ['begin']
 
 	if housekeeping.match_input == "door1":
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 	else:
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 
 
