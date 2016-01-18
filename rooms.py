@@ -5,6 +5,7 @@ from time import sleep
 import os
 import housekeeping
 import rooms_intro
+import start_and_dock_steps
 
 clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
 
@@ -694,6 +695,31 @@ def hopeless_wait():
 
 def path_left():
 	rooms_intro.path_left()
+
+	key1 = ['left', 'forest', 'dirt', 'forward','enter']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['return to docks', 'docks']
+	key4 = ['door','knock'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		forest_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		path_from_dock()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door4":
+		default_door()
+	else:
+		hopeless_wait()
+
+
 
 def path_right():
 	rooms_intro.path_right()
