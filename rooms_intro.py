@@ -301,9 +301,11 @@ def wait_after_door():
 	print """ The wind whistles and blows. 
 	Everything has confused you so far, and you can feel a sense of hopelessness drawing in on your mind. 
 	To survive in an unfamiliar world, you must forge on.
+	"""
+	sleep(3)
+	print """ Paths stretch to the left, off into a forest
+	and to the right, away from the walls and rocky cliffs."""
 
-	Paths stretch to the left, off into a forest
-and to the right, away from the walls and rocky cliffs."""
 def path_left():
 	print """ The sand and rocks near the shore give way almost immediately 
 	to a firm, well-worn dirt path.
@@ -311,6 +313,31 @@ def path_left():
 	It is obvious that, while it has seen much use, 
 	not much care has been taken with its upkeep recently.
 	Do you head further into the forest? """
+
+def forest_enter():
+	print """ Dense and overgrown, it becomes harder and harder to follow the path.
+Something about the thick air and large damp leaves reminds you of something.
+Your mind goes back to a favorite film from your childhood, 
+a nature tape about South America and its rainforests. 
+You cannot remember its title now, but it was narrated by a cheerful, British voice, 
+expounding on the countless layers of animal mystery in every centimeter of these 
+remote areas of the world."""
+	sleep(3)
+	print """ He encouraged you, while out in the world, 
+to take a moment and listen to all that surrounds you."""
+	sleep(2)
+	print "You do this now, and your stomach sinks."
+	sleep(2)
+	print """This is a silent forest."""
+	sleep(2)
+	print """ You have left behind even the sound of the waves.
+It lacks the life of your nature tape, 
+of any other place you've ever set foot in this world.
+You suddenly become aware of the swift thump of your heart. 
+It is the only perceivable sound and it is less than comforting.
+To proceed is to descend even further into silence, into dread.
+To turn back is to learn nothing.
+Indecision is not an option. """
 
 def path_right():
 	pass

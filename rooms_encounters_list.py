@@ -69,12 +69,16 @@ Your mind goes back to a favorite film from your childhood,
 a nature tape about South America and its rainforests. 
 You cannot remember its title now, but it was narrated by a cheerful, British voice, 
 expounding on the countless layers of animal mystery in every centimeter of these 
-remote areas of the world.
-He encouraged you, while out in the world, 
-to take a moment and listen to all that surrounds you.
-You do this now, and your stomach sinks. 
-This is a silent forest. 
-You have left behind even the sound of the waves.
+remote areas of the world."""
+	sleep(3)
+	print """ He encouraged you, while out in the world, 
+to take a moment and listen to all that surrounds you."""
+	sleep(2)
+	print "You do this now, and your stomach sinks."
+	sleep(2)
+	print """This is a silent forest."""
+	sleep(2)
+	print """ You have left behind even the sound of the waves.
 It lacks the life of your nature tape, 
 of any other place you've ever set foot in this world.
 You suddenly become aware of the swift thump of your heart. 
@@ -158,7 +162,8 @@ def path_right():
 #rocky outcroppings and a path that diverges from the one that loops the wall, heads between the cliffs to a red beach
 #the red sand is strange and unearthly in the same way that the stones making up the wall are
 #footsteps are in the process of being washed away, but lead to an opening that is exposed at low tide
-def path_left():the dock and shore.
+def path_left():
+#the dock and shore.
 #trees appear immediately (look up what trees would be in the South Pacific) 
 #choice to follow the wall or head into the forest (you see a structure in the tallest tree there)
 
