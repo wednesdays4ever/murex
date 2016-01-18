@@ -1,6 +1,29 @@
 notebook = ""
 clue = 'Nothing of note.'
 
+letter = """
+ELSA,
+	YOU WERE TOO YOUNG TO REMEMBER OUR ONLY MEETING, BUT I ASSUME YOU'VE HEARD OF ME. 
+	OUR SHARED RELATIVES ARE SMALL-MINDED, SO GOOD OR BAD, I WOULD NOT TRUST WHAT YOU HAVE HEARD.
+	TO TRUST EVEN YOU IS A RISK, BUT ONE I MUST TAKE. YOUR BLOOD IS MINE AND OURS IS OF THE ANCIENTS.
+	THE ISLE OF MURESTOS IS REMOTE, BUT THERE IS A CHARTERED SHIP THAT WILL BEGIN PREPARATIONS IMMEDIATELY WHEN YOU UTTER THE PASSWORD MUREX.
+	THE SEA IS RISING. THE CONDITIONS ARE PERFECT.
+	IF YOU CARE ABOUT THE FUTURE OF OUR WORLD AND MANY OTHERS, I WILL SEE YOU WITHIN THE MONTH."
+	THE ISLAND'S CARETAKER, MINISTER DOBBINS, WILL MEET YOU AT THE DOCK UPON YOUR ARRIVAL."
+		YOUR RELATION,
+			TAYMOR HUNTINGDON VII
+You barely remember him, and everything you've heard mentioned is so vague.
+Do you push to remember his childhood visit? Or revisit the stories your mother told? Or wait to see him yourself? """
+
+diary = """
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		The Diary of the Mad GL
+		>> His deepest secrets here. <<
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		"""
+
+		
+
 def scan_input(raw):
 	lowered = raw.lower()
 	scanned_input = lowered.split(' ')
