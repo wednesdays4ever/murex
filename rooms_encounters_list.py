@@ -125,30 +125,39 @@ and, gruesomely, scrawled in what looks like gore on the wall next to the opposi
 THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
 	sleep(6)
 	print """ The book is a diary. 
-A fine one, with a golden embossed G.L. on the cover,
-that has seen much wear and tear.
-Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
-But how can you know unless you ask?"""
+	A fine one, thick as an encyclopedia, that has seen much wear and tear.
+	G.L. is embossed in gold on the cover.
+	 Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
+	 But how can you know unless you ask?"""
 	 
 
-def open_diary():
+def open_diary ():
 	print """ As soon as you open the cover, dust and ash drift out from between musty, 
-yellowing pages, and the spine creaks at the effort.
-It looks as though someone has carried it through a fire, 
-and smells as though it was dragged through a gutter right after.
-The odors of piss and smoke fill your nostrils, and it is deeply unpleasant.
-Do you try to read it for clues, or discard the worthless piece of garbage?"""
+	yellowing pages, and the spine creaks at the effort.
+	It looks as though someone has carried it through a fire, 
+	and smells as though it was dragged through a gutter right after.
+	The odors of piss and smoke fill your nostrils, and it is deeply unpleasant.
+	Do you try to read it for clues, or discard the worthless piece of garbage?"""
 
 def read_diary ():
 	#automatically take diary pages wheen you pick it up
-	#these are the pages that you can look back to
+	#these are the pages that you can look back to in notebook
 	print """ Most of the pages have stuck together, are covered in illegible, bleeding ink, or been ripped out.
-The few pages you can make out can be folded into your notebook
-\n \n \n """
+	The few pages you can make out can be folded into your notebook."""
 
+def G_L_diary_consult ():
+	print """ 
+	APRIL, EXPECTANS ANNIS VI
+
+	Great, great strides have been made.
+	Our fortress is complete and I do believe that it is worthy of the one we serve. 
+	Discovery continues. 
+	My bones vibrate with possibility.
+	To harness the Great One's power is to change this imperfect world forever.
+	"""
 def discard_diary ():
 	print """ Your great grand-grandfather's initials weren't GL anyway.
-You're here for one reason and everything else is distraction."""
+	You're here for one reason and everything else is distraction."""
 
 def rope_bridge ():
 	#out the back door
@@ -163,7 +172,9 @@ def path_right():
 #rocky outcroppings and a path that diverges from the one that loops the wall, heads between the cliffs to a red beach
 #the red sand is strange and unearthly in the same way that the stones making up the wall are
 #footsteps are in the process of being washed away, but lead to an opening that is exposed at low tide
-
+def path_left():the dock and shore.
+#trees appear immediately (look up what trees would be in the South Pacific) 
+#choice to follow the wall or head into the forest (you see a structure in the tallest tree there)
 
 def forest_ruins():
 #a bizarre thriving tree-dwelling community once lived here
