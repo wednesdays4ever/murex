@@ -23,8 +23,81 @@ Do you push to remember his childhood visit? Or revisit the stories your mother 
 
 diary = """
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		The Diary of the Mad GL
-		>> His deepest secrets here. <<
+		APRIL, EXPECTANS ANNIS IV
+
+	Great, great strides have been made.
+	Early setbacks have been overcome, 
+	and the group that first arrived four years ago 
+	remains on the divine course ordained for us.
+	Our fortress is complete and I do believe that 
+	it is worthy of the One we serve. 
+	Discovery continues. 
+	My bones vibrate with possibility.
+	To harness the Great One's power 
+	is to change this imperfect world forever.
+	Hope slides toward us, 
+	in the violet sunset, 
+	across the horizon.
+
+
+		JANUARY, EXPECTANS ANNIS V
+
+	It is snowing at home, I imagine.
+	At the outset, I believed that Angela would
+	be by my side again by this time.
+	The pangs of homesickness and doubt
+	and mistrust of my fellow servants
+	may be embraced as proof that I am only
+	an imperfect human leader.
+	Ultimately, 
+	the Great One's consciousness will consume mine,
+	and all uncertainty will cease.
+
+
+		MARCH, EXPECTANS ANNIS V
+
+	Seven of our number have drowned at the Holy Beach.
+	High Priest Huntingdon was the only one to return 
+	from what should have been a typical salute to the sea.
+	He claims that as they knelt and he led them in the Deference,
+	a great wave larger than any he'd seen before
+	rose up and crashed down upon them.
+	When it washed away, he was the only one standing.
+	The seven had been ripped out to sea.
+	Huntingdon sees this as a sign that
+	the Great One is ready to approach us,
+	but is frustrated and kept at bay by
+	imperfections in our number.
+
+	It is true that all of the drowned 
+	had voiced controversial opinions during their time as servants.
+	But in my memory,
+	their words were directed at our High Priest himself, 
+	and not with any disrespect to the one we serve.
+
+	I am an imperfect servant,
+	and suspicion clouds my grief.
+
+
+		MAY, EXPECTANS ANNIS VII
+
+	Exiled. 
+	Kept from the house I built and pledged to serve.
+	But we cannot leave the island where we believe
+	the Great One will one day return,
+	I wait here, in my makeshift study, 
+	humiliated by the beautiful glimmer of the spire that
+	tops the temple I built in service
+	through this treehouse window.
+
+	A small group of the devout have followed me here. 
+	The Great One will know who was loyal.
+	Taymor has abandoned reason, 
+	he no longer seeks improvement of this world
+	and only ascension for himself.
+	Thoughts of the punishment he is sure to receive
+	are my only comfort in isolation.
+	
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
 
