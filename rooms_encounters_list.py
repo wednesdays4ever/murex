@@ -118,8 +118,8 @@ def tree_house_inspect ():
 
 def diary ():
 	print """ The book is a diary. 
-	A fine one, with a golden embossed G.L. on the cover,
-	 that has seen much wear and tear.
+	A fine one, thick as an encyclopedia, that has seen much wear and tear.
+	G.L. is embossed in gold on the cover.
 	 Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
 	 But how can you know unless you ask?"""
 	 
@@ -134,12 +134,19 @@ def open_diary ():
 
 def read_diary ():
 	#automatically take diary pages wheen you pick it up
-	#these are the pages that you can look back to
+	#these are the pages that you can look back to in notebook
 	print """ Most of the pages have stuck together, are covered in illegible, bleeding ink, or been ripped out.
-	The few pages you can make out can be folded into your notebook
+	The few pages you can make out can be folded into your notebook."""
 
+def G_L_diary_consult ():
+	print """ 
+	APRIL, EXPECTANS ANNIS VI
 
-
+	Great, great strides have been made.
+	Our fortress is complete and I do believe that it is worthy of the one we serve. 
+	Discovery continues. 
+	My bones vibrate with possibility.
+	To harness the Great One's power is to change this imperfect world forever.
 	"""
 def discard_diary ():
 	print """ Your great grand-grandfather's initials weren't GL anyway.
