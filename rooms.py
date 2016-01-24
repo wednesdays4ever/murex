@@ -6,27 +6,6 @@ import os
 import housekeeping
 import rooms_intro
 
-clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
-
-################
-#### Items #####
-################
-
-#notebook = ""
-
-letter = """
-ELSA,
-	YOU WERE TOO YOUNG TO REMEMBER OUR ONLY MEETING, BUT I ASSUME YOU'VE HEARD OF ME. 
-	OUR SHARED RELATIVES ARE SMALL-MINDED, SO GOOD OR BAD, I WOULD NOT TRUST WHAT YOU HAVE HEARD.
-	TO TRUST EVEN YOU IS A RISK, BUT ONE I MUST TAKE. YOUR BLOOD IS MINE AND OURS IS OF THE ANCIENTS.
-	THE ISLE OF MURESTOS IS REMOTE, BUT THERE IS A CHARTERED SHIP THAT WILL BEGIN PREPARATIONS IMMEDIATELY WHEN YOU UTTER THE PASSWORD MUREX.
-	THE SEA IS RISING. THE CONDITIONS ARE PERFECT.
-	IF YOU CARE ABOUT THE FUTURE OF OUR WORLD AND MANY OTHERS, I WILL SEE YOU WITHIN THE MONTH."
-	THE ISLAND'S CARETAKER, MINISTER DOBBINS, WILL MEET YOU AT THE DOCK UPON YOUR ARRIVAL."
-		YOUR RELATION,
-			TAYMOR HUNTINGDON VII
-You barely remember him, and everything you've heard mentioned is so vague.
-Do you push to remember his childhood visit? Or revisit the stories your mother told? Or wait to see him yourself? """
 
 ################
 ##Start of Game#
@@ -48,10 +27,10 @@ def start():
 		help_menu()
 	elif housekeeping.match_input(scanned_input, key1, 
 								  key2, key3, key4, key5) == "door2":
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 	else:
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 
 def help_menu():
@@ -67,10 +46,10 @@ def help_menu():
 	key6 = ['begin']
 
 	if housekeeping.match_input == "door1":
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 	else:
-		print clear_screen
+		print housekeeping.clear_screen
 		ship_awaken()
 
 
@@ -164,10 +143,13 @@ def captain_iii():
 		read_letterii()
 
 def read_letteri():
-	print """ You can't help but open the well worn envelope one more time before you dock. Something about it is irresistible.
-You slide your finger across the dark blue wax seal, stamped with the shape of a strange and spiny, spiral seashell.
-Your great-grandfather's handwriting stands out in green ink that almost glows against the thick, cream paper. """
-	print letter 
+	rooms_intro.read_letteri
+	print housekeeping.letter 
+
+	item = "* Preparations password = murex; Island caretaker = Dobbins \n"
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
 
 	key1 = ['childhood','visit']
 	key2 = ['stories', 'revisit','story','mother']
@@ -187,8 +169,13 @@ Your great-grandfather's handwriting stands out in green ink that almost glows a
 		dock_arrivei()
 
 def read_letterii():
-	rooms_intro.read_letteri()
-	print letter
+	rooms_intro.read_letterii()
+	print housekeeping.letter
+
+	item = "* Seal is stamped with spiral seashell \n"
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
 	
 	key1 = ['childhood','visit']
 	key2 = ['stories', 'revisit','story','mother']
@@ -229,13 +216,19 @@ def visit_memory():
 
 def mother_story():
 	rooms_intro.mother_story()
+
+	item = "* Mother held in truck on oceanic journey \n"
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
+
 	wait_dock()
 
 def wait_dock():
 	rooms_intro.wait_dock()
 
 	key1 = ["note","nailed"]
-	key2 = ["letter", "great-grandfather"]
+	key2 = ["letter", "revisit", "great-grandfather"]
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
@@ -253,12 +246,11 @@ def wait_dock():
 
 def dock_note():
 	rooms_intro.dock_note()
-
 	still_on_dock()
 
 def read_letteriii():
 	rooms_intro.read_letteriii()	
-	print letter
+	print housekeeping.letter
 
 	key1 = ["note","nailed"]
 	key2 = ["path","island"]
@@ -368,10 +360,10 @@ def path_from_dock():
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
-		dock_path_left()
+		path_left()
 	elif housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door2":
-		dock_path_right()
+		path_right()
 	elif housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door3":
 	    door_with_no_knob()
@@ -392,10 +384,10 @@ def default_from_dock():
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
-		dock_path_left()
+		path_left()
 	elif housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door2":
-		dock_path_right()
+		path_right()
 	elif housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door3":
 	    door_with_no_knob()
@@ -473,6 +465,11 @@ def push_or_pull_door():
 
 def door_eye_answer():
 	rooms_intro.door_eye_answer()
+
+	item = "* The eyes says it will only open for chosen ones. \n"
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
 
 	key1 = ['yes', 'servant', 'chosen', 'let', 'know' 'secrets']
 	key2 = ['no', 'touch', 'tap', 'knock', 'hit', 'strike', 'punch', 'attack']
@@ -670,6 +667,7 @@ def wait_after_door():
 	else:
 		hopeless_wait()
 
+#MISSING HOPELESS WAIT
 def hopeless_wait():
 	rooms_intro.hopeless_wait()
 
@@ -695,9 +693,152 @@ def hopeless_wait():
 def path_left():
 	rooms_intro.path_left()
 
+	key1 = ['left', 'forest', 'dirt', 'forward','enter']
+	key2 = ['right', 'cliff', 'cliffs', 'rocks']
+	key3 = ['return to docks', 'docks']
+	key4 = ['door','knock'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		forest_enter()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_right()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		path_from_dock()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door4":
+		default_door()
+	else:
+		hopeless_wait()
+
+def forest_enter():
+	rooms_intro.forest_enter()
+
+	key1 = ['proceed','forest', 'forward','enter']
+	key2 = ['turn back', 'return', 'docks']
+	key3 = ['door'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		forest_ruins()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		path_from_dock
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		default_from_dock
+	else:
+		forest_ruins()
+
+def forest_ruins():
+	rooms_intro.forest_ruins()
+
+	key1 = ['rope ladder', 'climb rope', 'tree house', 'approach tree']
+	key2 = ['clearing', 'head down path']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		tree_house()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		clearing_path()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door3":
+		default_forest()
+	else:
+		tree_house()
+
+def default_forest():
+	rooms_intro.default_forest()
+	tree_house() 
+
+def tree_house():
+	rooms_intro.tree_house()
+
+	key1 = ['start', 'walk around']
+	key2 = ['clearing', 'leave tree house']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		tree_house_inspect()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		clearing_path()
+	else:
+		tree_house_inspect()
+
+def tree_house_inspect():
+	rooms_intro.tree_house_inspect()
+
+	key1 = ['read', 'open', 'diary']
+	key2 = ['clearing', 'leave tree house']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		open_diary()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		clearing_path()
+	else:
+		open_diary()
+
+def open_diary():
+	rooms_intro.open_diary()
+
+	key1 = ['read', 'open', 'clues']
+	key2 = ['discard', 'toss', 'worthless']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		read_diary()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		discard_diary()
+	else:
+		read_diary()
+
+def read_diary():
+	rooms_intro.read_diary()
+
+	item = housekeeping.diary
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
+
+	pass
+
+def discard_diary():
+	rooms_intro.discard_diary()
+	pass
+
+def clearing_path():
+	pass
+
 def path_right():
 	rooms_intro.path_right()
-
 
 
 start()

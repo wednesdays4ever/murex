@@ -69,12 +69,16 @@ Your mind goes back to a favorite film from your childhood,
 a nature tape about South America and its rainforests. 
 You cannot remember its title now, but it was narrated by a cheerful, British voice, 
 expounding on the countless layers of animal mystery in every centimeter of these 
-remote areas of the world.
-He encouraged you, while out in the world, 
-to take a moment and listen to all that surrounds you.
-You do this now, and your stomach sinks. 
-This is a silent forest. 
-You have left behind even the sound of the waves.
+remote areas of the world."""
+	sleep(3)
+	print """ He encouraged you, while out in the world, 
+to take a moment and listen to all that surrounds you."""
+	sleep(2)
+	print "You do this now, and your stomach sinks."
+	sleep(2)
+	print """This is a silent forest."""
+	sleep(2)
+	print """ You have left behind even the sound of the waves.
 It lacks the life of your nature tape, 
 of any other place you've ever set foot in this world.
 You suddenly become aware of the swift thump of your heart. 
@@ -93,30 +97,33 @@ But then you realize, the silence persists.
 Across the clearing, the path picks back up.
 To your left, a rope ladder leads up to a tree house. """
 
-def tree_house ():
+def tree_house():
 	print """ This is not at all what you were expecting from the disarray in the clearing.
 	This finished interior would be more fitting in an Ivy League library 
 	than a makeshift building in the South Pacific.
 	But the formerly beautiful room is in tatters.
-	Some violence has happened here.
+	Some violence has happened here."""
+	sleep(4)
+	print"""
 	Leatherbound books lay ripped apart and scorched on the dark, polished mahogany floor.
 	A small side table with accompanying chess set lies overturned 
 	next to a finely upholstered chair.
 	This place must somehow be related to the compound.
-	Could this have been Taymor's den? 
+	Could this have been Taymor's den?"""
+	sleep(2)
+	print """"
 	Were you too late to respond to his letter?
 	The room fills you with sadness,
 	but if you're here to learn about your relative, this seems like a place to start.
 	"""
 
-def tree_house_inspect ():
+def tree_house_inspect():
 	print """ Upon closer inspection, you notice a few things that seem out of the ordinary:
-	The corner of a hardcover book peeking out from under the chair's cushion,
-	The initials G.L. embossed on the back of the chair,
-	and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
-	THE END IS THE ONLY OUTCOME. WE WILL PREVAIL."""
-
-def diary ():
+The corner of a hardcover book peeking out from under the chair's cushion,
+The initials G.L. embossed on the back of the chair,
+and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
+THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
+	sleep(6)
 	print """ The book is a diary. 
 	A fine one, thick as an encyclopedia, that has seen much wear and tear.
 	G.L. is embossed in gold on the cover.
