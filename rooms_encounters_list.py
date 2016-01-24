@@ -90,12 +90,12 @@ Indecision is not an option. """
 def forest_ruins():
 	print """ Moments after it felt as though the path would end in overgrowth, 
 	it breaks open into a large, man made clearing.
-A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
-sit above a central fire pit.
-These signs of life bring you a moment of joy.
-But then you realize, the silence persists.
-Across the clearing, the path picks back up.
-To your left, a rope ladder leads up to a tree house. """
+	A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
+	sit above a central fire pit.
+	These signs of life bring you a moment of joy.
+	But then you realize, the silence persists.
+	Across the clearing, the path picks back up.
+	To your left, a rope ladder leads up to a tree house. """
 
 def tree_house():
 	print """ This is not at all what you were expecting from the disarray in the clearing.
@@ -129,9 +129,8 @@ THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
 	G.L. is embossed in gold on the cover.
 	 Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
 	 But how can you know unless you ask?"""
-	 
 
-def open_diary ():
+def open_diary():
 	print """ As soon as you open the cover, dust and ash drift out from between musty, 
 	yellowing pages, and the spine creaks at the effort.
 	It looks as though someone has carried it through a fire, 
@@ -139,34 +138,206 @@ def open_diary ():
 	The odors of piss and smoke fill your nostrils, and it is deeply unpleasant.
 	Do you try to read it for clues, or discard the worthless piece of garbage?"""
 
-def read_diary ():
+def read_diary():
 	#automatically take diary pages wheen you pick it up
 	#these are the pages that you can look back to in notebook
 	print """ Most of the pages have stuck together, are covered in illegible, bleeding ink, or been ripped out.
 	The few pages you can make out can be folded into your notebook."""
 
-def G_L_diary_consult ():
-	print """ 
-	APRIL, EXPECTANS ANNIS VI
-
-	Great, great strides have been made.
-	Our fortress is complete and I do believe that it is worthy of the one we serve. 
-	Discovery continues. 
-	My bones vibrate with possibility.
-	To harness the Great One's power is to change this imperfect world forever.
-	"""
-def discard_diary ():
+def discard_diary():
 	print """ Your great grand-grandfather's initials weren't GL anyway.
 	You're here for one reason and everything else is distraction."""
 
-def rope_bridge ():
-	#out the back door
+def rope_bridge():
+	print """ The door at the other side of the study opens straight onto a rope bridge.
+	Across, you see a large, circular structure with a thatched roof. 
+	It swings back and forth in the light breeze.
+	Do you venture forward for further investigation, or close the door and turn back?"""
 
-##multiple things to inspect
-#can find diary
-#find redacted statement of purpose of initial brotherhood
-#chair has embossed initials GL
-#scrawled on wall, the same symbol as front door and message: we seek only one outcome. we will prevail
+def no_bridge():
+	print """ You turn back into the sad, smelly little room.
+	The ladder down and the door to the bridge are the only paths out."""
+
+def cross_bridge():
+	print"""The bridge swings wildly and forces you to take slow, careful steps.
+	It is certainly treacherous, but something within you keeps fear at bay.
+	To adventure, to address danger, feels natural here.
+	Necessary. 
+	At the other side, you stand at the wooden door to the thatched structure.
+	A closed eye just like the one on the stone fortress is painted on the front."""
+
+def second_sect_hq():
+	print """ This eye does not open as you enter.
+	The interior of the thatched hut has a dark, musty gravity.
+	Serious things were discussed here by sad men.
+	Secrets have seeped into the dust.
+	A long mahogany table sits in the center, 
+	the image of a huge, spiny seashell
+	carved crudely into the beautiful wood.
+	A dozen chairs line its sides with 
+	one, large commanding seat at the head of the table.
+	Behind it, a handwritten piece of paper is tacked to the wall.
+	Another ladder leads down to the ground."""
+
+def second_sect_manifesto():
+	#the text of the page can be added to your notebook
+	print """ You move across the room until you are close enough 
+	to make out words on the tacked up page. 
+
+	SECOND SECT OF THE SERVANTS OF THE MUREX
+	A call to return to service.
+	The task of our brotherhood was always 
+	to invite divinity into our small and tainted world,
+	to bring greatness close enough to man's touch that our race could glow 
+	like the old ones who lived before us, and continue to live on, 
+	beyond and outside of the constraints of our limited understanding.
+	This path has been abandoned 
+	by heretics who now hold the seat of our holy order hostage,
+	but when the Great One comes to swallow us whole, 
+	he will taste the difference between 
+	the sour, vile and selfish opportunist 
+	and the sweet purity of the true believer.
+
+	That is all you can make out, 
+	as the bottom has been ripped away
+	and spattered with ink and blood.
+	"""
+
+def ladder_down():
+	print """ The ladder leads down 
+	into a much smaller clearing than the first you encountered.
+	A path leads back in what you believe to be the direction of the first large forest clearing, 
+	but there are also signs that someone has walked further into the forest, 
+	footsteps through a thicket. 
+	Do you take the path, or continue your investigation?"""
+
+def path_back():
+	print """ This path winds back through the trees. 
+	You find yourself at the first, large forest clearing that you encountered."""
+	#then print first description again
+
+def follow_steps():
+	print """ You follow the footsteps into a thicket, 
+	which opens up almost immediately to the entrance of a small cave.
+	Do you enter the darkness?"""
+
+def cave_enter():
+	print """ The low ceiling forces you to your knees.
+	A dim, smoky light and a foul, sour smell come from deeper in.
+	Your natural senses are repulsed, but secrets are rarely pleasant
+	and you are here for discovery, so you crawl forward.
+	Around a bend, you find the source of the light.
+	A skinny, bearded man sits cross legged in a sea of candles, 
+	wrapped in the tatters of a royal purple velvet robe, 
+	emroidered across the breast with a golden G.L.
+	He looks up at you as a dog who expects another kick.
+	What do you say to the pitiful man?"""
+
+def GL_introduce():
+	print """ I AM GUY LEICESTER,
+	HEAD OF THE ONE TRUE BROTHERHOOD OF THE MUREX. 
+	WHY HAVE YOU ENTERED MY CHAMBER?"""
+
+def GL_threaten():
+	print """ He laughs before responding to your threat.
+	IF YOU HAD KNOWN THE PAIN THAT ALREADY LIVES IN ME,
+	YOU WOULD NOT HAVE EMBARRASSED YOURSELF 
+	BY PRESUMING YOU WERE ABLE TO INFLICT MORE.
+	I'LL FORGIVE IT ONCE.
+	WHY ARE YOU HERE?"""
+
+def GL_Taymor():
+	print """YOU HAVE THE EYES OF THE MAN WHO TOOK IT ALL AWAY. 
+	I CAN TELL ON SIGHT THAT YOU ARE RELATED. 
+	I CAN ALSO SEE THAT IT IS NOT TOO LATE FOR YOU.
+	EMBRACE THE TRUE NATURE OF THE ONE WE SERVE,
+	AND MAYBE YOU CAN STEER THE LOST PRIEST BACK TO GREATNESS.
+	DON'T YOU WANT TO SEE THE WORLD EVOLVE?"""
+
+def GL_diary_show():
+	print """ I DON'T KNOW WHAT YOU THINK YOU'VE LEARNED.
+	REAL ANSWERS LIE INSIDE THE FORTRESS ON THE TEMPLE GROUNDS.
+	WHY DID YOU COME HERE?
+	DO YOU ASPIRE TO SERVICE?"""
+	#IF YES, PURITY
+	#IF NO, NO PATIENCE
+
+def GL_purity():
+	print """ TO SERVE THE GREAT ONE,
+	YOU MUST PROVE YOUR PURITY.
+
+	HAVE YOU EVER EXTINGUISHED LIFE?"""
+	#no matter what, GL end me
+
+def GL_no_patience():
+	print """ He glares.
+	JUST BECAUSE I HAVE WAITED FOR DECADES
+	DOES NOT MEAN THAT MY TIME IS WORTHLESS.
+	TELL ME WHY YOU ARE HERE 
+	OR I WILL MAKE YOU LEAVE."""
+	#if mentions anything to do with temple or taymor, go to gl_end_me
+	#elif GL_no_kill
+
+def GL_end_me():
+	print """HORRIBLE THINGS I'VE BEEN MADE TO WITNESS.
+	I AM NO LONGER USEFUL AS HIS SERVANT ON THIS PLANE.
+	BUT I CAN PUT MY HOPE IN YOU.
+	I KNOW THAT I CANNOT ASK FOR GUARANTEES,
+	BUT I HOPE THAT WHEN YOU SEE THE TRUTH, THE HORROR,
+	YOU WILL REALIZE WHAT YOU MUST DO.
+
+	END ME, AND THE ACT WILL GRANT YOU ENTRANCE TO THE TEMPLE GROUNDS.
+
+	He produces a thin, golden dagger, which he hands gently to you.
+
+	YORHAM WILL SMELL MY BLOOD ON YOUR HANDS 
+	AND KNOW YOUR PURITY. 
+
+	His eyes water as he looks up at you with a toothless smile.
+	Do you end this miserable life? """
+
+def GL_dead():
+	print """ His life leaves its broken vessel easily.
+	Blood pours freely, extinguishing many of the candles,
+	and soaking your clothes.
+	The smell is horrible,
+	but the peaceful, powerful smile of a man at rest
+	warms the room, making it feel less gruesome
+	than it might otherwise.
+
+	You have killed. 
+	It is time to test the blood."""
+
+def GL_no_kill():
+	print """He cackles at you.
+	TO CONTINUALLY BELIEVE THAT THERE IS ANOTHER, 
+	MORE PLEASANT PATH 
+	IS A PARTICULARLY HUMAN FANTASY.
+	THERE IS MORE WEAKNESS IN YOU THAN I EXPECTED.
+	BE GONE BEFORE I SPILL YOUR BLOOD INSTEAD."""
+
+def GL_no_kill_leave():
+	print""" The man is crazed and willing to kill,
+	you see it in his eyes and flee.
+	You find yourself at the entrance to the cave,
+	no closer to the truth."""
+
+def GL_no_kill_stay():
+	print """ You have faltered as an investigator,
+	and Leicester follows through with his promise.
+
+	IMPURITY CANNOT BE TOLERATED IN HIS HOUSE.
+
+	You find the golden dagger buried deep in your stomach.
+	As you close your eyes,
+	you enter a vision,
+	like a dream,
+	of thumbing through a book thousands of pages of long,
+	in a language you do not recognize.
+	So much knowledge.
+	An endless universe of truths 
+	that you will never begin to understand."""
+	#respawn at dock?
 
 def path_right():
 #rocky outcroppings and a path that diverges from the one that loops the wall, heads between the cliffs to a red beach
@@ -175,23 +346,6 @@ def path_right():
 def path_left():the dock and shore.
 #trees appear immediately (look up what trees would be in the South Pacific) 
 #choice to follow the wall or head into the forest (you see a structure in the tallest tree there)
-
-def forest_ruins():
-#a bizarre thriving tree-dwelling community once lived here
-#multiple tree platforms to explore
-#clues to find: the diary of G. Leicester, a manifesto of splinter murex group (glory of the current man, we can use their secrets without calling them back)
-#manifesto - the holy order does not have the improvement of our own lives at heart - they seek a greater power - we were lied to
-#diary - the man is insane. our ships out were supposed to arrive days ago. we wait for some savior
-#deeper into forest or return to path
-
-def hermit_hollow():
-#crazy ranting man (owner of the diary G. Leicester) - he walks you around in a circular conversation
-#if asked about the diary he tells you that Taymor is a great man with a great number of secrets
-#he enjoys eating seagulls
-#veiled reference to the higher ups? greater race
-#he clutches a ripped out page from the diary - they've come, our small band is lost
-#go find the grotto. i am tired. i've been tired for so long. i'll stay sitting here. go ask the ones with the answers
-#if you go deeper into the forest you get lost and find yourself back at the path
 
 def follow_left_wall():
 	# this wall is made of a stone you're unfamiliar with. you're no mason, but something is unusual, unearthly about it
