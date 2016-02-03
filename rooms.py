@@ -145,6 +145,7 @@ def captain_iii():
 def read_letteri():
 	rooms_intro.read_letteri
 	print housekeeping.letter 
+	print housekeeping.reaction_to_letter
 
 	item = "* Preparations password = murex; Island caretaker = Dobbins \n"
 
@@ -171,6 +172,7 @@ def read_letteri():
 def read_letterii():
 	rooms_intro.read_letterii()
 	print housekeeping.letter
+	print housekeeping.reaction_to_letter
 
 	item = "* Seal is stamped with spiral seashell \n"
 
@@ -197,7 +199,7 @@ def read_letterii():
 def visit_memory():
 	rooms_intro.visit_memory()
 
-	key1 = ["note","nailed"]
+	key1 = ["note","nailed", "read"]
 	key2 = ["path", "island"]
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
@@ -227,7 +229,7 @@ def mother_story():
 def wait_dock():
 	rooms_intro.wait_dock()
 
-	key1 = ["note","nailed"]
+	key1 = ["note","nailed", "read"]
 	key2 = ["letter", "revisit", "great-grandfather"]
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
@@ -251,6 +253,7 @@ def dock_note():
 def read_letteriii():
 	rooms_intro.read_letteriii()	
 	print housekeeping.letter
+	print housekeeping.reaction_to_letter
 
 	key1 = ["note","nailed"]
 	key2 = ["path","island"]
@@ -693,7 +696,7 @@ def hopeless_wait():
 def path_left():
 	rooms_intro.path_left()
 
-	key1 = ['left', 'forest', 'dirt', 'forward','enter']
+	key1 = ['left', 'forest', 'dirt', 'forward','enter', 'further']
 	key2 = ['right', 'cliff', 'cliffs', 'rocks']
 	key3 = ['return to docks', 'docks']
 	key4 = ['door','knock'] #add a key here?
@@ -775,6 +778,8 @@ def tree_house():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
+	scanned_input = housekeeping.ask_input()
+
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
 		tree_house_inspect()
@@ -792,6 +797,8 @@ def tree_house_inspect():
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
@@ -811,6 +818,8 @@ def open_diary():
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
+	scanned_input = housekeeping.ask_input()
+
 	if housekeeping.match_input(scanned_input, key1, 
 									 key2, key3, key4, key5) == "door1":
 		read_diary()
@@ -828,11 +837,152 @@ def read_diary():
 	if item not in housekeeping.notebook: 
 		housekeeping.notebook += item
 
-	pass
+	rope_bridge()
 
 def discard_diary():
 	rooms_intro.discard_diary()
+	rope_bridge()
 	pass
+
+def rope_bridge():
+	rooms_intro.rope_bridge()
+
+	key1 = ['forward', 'venture', 'bridge']
+	key2 = ['return', 'back', 'close', 'door']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?	
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		cross_bridge()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		no_bridge()
+	else:
+		cross_bridge()
+
+def no_bridge():
+	rooms_intro.no_bridge()
+
+	key1 = ['forward', 'venture', 'bridge']
+	key2 = ['ladder', 'down', 'clearing']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?	
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		cross_bridge()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		clearing_path()
+	else:
+		cross_bridge()
+
+def cross_bridge():
+	rooms_intro.cross_bridge()
+
+	key1 = ['continue', 'closed eye', 'fortress']
+	key2 = ['ladder', 'down', 'clearing']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		second_sect_hq()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		clearing_path()
+	else:
+		second_sect_hq()
+
+def second_sect_hq():
+	rooms_intro.second_sect_hq()
+
+	key1 = ['read', 'paper', 'pick up']
+	key2 = ['ladder', 'down', 'ground']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door1":
+		second_sect_manifesto()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2, key3, key4, key5) == "door2":
+		ladder_down()
+	else:
+		second_sect_manifesto()
+
+def second_sect_manifesto():
+	rooms_intro.second_sect_manifesto()
+
+	item = housekeeping.manifesto
+
+	if item not in housekeeping.notebook: 
+		housekeeping.notebook += item
+
+	ladder_down()
+
+def ladder_down():
+	rooms_intro.ladder_down()
+	
+	key1 = ['continue', 'investigation', 'forest', 'footsteps']
+	key2 = ['path', 'return', 'clearing']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		follow_steps()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		path_back()
+	else:
+		follow_steps()
+
+def follow_steps():
+	rooms_intro.follow_steps()
+
+	key1 = ['continue', 'enter', 'darkness']
+	key2 = ['path', 'return', 'clearing']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		cave_enter
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		path_back()
+	else:
+		cave_enter
+
+def cave_enter():
+	rooms_intro.cave_enter()
+	pass	
+
+
+def path_back():
+	rooms_intro.path_back()
+	default_forest()
+
 
 def clearing_path():
 	pass

@@ -118,6 +118,8 @@ stamped with the shape of a strange and spiny, spiral seashell.
 Your great-grandfather's handwriting stands out in green ink 
 that almost glows against the thick, cream paper. """
 
+
+
 def visit_memory():
 	print """The man's face is a shadow, 
 but you recall your mother in an intense argument with him. \n
@@ -182,11 +184,14 @@ def wait_dock():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship 
-bump against the dock with a hard wooden knock.
-Before you realize what is happening, 
-the crew has shuffled you off the deck, thrown your bag at your feet, and set sail once more.
-The letter that sent you here in the first pokes against your ribs from inside your pocket. 
-A note is nailed to one of the posts on the dock.
+bump against the dock with a hard wooden knock. \n
+Before you realize what is happening, the crew has shuffled you off the deck, 
+thrown your bag at your feet, and set sail once more.\n"""
+sleep(5)
+print """ The letter that sent you here in the first 
+pokes against your ribs from inside your pocket."""
+sleep(2)
+print """ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
 def dock_note():
@@ -343,15 +348,17 @@ To survive in an unfamiliar world, you must forge on.
 and to the right, away from the walls and rocky cliffs."""
 
 def hopeless_wait():
-	print "This step is missing"
+	print """Time feels to be stopped. You reawaken as if in a dream. 
+To which direction do you turn?"""
 
 def path_left():
 	print """ The sand and rocks near the shore give way almost immediately 
 to a firm, well-worn dirt path.
 It gets narrower as it winds into a thick, overgrown forest.
 It is obvious that, while it has seen much use, 
-not much care has been taken with its upkeep recently.
-Do you head further into the forest? """
+not much care has been taken with its upkeep recently.\n"""
+	sleep(3)
+	print "Do you head further into the forest? "
 
 
 def forest_enter():
@@ -359,16 +366,17 @@ def forest_enter():
 Something about the thick air and large damp leaves reminds you of something.
 Your mind goes back to a favorite film from your childhood, 
 a nature tape about South America and its rainforests. 
+
 You cannot remember its title now, but it was narrated by a cheerful, British voice, 
 expounding on the countless layers of animal mystery in every centimeter of these 
-remote areas of the world."""
-	sleep(7)
+remote areas of the world.\n"""
+	sleep(9)
 	print """ He encouraged you, while out in the world, 
-to take a moment and listen to all that surrounds you."""
+to take a moment and listen to all that surrounds you.\n\n"""
 	sleep(5)
 	print "You do this now, and your stomach sinks."
 	sleep(5)
-	print """This is a silent forest."""
+	print """This is a silent forest.\n\n"""
 	sleep(5)
 	print """ You have left behind even the sound of the waves.
 It lacks the life of your nature tape, 
@@ -381,10 +389,10 @@ Indecision is not an option. """
 
 def forest_ruins():
 	print """ Moments after it felt as though the path would end in overgrowth, 
-it breaks open into a large, man made clearing.
+it breaks open into a large, man made clearing.\n
 A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
-sit above a central fire pit.
-These signs of life bring you a moment of joy.
+sit above a central fire pit.\n
+These signs of life bring you a moment of joy.\n
 But then you realize, the silence persists.
 Across the clearing, the path picks back up.
 To your left, a rope ladder leads up to a tree house. """
@@ -442,6 +450,86 @@ def discard_diary ():
 	print """ Your great grand-grandfather's initials weren't GL anyway.
 You're here for one reason and everything else is distraction."""
 
+def rope_bridge():
+	print """ The door at the other side of the study opens straight onto a rope bridge.
+	Across, you see a large, circular structure with a thatched roof. 
+	It swings back and forth in the light breeze."""
+	sleep(4)
+	print """Do you venture forward for further investigation, or close the door and turn back?"""
+
+def no_bridge():
+	print """ You turn back into the sad, smelly little room.
+	The ladder down and the door to the bridge are the only paths out."""
+
+def cross_bridge():
+	print"""The bridge swings wildly and forces you to take slow, careful steps.
+	It is certainly treacherous, but something within you keeps fear at bay.
+	To adventure, to address danger, feels natural here.\n
+	Necessary. \n
+	At the other side, you stand at the wooden door to the thatched structure.
+	A closed eye just like the one on the stone fortress is painted on the front."""
+	print """Continue on? Or return to the forest?"""
+
+def second_sect_hq():
+	print """ This eye does not open as you enter.
+	The interior of the thatched hut has a dark, musty gravity.
+	Serious things were discussed here by sad men.
+	Secrets have seeped into the dust.
+	A long mahogany table sits in the center, 
+	the image of a huge, spiny seashell
+	carved crudely into the beautiful wood.
+	A dozen chairs line its sides with 
+	one, large commanding seat at the head of the table.
+	Behind it, a handwritten piece of paper is tacked to the wall.
+	Another ladder leads down to the ground."""
+
+def second_sect_manifesto():
+	#the text of the page can be added to your notebook
+	print """ You move across the room until you are close enough 
+	to make out words on the tacked up page."""
+	sleep(3)
+	print housekeeping.manifesto
+	sleep(2)
+	print """That is all you can make out, 
+	as the bottom has been ripped away
+	and spattered with ink and blood.
+	"""
+
+def ladder_down():
+	print """ The ladder leads down 
+	into a much smaller clearing than the first you encountered.
+	A path leads back in what you believe to be the direction of the first large forest clearing, 
+	but there are also signs that someone has walked further into the forest, 
+	footsteps through a thicket. 
+	Do you take the path, or continue your investigation?"""
+
+def path_back():
+	print """ This path winds back through the trees. 
+	You find yourself at the first, large forest clearing that you encountered."""
+
+	print """A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
+	sit above a central fire pit.
+	These signs of life bring you a moment of joy.
+	But then you realize, the silence persists.
+	Across the clearing, the path picks back up.
+	To your left, a rope ladder leads up to a tree house."""
+
+def follow_steps():
+	print """ You follow the footsteps into a thicket, 
+	which opens up almost immediately to the entrance of a small cave.
+	Do you enter the darkness?"""
+
+def cave_enter():
+	print """ The low ceiling forces you to your knees.
+	A dim, smoky light and a foul, sour smell come from deeper in.
+	Your natural senses are repulsed, but secrets are rarely pleasant
+	and you are here for discovery, so you crawl forward.
+	Around a bend, you find the source of the light.
+	A skinny, bearded man sits cross legged in a sea of candles, 
+	wrapped in the tatters of a royal purple velvet robe, 
+	emroidered across the breast with a golden G.L.
+	He looks up at you as a dog who expects another kick.
+	What do you say to the pitiful man?"""
 
 def clearing_path():
 	pass
