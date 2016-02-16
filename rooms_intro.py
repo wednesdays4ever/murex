@@ -529,7 +529,114 @@ def cave_enter():
 	wrapped in the tatters of a royal purple velvet robe, 
 	emroidered across the breast with a golden G.L.
 	He looks up at you as a dog who expects another kick.
+	\n
 	What do you say to the pitiful man?"""
+
+def gl_introduce():
+	print """ I AM GUY LEICESTER,
+	HEAD OF THE ONE TRUE BROTHERHOOD OF THE MUREX. 
+	WHY HAVE YOU ENTERED MY CHAMBER?"""
+
+def gl_threaten():
+	print """ He laughs before responding to your threat.
+	IF YOU HAD KNOWN THE PAIN THAT ALREADY LIVES IN ME,
+	YOU WOULD NOT HAVE EMBARRASSED YOURSELF 
+	BY PRESUMING YOU WERE ABLE TO INFLICT MORE.
+	I'LL FORGIVE IT ONCE.
+	WHY ARE YOU HERE?"""
+
+def gl_taymor():
+	print """YOU HAVE THE EYES OF THE MAN WHO TOOK IT ALL AWAY. 
+	I CAN TELL ON SIGHT THAT YOU ARE RELATED. 
+	I CAN ALSO SEE THAT IT IS NOT TOO LATE FOR YOU.
+	EMBRACE THE TRUE NATURE OF THE ONE WE SERVE,
+	AND MAYBE YOU CAN STEER THE LOST PRIEST BACK TO GREATNESS.
+	DON'T YOU WANT TO SEE THE WORLD EVOLVE?"""
+
+def gl_purity():
+	print """ TO SERVE THE GREAT ONE,
+	YOU MUST PROVE YOUR PURITY.
+
+	HAVE YOU EVER EXTINGUISHED LIFE?"""
+	#no matter what, GL end me
+
+def gl_diary_show():
+	print """ I DON'T KNOW WHAT YOU THINK YOU'VE LEARNED.
+	REAL ANSWERS LIE INSIDE THE FORTRESS ON THE TEMPLE GROUNDS.
+	WHY DID YOU COME HERE?
+	DO YOU ASPIRE TO SERVICE?"""
+	#IF YES, PURITY
+	#IF NO, NO PATIENCE
+
+def gl_no_patience():
+	print """ He glares.
+	JUST BECAUSE I HAVE WAITED FOR DECADES
+	DOES NOT MEAN THAT MY TIME IS WORTHLESS.
+	TELL ME WHY YOU ARE HERE 
+	OR I WILL MAKE YOU LEAVE."""
+	#if mentions anything to do with temple or taymor, go to gl_end_me
+	#elif GL_no_kill
+
+def gl_end_me():
+	print """HORRIBLE THINGS I'VE BEEN MADE TO WITNESS.
+	I AM NO LONGER USEFUL AS HIS SERVANT ON THIS PLANE.
+	BUT I CAN PUT MY HOPE IN YOU.
+	I KNOW THAT I CANNOT ASK FOR GUARANTEES,
+	BUT I HOPE THAT WHEN YOU SEE THE TRUTH, THE HORROR,
+	YOU WILL REALIZE WHAT YOU MUST DO.
+
+	END ME, AND THE ACT WILL GRANT YOU ENTRANCE TO THE TEMPLE GROUNDS.
+
+	He produces a thin, golden dagger, which he hands gently to you.
+
+	YORHAM WILL SMELL MY BLOOD ON YOUR HANDS 
+	AND KNOW YOUR PURITY. 
+
+	His eyes water as he looks up at you with a toothless smile.
+	Do you end this miserable life? """
+
+def gl_dead():
+	print """ His life leaves its broken vessel easily.
+	Blood pours freely, extinguishing many of the candles,
+	and soaking your clothes.
+	The smell is horrible,
+	but the peaceful, powerful smile of a man at rest
+	warms the room, making it feel less gruesome
+	than it might otherwise.
+
+	You have killed. 
+	It is time to test the blood."""
+
+def gl_no_kill():
+	print """He cackles at you.
+	TO CONTINUALLY BELIEVE THAT THERE IS ANOTHER, 
+	MORE PLEASANT PATH 
+	IS A PARTICULARLY HUMAN FANTASY.
+	THERE IS MORE WEAKNESS IN YOU THAN I EXPECTED.
+	BE GONE BEFORE I SPILL YOUR BLOOD INSTEAD."""
+
+def gl_no_kill_leave():
+	print""" The man is crazed and willing to kill,
+	you see it in his eyes and flee.
+	You find yourself at the entrance to the cave,
+	no closer to the truth."""
+
+def gl_no_kill_stay():
+	print """ You have faltered as an investigator,
+	and Leicester follows through with his promise.
+
+	IMPURITY CANNOT BE TOLERATED IN HIS HOUSE.
+
+	You find the golden dagger buried deep in your stomach.
+	As you close your eyes,
+	you enter a vision,
+	like a dream,
+	of thumbing through a book thousands of pages of long,
+	in a language you do not recognize.
+	So much knowledge.
+	An endless universe of truths 
+	that you will never begin to understand."""
+	#respawn at dock?
 
 def clearing_path():
 	pass

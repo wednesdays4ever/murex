@@ -976,11 +976,165 @@ def follow_steps():
 
 def cave_enter():
 	rooms_intro.cave_enter()
-	pass	
+
+	key1 = ['hello', 'introduce', 'say hi', 'talk']
+	key2 = ['punch', 'hit']
+	key3 = ['no way']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_introduce()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_threaten()
+	else:
+		gl_introduce()
+		
+
+def gl_introduce():
+	rooms_intro.gl_introduce()
+	
+	key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'show', 'letter']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_threaten()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	else:
+		gl_teymor()
+
+def gl_taymor():
+	rooms_intro.gl_taymor()
+
+	key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'show', 'letter']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_threaten()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	else:
+		gl_no_patience()
+
+def gl_threaten():
+	rooms_intro.gl_threaten()
+	pass
+
+def gl_diary_show():
+	rooms_intro.gl_diary_show()
+	
+	key1 = ['yes', 'i do']
+	key2 = ['no', 'i don\'t', 'do not']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_purity()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_no_patience()
+	else:
+		gl_no_patience()
+
+def gl_no_patience():
+	rooms_intro.gl_no_patience()
+	
+	key1 = ['temple', 'taymor']
+	key2 = ['punch', 'hit']
+	key3 = ['diary', 'show', 'letter']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_end_me()
+	else:
+		gl_no_kill()
+
+
+def gl_diary_show():
+	rooms_intro.gl_diary_show()
+	
+	rooms_intro.gl_end_me()
+
+def gl_end_me():
+	rooms_intro.gl_end_me()
+
+	key1 = ['yes', 'i do', 'kill', 'dead']
+	key2 = ['no', 'i don\'t', 'do not', 'will not']
+	key3 = ['leave', 'turn back'] 
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_dead()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_no_kill()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_no_kill_leave()
+	else:
+		gl_no_kill_stay()
+
+def gl_dead():
+	rooms_intro.gl_dead()
+
+	pass
+
+def gl_no_kill():
+	rooms_intro.gl_no_kill()
+
+	pass
+
+def gl_no_kill_leave():
+	rooms_intro.gl_no_kill_leave()
+
+	pass
+
+def gl_no_kill_stay():
+	rooms_intro.gl_no_kill_stay()
+
+	pass
 
 
 def path_back():
 	rooms_intro.path_back()
+
 	default_forest()
 
 
@@ -989,6 +1143,8 @@ def clearing_path():
 
 def path_right():
 	rooms_intro.path_right()
+
+
 
 
 start()
