@@ -58,6 +58,12 @@ def ship_awaken():
 	
 	item = "* The adventure has begun. \n"
 
+	clue = """You spy a grizzled sailor fingering his rosary 
+			and mumbling to himself in a corner.
+			He averts his eyes when you notice him.
+			What you've heard is true, you think,
+			seamen are both god-fearing and rude."""
+
 	if item not in housekeeping.notebook: 
 		housekeeping.notebook += item
 
@@ -234,6 +240,12 @@ def wait_dock():
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
+
+	clue = """In stories as a child you remember hearing about the 
+	ocean as a magical character ready to whisk you off to new and exciting adventures.
+	Now, you look at it as something else entirely.
+
+	The formidable barrier between home and the unsettling other."""
 
 	scanned_input = housekeeping.ask_input()
 
@@ -702,6 +714,12 @@ def path_left():
 	key4 = ['door','knock'] #add a key here?
 	key5 = ['no way'] #add a key here?
 
+	clue = """There is nothing new to notice 
+	about your environment as far as you can tell.
+	But you feel the strength of the sun beating down on you.
+	You look up, sweat dripping from your temples, and fight back the 
+	overwhelming awareness of the tiny space you take up in this world."""
+
 	scanned_input = housekeeping.ask_input()
 
 	if housekeeping.match_input(scanned_input, key1, 
@@ -772,11 +790,14 @@ def default_forest():
 def tree_house():
 	rooms_intro.tree_house()
 
-	key1 = ['start', 'walk around']
+	key1 = ['start', 'walk around', 'inspect']
 	key2 = ['clearing', 'leave tree house']
 	key3 = ['no way'] #add a key here?
 	key4 = ['no way'] #add a key here?
 	key5 = ['no way'] #add a key here?
+
+	clue = """Amid the chaos, one book remains mostly intact, 
+	poking out from beneath the leather chair."""
 
 	scanned_input = housekeeping.ask_input()
 
@@ -1129,7 +1150,7 @@ def gl_no_kill_leave():
 def gl_no_kill_stay():
 	rooms_intro.gl_no_kill_stay()
 
-	pass
+	still_on_dock()
 
 
 def path_back():

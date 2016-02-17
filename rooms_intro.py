@@ -1,4 +1,5 @@
 from time import sleep
+import housekeeping
 
 def start_intro():
 	print """
@@ -65,7 +66,7 @@ He looks up at the sky as if he's forgotten you're there."""
 has turned to boredom bordering on disgust, 
 and he can sense the shift."""
 	sleep(3)
-	print """ BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, \n
+	print """ \n BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, \n
 he says before he clomps away, leaving you alone again.
 Was that a threat? What are you getting yourself into? \n"""
 	sleep(3)
@@ -187,11 +188,11 @@ You can only rip your eyes away when you feel the ship
 bump against the dock with a hard wooden knock. \n
 Before you realize what is happening, the crew has shuffled you off the deck, 
 thrown your bag at your feet, and set sail once more.\n"""
-sleep(5)
-print """ The letter that sent you here in the first 
-pokes against your ribs from inside your pocket."""
-sleep(2)
-print """ A note is nailed to one of the posts on the dock.
+	sleep(5)
+	print """ The letter that sent you here in the first pokes 
+	against your ribs from inside your pocket."""
+	sleep(2)
+	print """ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
 def dock_note():
@@ -234,7 +235,7 @@ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
 def still_on_dock():
-	print """ You look around your new surroundings. The path lies in front of you. 
+	print """ You look around your new surroundings on the creeky dock. The path lies in front of you. 
 Do you look back at the note or the letter or do you forge on ahead? """
 
 
