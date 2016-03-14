@@ -190,7 +190,7 @@ Before you realize what is happening, the crew has shuffled you off the deck,
 thrown your bag at your feet, and set sail once more.\n"""
 	sleep(5)
 	print """ The letter that sent you here in the first pokes 
-	against your ribs from inside your pocket."""
+against your ribs from inside your pocket."""
 	sleep(2)
 	print """ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
@@ -227,10 +227,11 @@ def dock_arrivei():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship 
-bump against the dock with a hard wooden knock.
-Before you realize what is happening, the crew has shuffled you off the deck, 
+bump against the dock with a hard wooden knock.\n"""
+	sleep(3)
+	print """Before you realize what is happening, the crew has shuffled you off the deck, 
 thrown your bag at your feet, and set sail once more.
-The letter that sent you here in the first pokes against your ribs from inside your pocket. 
+The letter that sent you here in the first pokes against your ribs from inside your pocket.\n
 A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
@@ -241,12 +242,13 @@ Do you look back at the note or the letter or do you forge on ahead? """
 
 def path_from_dock():
 	print """ You can see the tip of what must be the Great Pyramid 
-	far off in the distance, beyond a giant stone wall. 
+far off in the distance, beyond a giant stone wall.\n
 The path ahead leads away from the dock and splits in three directions.
 One straight ahead toward a door in the stone island fortress.
 Another forks to the left toward a sparse wood, removed from the stone walls and hugging the rocky shore.
-The path to the right drops off and out of sight. There may be cliffs ahead.
-The waves crash and the wind whistles at your back. You know you must proceed, but in which direction?"""
+The path to the right drops off and out of sight. There may be cliffs ahead.\n
+The waves crash and the wind whistles at your back. 
+You know you must proceed, but in which direction?"""
 
 def default_from_dock():
 	print """ 
@@ -638,6 +640,9 @@ def gl_no_kill_stay():
 	An endless universe of truths 
 	that you will never begin to understand."""
 	#respawn at dock?
+
+def return_forest():
+	
 
 def clearing_path():
 	pass

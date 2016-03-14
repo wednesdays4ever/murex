@@ -360,7 +360,7 @@ def still_on_dock():
 									 key2, key3, key4, key5) == "door3":
 	    path_from_dock()
 	else:
-		still_on_dock
+		path_from_dock()
 
 def path_from_dock(): 
 	rooms_intro.path_from_dock()
@@ -1135,7 +1135,7 @@ def gl_end_me():
 def gl_dead():
 	rooms_intro.gl_dead()
 
-	pass
+	rooms_intro.return_clearing()
 
 def gl_no_kill():
 	rooms_intro.gl_no_kill()
