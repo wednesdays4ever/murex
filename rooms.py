@@ -5,7 +5,7 @@ from time import sleep
 import os
 import housekeeping
 import rooms_intro
-
+import fortress
 
 ################
 ##Start of Game#
@@ -1140,12 +1140,42 @@ def gl_dead():
 def gl_no_kill():
 	rooms_intro.gl_no_kill()
 
-	pass
+	key1 = ['stay', 'wait', 'watch', 'nothing']
+	key2 = ['leave', 'turn back', 'return', 'docks']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_kill_stay()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_no_kill_leave()
+	else:
+		gl_no_kill_leave()
 
 def gl_no_kill_leave():
 	rooms_intro.gl_no_kill_leave()
 
-	pass
+    key1 = ['cave', 'return', 'GL', 'kill']
+    key2 = ['leave', 'turn back', 'return', 'docks']
+    key3 = ['no way'] #add a key here?
+    key4 = ['no way'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        gl_end_me()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        path_back()
+    else:
+        gl_end_me	
 
 def gl_no_kill_stay():
 	rooms_intro.gl_no_kill_stay()
@@ -1156,11 +1186,31 @@ def gl_no_kill_stay():
 def path_back():
 	rooms_intro.path_back()
 
-	default_forest()
+	clearing_path()
 
 
 def clearing_path():
-	pass
+    rooms_intro.clearing_path()
+
+    key1 = ['investigate', 'tree house', 'tree']
+    key2 = ['cave', 'trace', 'steps']
+    key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
+    key4 = ['no way'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        tree_house()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        path_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        still_on_dock()
+    else:
+        default_forest()  
 
 def path_right():
 	rooms_intro.path_right()
