@@ -66,7 +66,9 @@ def door_judgement_resist():
 	TO DESERVE HIS JUDGEMENT.
 	BELIEF IN CHOICE IS SMALL, HUMAN, FOOLISH.
 	"""
-	if 1=1 door_judgement() ###how do i do this correctly?
+	if 1=1:
+		door_judgement() ###how do i do this correctly?
+	#feed back into door_judgement^^
 
 def enter_fortress():
 	print """ 

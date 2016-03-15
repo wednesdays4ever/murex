@@ -622,7 +622,8 @@ def gl_no_kill_leave():
 	print""" The man is crazed and willing to kill,
 	you see it in his eyes and flee.
 	You find yourself at the entrance to the cave,
-	no closer to the truth."""
+	no closer to the truth. 
+	Return to the cave or walk back to the forest"""
 
 def gl_no_kill_stay():
 	print """ You have faltered as an investigator,
@@ -642,10 +643,12 @@ def gl_no_kill_stay():
 	#respawn at dock?
 
 def return_forest():
-	
+	pass
 
 def clearing_path():
-	pass
+	print """The path is littered with fallen leaves from the unfamiliar
+trees above.\n 
+Investigate the tree house, trace the marked steps to the cave or return to the dock?"""
 
 def default_forest():
 	print """ The forest is beautiful but all-enveloping in its silence.
