@@ -1215,6 +1215,48 @@ def clearing_path():
 def path_right():
 	rooms_intro.path_right()
 
+##Need to write a whole path to reach this door again.
+def door_return_refuse():
+    fortress.door_return_refuse()
+    door_return()
+
+def door_return():
+    fortress.door_return()
+
+    key1 = ['yes', 'yeah', 'ready', 'judgement']
+    key2 = ['no', 'not ready', 'leave'] 
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        door_return_yes()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        door_return_no()
+    else:
+        door_return_no()
+
+def door_return_yes():
+    fortress.door_return_yes()
+    
+    key1 = ['yes', 'yeah', 'ready', 'succumb', 'desire']
+    key2 = ['no', 'not ready', 'leave'] 
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        door_return_judgement()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        door_return_judgement()
+    else:
+        door_return_judgement()
+
+def door_return_no():
+    fortress.door_return_no()
+    pass
+
+
+
+
 
 
 
