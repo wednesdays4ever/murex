@@ -1252,12 +1252,97 @@ def door_return_yes():
 
 def door_return_no():
     fortress.door_return_no()
-    pass
+    door_judgement()
+
+def door_judgement():
+    fortress.door_judgement()
+
+    key1 = ['yes', 'yeah', 'ready', 'enter', 'fortress']
+    key2 = ['no', 'not ready', 'leave', 'dock'] 
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        enter_fortress()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        door_judgement_resist()
+    else:
+        enter_fortress()
 
 
+def door_judgement_resist():
+    fortress.door_judgement_resist()
+    enter_fortress()
 
 
+def enter_fortress():
+    fortress.enter_fortress()
+
+    key1 = ['yes', 'yeah', 'creature', 'address', 'mythic creatrue']
+    key2 = ['investigate', 'marble buildings', 'marble'] 
+    key3 = ['move', 'shining', 'shell']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        faceless_sphinx_approach()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        barracks_investigate()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        pyramid_approach()
+    else:
+        faceless_sphinx_approach()
 
 
+def faceless_sphinx_approach():
+    fortress.faceless_sphinx_approach()
+    
+    key1 = ['question', 'ask', 'talk']
+    key2 = ['presence', 'not ready', 'leave', 'dock'] 
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        sphinx_defer()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        sphinx_defer()
+    else:
+        sphinx_defer()
+
+def barracks_investigate():
+	fortress.barracks_investigate()
+	pass
+
+def sphinx_defer():
+	fortress.sphinx_defer()
+
+    key1 = ['taymor', 'grandfather', 'letter', 'ship']
+    key2 = ['murex', 'shining', 'shell']
+    key3 = ['diary', 'GL', 'treehouse']
+    key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
+    key5 = ['beach', 'rocky', 'shore']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        sphinx_taymor()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door2":
+        sphinx_murex()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door3":
+        sphinx_diary()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door4":
+        sphinx_beach()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door5":
+        sphinx_aggression()
+    else:
+        sphinx_taymor()
+
+def pyramid_approach():
+	fortress.pyramid_approach()
+	pass
 
 start()
