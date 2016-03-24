@@ -54,7 +54,12 @@ def door_judgement():
 	larger than your understanding.
 	Yorham whispers to you softly 
 	as the hurt floods your consciousness,
-	AH, YOU HAVE TASTED THE BLOOD. 
+	AH, YOU HAVE TASTED THE BLOOD. \n
+
+Your body screams at you to do something to get rid of the pain.
+But, something inside forces you to remain.
+
+Enter the fortrees?
 	"""
 	##maybe make this a choice instead of a straight up print.
 	#your body screams at you to do something to get rid of the pain
@@ -66,19 +71,21 @@ def door_judgement_resist():
 	TO DESERVE HIS JUDGEMENT.
 	BELIEF IN CHOICE IS SMALL, HUMAN, FOOLISH.
 	"""
-	if 1=1 door_judgement() ###how do i do this correctly?
+	# if 1=1:
+	# 	door_judgement() ###how do i do this correctly?
+	#feed back into door_judgement^^
 
 def enter_fortress():
 	print """ 
 	Your entirety tingles 
 	as you step onto hallowed ground
-	and your stone slams down behind you.
+	and your stone slams down behind you.\n
 	This is nothing like the 
 	primitive clearing you saw earlier, 
 	sapphire cobblestones line manicured paths,
 	it exudes a grand an ancient quality 
 	that makes your mind buzz, 
-	and it is difficult for you to take it all in at once.
+	and it is difficult for you to take it all in at once.\n
 	Once you have adjusted to glory,
 	you can comprehend your surroundings.
 	In the distance, the glinting spire 
@@ -86,14 +93,14 @@ def enter_fortress():
 	still shines bright and you 
 	notice for the first time that 
 	it is in the shape of an enormous spined seashell,
-	just like the one engraved above Yorham.
+	just like the one engraved above Yorham.\n\n
 	Closer, a line of white 
 	marble buildings with shining metal doors
-	labeled one through twelve sit just off the path.
+	labeled one through twelve sit just off the path.\n
 	Next to you, a giant stone sphinx sits. 
 	Its face has been destroyed,
 	where an expression should sit is just a jagged stump,
-	but still you feel as though it is staring at you.
+	but still you feel as though it is staring at you.\n\n
 	Do you address the mythic creature?
 	Or investigate the marble buildings?
 	Or move towards the bright shining shell,
@@ -110,7 +117,7 @@ def faceless_sphinx_approach():
 	Or is its presence enough to satisfy?
 	"""
 
-def sphinx_defer
+def sphinx_defer():
 	print """ 
 	The stone giant's voice 
 	echoes across the walled fortress.
@@ -125,6 +132,8 @@ def sphinx_defer
 	IF YOU HAVE COME TO ASCEND,
 	UP QUICK AND ONWARD,
 	UNLESS THERE IS SOMETHING YOU WISH TO KNOW FROM ME.
+
+You rack your brain for the right response. What question do you ask?
 	"""
 
 	#lead in bit - same thing with the rumbling -
@@ -237,7 +246,7 @@ def fortress_reassess():
 	print """ 
 	The same options lay before you,
 	do you have further questions for the sphinx?
-	Would you like to invesitigate the marble structures?
+	Would you like to investigate the marble structures?
 	Or do you press on towards the pyramid? 
 	"""
 
@@ -436,6 +445,9 @@ def even_must_leave ():
 def leave_barracks():
 	pass
 #feeds straight back to reassess
+
+def pyramid_approach():
+	pass
 
 def pyramid_enter():
 	pass

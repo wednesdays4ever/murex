@@ -5,21 +5,25 @@
 clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
 
 notebook = ""
-clue = 'Nothing of note.'
+clue_default = 'Nothing of note.'
 
 letter = """
 ELSA,
 	YOU WERE TOO YOUNG TO REMEMBER OUR ONLY MEETING, BUT I ASSUME YOU'VE HEARD OF ME. 
 	OUR SHARED RELATIVES ARE SMALL-MINDED, SO GOOD OR BAD, I WOULD NOT TRUST WHAT YOU HAVE HEARD.
 	TO TRUST EVEN YOU IS A RISK, BUT ONE I MUST TAKE. YOUR BLOOD IS MINE AND OURS IS OF THE ANCIENTS.
-	THE ISLE OF MURESTOS IS REMOTE, BUT THERE IS A CHARTERED SHIP THAT WILL BEGIN PREPARATIONS IMMEDIATELY WHEN YOU UTTER THE PASSWORD MUREX.
+	THE ISLE OF MURESTOS IS REMOTE, BUT THERE IS A CHARTERED SHIP 
+	THAT WILL BEGIN PREPARATIONS IMMEDIATELY WHEN YOU UTTER THE PASSWORD MUREX.
 	THE SEA IS RISING. THE CONDITIONS ARE PERFECT.
 	IF YOU CARE ABOUT THE FUTURE OF OUR WORLD AND MANY OTHERS, I WILL SEE YOU WITHIN THE MONTH."
 	THE ISLAND'S CARETAKER, MINISTER DOBBINS, WILL MEET YOU AT THE DOCK UPON YOUR ARRIVAL."
 		YOUR RELATION,
-			TAYMOR HUNTINGDON VII
+			TAYMOR HUNTINGDON VII"""
+
+reaction_to_letter = """
 You barely remember him, and everything you've heard mentioned is so vague.
-Do you push to remember his childhood visit? Or revisit the stories your mother told? Or wait to see him yourself? """
+Do you push to remember his childhood visit? Or revisit the stories your mother told? 
+Or wait to see him yourself? """
 
 diary = """
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,6 +105,22 @@ diary = """
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
 
+manifesto = """
+	SECOND SECT OF THE SERVANTS OF THE MUREX
+	A call to return to service.
+	The task of our brotherhood was always 
+	to invite divinity into our small and tainted world,
+	to bring greatness close enough to man's touch that our race could glow 
+	like the old ones who lived before us, and continue to live on, 
+	beyond and outside of the constraints of our limited understanding.
+	This path has been abandoned 
+	by heretics who now hold the seat of our holy order hostage,
+	but when the Great One comes to swallow us whole, 
+	he will taste the difference between 
+	the sour, vile and selfish opportunist 
+	and the sweet purity of the true believer.
+	"""
+
 ###################
 ## Key Functions ##
 ###################		
@@ -149,7 +169,10 @@ def ask_input():
 		ask_input()
 		return choice
 	elif choice == ['look','around']:
-		print clue
+		try:
+			print clue
+		except:
+			print clue_default
 		ask_input()
 		return choice
 	else: 

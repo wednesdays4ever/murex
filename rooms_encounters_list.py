@@ -119,10 +119,10 @@ def tree_house():
 
 def tree_house_inspect():
 	print """ Upon closer inspection, you notice a few things that seem out of the ordinary:
-The corner of a hardcover book peeking out from under the chair's cushion,
-The initials G.L. embossed on the back of the chair,
-and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
-THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
+	The corner of a hardcover book peeking out from under the chair's cushion,
+	The initials G.L. embossed on the back of the chair,
+	and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
+	THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
 	sleep(6)
 	print """ The book is a diary. 
 	A fine one, thick as an encyclopedia, that has seen much wear and tear.
@@ -151,8 +151,9 @@ def discard_diary():
 def rope_bridge():
 	print """ The door at the other side of the study opens straight onto a rope bridge.
 	Across, you see a large, circular structure with a thatched roof. 
-	It swings back and forth in the light breeze.
-	Do you venture forward for further investigation, or close the door and turn back?"""
+	It swings back and forth in the light breeze."""
+	sleep(4)
+	print """Do you venture forward for further investigation, or close the door and turn back?"""
 
 def no_bridge():
 	print """ You turn back into the sad, smelly little room.

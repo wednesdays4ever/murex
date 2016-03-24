@@ -1,4 +1,5 @@
 from time import sleep
+import housekeeping
 
 def start_intro():
 	print """
@@ -65,7 +66,7 @@ He looks up at the sky as if he's forgotten you're there."""
 has turned to boredom bordering on disgust, 
 and he can sense the shift."""
 	sleep(3)
-	print """ BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, \n
+	print """ \n BE THERE SOON, HOPE YOU KNOW WHAT YOU'RE GETTING INTO, \n
 he says before he clomps away, leaving you alone again.
 Was that a threat? What are you getting yourself into? \n"""
 	sleep(3)
@@ -117,6 +118,8 @@ before you dock. \n """
 stamped with the shape of a strange and spiny, spiral seashell.
 Your great-grandfather's handwriting stands out in green ink 
 that almost glows against the thick, cream paper. """
+
+
 
 def visit_memory():
 	print """The man's face is a shadow, 
@@ -182,11 +185,14 @@ def wait_dock():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship 
-bump against the dock with a hard wooden knock.
-Before you realize what is happening, 
-the crew has shuffled you off the deck, thrown your bag at your feet, and set sail once more.
-The letter that sent you here in the first pokes against your ribs from inside your pocket. 
-A note is nailed to one of the posts on the dock.
+bump against the dock with a hard wooden knock. \n
+Before you realize what is happening, the crew has shuffled you off the deck, 
+thrown your bag at your feet, and set sail once more.\n"""
+	sleep(5)
+	print """ The letter that sent you here in the first pokes 
+against your ribs from inside your pocket."""
+	sleep(2)
+	print """ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
 def dock_note():
@@ -221,26 +227,28 @@ def dock_arrivei():
 Something about the bright glint in the distance won't let you look away. 
 You can't quite make out its source, but it is hopelessly mesmerizing.
 You can only rip your eyes away when you feel the ship 
-bump against the dock with a hard wooden knock.
-Before you realize what is happening, the crew has shuffled you off the deck, 
+bump against the dock with a hard wooden knock.\n"""
+	sleep(3)
+	print """Before you realize what is happening, the crew has shuffled you off the deck, 
 thrown your bag at your feet, and set sail once more.
-The letter that sent you here in the first pokes against your ribs from inside your pocket. 
+The letter that sent you here in the first pokes against your ribs from inside your pocket.\n
 A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
 
 def still_on_dock():
-	print """ You look around your new surroundings. The path lies in front of you. 
+	print """ You look around your new surroundings on the creeky dock. The path lies in front of you. 
 Do you look back at the note or the letter or do you forge on ahead? """
 
 
 def path_from_dock():
 	print """ You can see the tip of what must be the Great Pyramid 
-	far off in the distance, beyond a giant stone wall. 
+far off in the distance, beyond a giant stone wall.\n
 The path ahead leads away from the dock and splits in three directions.
 One straight ahead toward a door in the stone island fortress.
 Another forks to the left toward a sparse wood, removed from the stone walls and hugging the rocky shore.
-The path to the right drops off and out of sight. There may be cliffs ahead.
-The waves crash and the wind whistles at your back. You know you must proceed, but in which direction?"""
+The path to the right drops off and out of sight. There may be cliffs ahead.\n
+The waves crash and the wind whistles at your back. 
+You know you must proceed, but in which direction?"""
 
 def default_from_dock():
 	print """ 
@@ -343,15 +351,17 @@ To survive in an unfamiliar world, you must forge on.
 and to the right, away from the walls and rocky cliffs."""
 
 def hopeless_wait():
-	print "This step is missing"
+	print """Time feels to be stopped. You reawaken as if in a dream. 
+To which direction do you turn?"""
 
 def path_left():
 	print """ The sand and rocks near the shore give way almost immediately 
 to a firm, well-worn dirt path.
 It gets narrower as it winds into a thick, overgrown forest.
 It is obvious that, while it has seen much use, 
-not much care has been taken with its upkeep recently.
-Do you head further into the forest? """
+not much care has been taken with its upkeep recently.\n"""
+	sleep(3)
+	print "Do you head further into the forest? "
 
 
 def forest_enter():
@@ -359,16 +369,17 @@ def forest_enter():
 Something about the thick air and large damp leaves reminds you of something.
 Your mind goes back to a favorite film from your childhood, 
 a nature tape about South America and its rainforests. 
+
 You cannot remember its title now, but it was narrated by a cheerful, British voice, 
 expounding on the countless layers of animal mystery in every centimeter of these 
-remote areas of the world."""
-	sleep(7)
+remote areas of the world.\n"""
+	sleep(9)
 	print """ He encouraged you, while out in the world, 
-to take a moment and listen to all that surrounds you."""
+to take a moment and listen to all that surrounds you.\n\n"""
 	sleep(5)
 	print "You do this now, and your stomach sinks."
 	sleep(5)
-	print """This is a silent forest."""
+	print """This is a silent forest.\n\n"""
 	sleep(5)
 	print """ You have left behind even the sound of the waves.
 It lacks the life of your nature tape, 
@@ -381,10 +392,10 @@ Indecision is not an option. """
 
 def forest_ruins():
 	print """ Moments after it felt as though the path would end in overgrowth, 
-it breaks open into a large, man made clearing.
+it breaks open into a large, man made clearing.\n
 A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
-sit above a central fire pit.
-These signs of life bring you a moment of joy.
+sit above a central fire pit.\n
+These signs of life bring you a moment of joy.\n
 But then you realize, the silence persists.
 Across the clearing, the path picks back up.
 To your left, a rope ladder leads up to a tree house. """
@@ -442,9 +453,202 @@ def discard_diary ():
 	print """ Your great grand-grandfather's initials weren't GL anyway.
 You're here for one reason and everything else is distraction."""
 
+def rope_bridge():
+	print """ The door at the other side of the study opens straight onto a rope bridge.
+	Across, you see a large, circular structure with a thatched roof. 
+	It swings back and forth in the light breeze."""
+	sleep(4)
+	print """Do you venture forward for further investigation, or close the door and turn back?"""
+
+def no_bridge():
+	print """ You turn back into the sad, smelly little room.
+	The ladder down and the door to the bridge are the only paths out."""
+
+def cross_bridge():
+	print"""The bridge swings wildly and forces you to take slow, careful steps.
+	It is certainly treacherous, but something within you keeps fear at bay.
+	To adventure, to address danger, feels natural here.\n
+	Necessary. \n
+	At the other side, you stand at the wooden door to the thatched structure.
+	A closed eye just like the one on the stone fortress is painted on the front."""
+	print """Continue on? Or return to the forest?"""
+
+def second_sect_hq():
+	print """ This eye does not open as you enter.
+	The interior of the thatched hut has a dark, musty gravity.
+	Serious things were discussed here by sad men.
+	Secrets have seeped into the dust.
+	A long mahogany table sits in the center, 
+	the image of a huge, spiny seashell
+	carved crudely into the beautiful wood.
+	A dozen chairs line its sides with 
+	one, large commanding seat at the head of the table.
+	Behind it, a handwritten piece of paper is tacked to the wall.
+	Another ladder leads down to the ground."""
+
+def second_sect_manifesto():
+	#the text of the page can be added to your notebook
+	print """ You move across the room until you are close enough 
+	to make out words on the tacked up page."""
+	sleep(3)
+	print housekeeping.manifesto
+	sleep(2)
+	print """That is all you can make out, 
+	as the bottom has been ripped away
+	and spattered with ink and blood.
+	"""
+
+def ladder_down():
+	print """ The ladder leads down 
+	into a much smaller clearing than the first you encountered.
+	A path leads back in what you believe to be the direction of the first large forest clearing, 
+	but there are also signs that someone has walked further into the forest, 
+	footsteps through a thicket. 
+	Do you take the path, or continue your investigation?"""
+
+def path_back():
+	print """ This path winds back through the trees. 
+	You find yourself at the first, large forest clearing that you encountered."""
+
+	print """A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
+	sit above a central fire pit.
+	These signs of life bring you a moment of joy.
+	But then you realize, the silence persists.
+	Across the clearing, the path picks back up.
+	To your left, a rope ladder leads up to a tree house."""
+
+def follow_steps():
+	print """ You follow the footsteps into a thicket, 
+	which opens up almost immediately to the entrance of a small cave.
+	Do you enter the darkness?"""
+
+def cave_enter():
+	print """ The low ceiling forces you to your knees.
+	A dim, smoky light and a foul, sour smell come from deeper in.
+	Your natural senses are repulsed, but secrets are rarely pleasant
+	and you are here for discovery, so you crawl forward.
+	Around a bend, you find the source of the light.
+	A skinny, bearded man sits cross legged in a sea of candles, 
+	wrapped in the tatters of a royal purple velvet robe, 
+	emroidered across the breast with a golden G.L.
+	He looks up at you as a dog who expects another kick.
+	\n
+	What do you say to the pitiful man?"""
+
+def gl_introduce():
+	print """ I AM GUY LEICESTER,
+	HEAD OF THE ONE TRUE BROTHERHOOD OF THE MUREX. 
+	WHY HAVE YOU ENTERED MY CHAMBER?"""
+
+def gl_threaten():
+	print """ He laughs before responding to your threat.
+	IF YOU HAD KNOWN THE PAIN THAT ALREADY LIVES IN ME,
+	YOU WOULD NOT HAVE EMBARRASSED YOURSELF 
+	BY PRESUMING YOU WERE ABLE TO INFLICT MORE.
+	I'LL FORGIVE IT ONCE.
+	WHY ARE YOU HERE?"""
+
+def gl_taymor():
+	print """YOU HAVE THE EYES OF THE MAN WHO TOOK IT ALL AWAY. 
+	I CAN TELL ON SIGHT THAT YOU ARE RELATED. 
+	I CAN ALSO SEE THAT IT IS NOT TOO LATE FOR YOU.
+	EMBRACE THE TRUE NATURE OF THE ONE WE SERVE,
+	AND MAYBE YOU CAN STEER THE LOST PRIEST BACK TO GREATNESS.
+	DON'T YOU WANT TO SEE THE WORLD EVOLVE?"""
+
+def gl_purity():
+	print """ TO SERVE THE GREAT ONE,
+	YOU MUST PROVE YOUR PURITY.
+
+	HAVE YOU EVER EXTINGUISHED LIFE?"""
+	#no matter what, GL end me
+
+def gl_diary_show():
+	print """ I DON'T KNOW WHAT YOU THINK YOU'VE LEARNED.
+	REAL ANSWERS LIE INSIDE THE FORTRESS ON THE TEMPLE GROUNDS.
+	WHY DID YOU COME HERE?
+	DO YOU ASPIRE TO SERVICE?"""
+	#IF YES, PURITY
+	#IF NO, NO PATIENCE
+
+def gl_no_patience():
+	print """ He glares.
+	JUST BECAUSE I HAVE WAITED FOR DECADES
+	DOES NOT MEAN THAT MY TIME IS WORTHLESS.
+	TELL ME WHY YOU ARE HERE 
+	OR I WILL MAKE YOU LEAVE."""
+	#if mentions anything to do with temple or taymor, go to gl_end_me
+	#elif GL_no_kill
+
+def gl_end_me():
+	print """HORRIBLE THINGS I'VE BEEN MADE TO WITNESS.
+	I AM NO LONGER USEFUL AS HIS SERVANT ON THIS PLANE.
+	BUT I CAN PUT MY HOPE IN YOU.
+	I KNOW THAT I CANNOT ASK FOR GUARANTEES,
+	BUT I HOPE THAT WHEN YOU SEE THE TRUTH, THE HORROR,
+	YOU WILL REALIZE WHAT YOU MUST DO.
+
+	END ME, AND THE ACT WILL GRANT YOU ENTRANCE TO THE TEMPLE GROUNDS.
+
+	He produces a thin, golden dagger, which he hands gently to you.
+
+	YORHAM WILL SMELL MY BLOOD ON YOUR HANDS 
+	AND KNOW YOUR PURITY. 
+
+	His eyes water as he looks up at you with a toothless smile.
+	Do you end this miserable life? """
+
+def gl_dead():
+	print """ His life leaves its broken vessel easily.
+	Blood pours freely, extinguishing many of the candles,
+	and soaking your clothes.
+	The smell is horrible,
+	but the peaceful, powerful smile of a man at rest
+	warms the room, making it feel less gruesome
+	than it might otherwise.
+
+	You have killed. 
+	It is time to test the blood."""
+
+def gl_no_kill():
+	print """He cackles at you.
+	TO CONTINUALLY BELIEVE THAT THERE IS ANOTHER, 
+	MORE PLEASANT PATH 
+	IS A PARTICULARLY HUMAN FANTASY.
+	THERE IS MORE WEAKNESS IN YOU THAN I EXPECTED.
+	BE GONE BEFORE I SPILL YOUR BLOOD INSTEAD."""
+
+def gl_no_kill_leave():
+	print""" The man is crazed and willing to kill,
+	you see it in his eyes and flee.
+	You find yourself at the entrance to the cave,
+	no closer to the truth. 
+	Return to the cave or walk back to the forest"""
+
+def gl_no_kill_stay():
+	print """ You have faltered as an investigator,
+	and Leicester follows through with his promise.
+
+	IMPURITY CANNOT BE TOLERATED IN HIS HOUSE.
+
+	You find the golden dagger buried deep in your stomach.
+	As you close your eyes,
+	you enter a vision,
+	like a dream,
+	of thumbing through a book thousands of pages of long,
+	in a language you do not recognize.
+	So much knowledge.
+	An endless universe of truths 
+	that you will never begin to understand."""
+	#respawn at dock?
+
+def return_forest():
+	pass
 
 def clearing_path():
-	pass
+	print """The path is littered with fallen leaves from the unfamiliar
+trees above.\n 
+Investigate the tree house, trace the marked steps to the cave or return to the dock?"""
 
 def default_forest():
 	print """ The forest is beautiful but all-enveloping in its silence.
