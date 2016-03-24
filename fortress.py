@@ -421,6 +421,18 @@ def even_chamber_pot():
 	before giving in to the bodily urge to vomit.
 	"""
 
+def even_must_leave ():
+	print """ 
+	The sour stench of your own bile fills the small marble room.
+	Something is deeply unsettling about this place,
+	and it is not just the blood. 
+	Some animal instinct overrides your mind
+	and forces you from this building.
+	You find yourself along the cobblestone path again,
+	blinking up at shining seashell.
+	"""
+	#if you try to stay after puking
+
 def leave_barracks():
 	pass
 #feeds straight back to reassess
