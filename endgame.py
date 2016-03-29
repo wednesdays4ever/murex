@@ -147,16 +147,19 @@ def pyramid_enter():
 	surrounded by the mummified remains of eleven men,
 	suspended from the ceiling by silver chains.
 
-	He smiles at you with these bright eyes
+	He smiles at you with bright eyes
 	that remind you of a photo you remember from
-	a textbook in elementary school,
+	a textbook in elementary school
 	of a young woman who has just seen her fiancee
 	returning from war, 
 	one of the old ones.
 	And her face is so full 
 	of confidence and relief and disbelief and love and hope.
 	It is right next to elation but also on the edge of tears.
-	It was a beautiful expression,
+	Later in life you looked for the photo
+	and the book you found it in with no luck.
+	It was a beautiful expression
+	that you have always remembered and longed to see again,
 	and you are surpised to see it mirrored now.
 
 	MY BLOOD,
@@ -164,15 +167,78 @@ def pyramid_enter():
 	HERE YOU ARE,
 	AND JUST IN TIME TO WITNESS THE NEW WORLD.
 	WON'T YOU COME AND HUG YOUR GREAT-GRANDFATHER?
-
 	"""
 
 def pyramid_other():
-	pass
-	#the majesty is something that has perhaps been forever unknown to this world,
-	#you are right to bask in it 
+	print """ 
+	A majestic moment like this is something
+	that has perhaps been forever unknown to this world.
+	You are right to bask in it.
+	But soon, the call is too strong,
+	and you find yourself pushing the stone door open.
+	"""
+	#leads into pyramid entrance
 
-def dobbins_encounter():
+def taymor_hug(): #if hug
+	print """ 
+	His arms are tan and strong 
+	like Charlton Heston's in The Ten Commandments.
+	When they grip you tight you feel the endless potential
+	of your bloodline,
+	and briefly recall your mother's fear with scorn.
+
+	IT FEELS SO GOOD TO FINALLY TOUCH YOU.
+	I HAVE ALWAYS KNOWN THAT YOU WERE MEANT
+	FOR HIS GLORY.
+	TELL ME,
+	HAVE YOU COME TO HELP YOUR GREAT-GRANDFATHER
+	WITH HIS DIVINE WORK?
+	"""
+
+def hug_yes():
+	pass
+
+def hug_no():
+	print """ 
+	YOU'VE COME A LONG WAY TO HAVE SUCH A DANGEROUS ANSWER
+	ON YOUR LIPS.
+	ARE YOU SURE YOU ARE NOT HERE TO FURTHER
+	THE SERVANTS' CAUSE?
+	"""
+
+def hug_second_no():
+	print """ 
+	He sighs.
+	A lonely sound.
+
+	I DID TRULY WISH FOR YOUR COMPANY.
+	BUT IN TRUTH,
+	IT IS JUST YOUR BLOOD I NEED.
+
+	A golden flash and you are leaking lifeblood.
+	Before your consciousness is complete,
+	you see Taymor's smile flash 
+	and glimpse a giant purple snail,
+	larger than the island itself,
+	with a glimmering Murex on its back,
+	sliding over the horizon,
+	swallowing everything in its path.
+
+	You have let divinity pass you by.
+	Mankind is eclipsed.
+	No one will remember your name.
+	"""
+
+def taymor_question():
+	pass
+
+def taymor_attack():
+	pass
+
+def taymor_murex():
+	pass
+
+def taymor_other():
 	pass
 
 def pyramid_survey():
