@@ -190,7 +190,11 @@ Before you realize what is happening, the crew has shuffled you off the deck,
 thrown your bag at your feet, and set sail once more.\n"""
 	sleep(5)
 	print """ The letter that sent you here in the first pokes 
+<<<<<<< HEAD
 against your ribs from inside your pocket."""
+=======
+	against your ribs from inside your pocket."""
+>>>>>>> master
 	sleep(2)
 	print """ A note is nailed to one of the posts on the dock.
 Do you read the note? Or revisit the letter from your great-grandfather? """
