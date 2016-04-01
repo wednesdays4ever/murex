@@ -250,7 +250,7 @@ def fortress_reassess():
 	Or do you press on towards the pyramid? 
 	"""
 
-def sphinx_return():
+desphinx_return():
 	#after first round of talking
 	print """ 
 	GREATNESS OR DESTRUCTION AWAIT.
@@ -275,21 +275,35 @@ def barracks_odd():
 	print """ 
 	The polished copper door swings open 
 	easily when you push it.
+	
 	Inside, the floor and walls are 
 	made of the same clean white marble as the facades.
+	
 	There is no electric light, but the entire room is perfectly
 	illuminated by one circular window, 
 	set strangely into a corner of the ceiling at an angle.
+	
 	A small single bed stands neatly made against one wall.
-	Beside it, a small nightstand 
-	with a book bound in purple leather resting on top.
+	
+	Beside it, a small nightstand with a book bound in 
+	purple leather resting on top.
+	
 	One wooden chair sits in the center of the room, 
 	facing a wall.
+
 	In the corner, a chamber pot of the same glistening copper
 	emits a stench that makes it impossible to believe 
 	another human has been here recently.
 	"""
 #this could be a nice place to have a look around reward
+def odd_default():
+	print """
+	Standing in the small room, you are presented with the
+	same simple objects. 
+
+	Choose one to investigate further, or depart from this place?
+	"""
+
 def odd_chair():
 	print """ 
 	The purpose of this stiff-backed chair is
@@ -302,6 +316,7 @@ def odd_chair():
 	It is truly dazzling,
 	and you have a hard time pulling your eyes away.
 	"""
+
 def odd_under_bed():
 	print """ 
 	A thin layer of white dust coats your clothes
@@ -390,8 +405,11 @@ def barracks_even():
 	print """
 	The polished copper door pushes a purple cotton robe
 	across the floor as you open it.
+	
 	A single, mussed bed stands against one wall.
+	
 	An overturned chair is the only other furniture in the room.
+	
 	There is no electric light, but the entire room is perfectly
 	illuminated by one circular window, 
 	set strangely into a corner of the ceiling at an angle.
@@ -399,10 +417,18 @@ def barracks_even():
 	#similar, but the bed is mussed. book can be found under the bed. chair is knocked over.
 	#if search, glint coming from underneath bed
 
+def even_default():
+	print """
+	Standing in the small room, you are presented with the
+	same simple objects. 
+
+	Choose one to investigate further, or depart from this place?
+	"""
+
 def even_upright_chair():
 	print """ 
 	You set the chair upright in the center of the room.
-	There is no desk,
+	There is no desk, 
 	nor would there be room for much of one.
 	It is unclear what the chair was meant to accomplish 
 	that the bed could not.

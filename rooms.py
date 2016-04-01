@@ -1065,8 +1065,6 @@ def gl_taymor():
 
 def gl_threaten():
 	rooms_intro.gl_threaten()
-=======
-	pass
 
 def rope_bridge():
 	rooms_intro.rope_bridge()
@@ -1338,17 +1336,47 @@ def gl_end_me():
 def gl_dead():
 	rooms_intro.gl_dead()
 
-	pass
+	rooms_intro.return_clearing()
 
 def gl_no_kill():
 	rooms_intro.gl_no_kill()
 
-	pass
+	key1 = ['stay', 'wait', 'watch', 'nothing']
+	key2 = ['leave', 'turn back', 'return', 'docks']
+	key3 = ['no way'] #add a key here?
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_kill_stay()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_no_kill_leave()
+	else:
+		gl_no_kill_leave()
 
 def gl_no_kill_leave():
 	rooms_intro.gl_no_kill_leave()
 
-	pass
+    key1 = ['cave', 'return', 'GL', 'kill']
+    key2 = ['leave', 'turn back', 'return', 'docks']
+    key3 = ['no way'] #add a key here?
+    key4 = ['no way'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        gl_end_me()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        path_back()
+    else:
+        gl_end_me	
 
 def gl_no_kill_stay():
 	rooms_intro.gl_no_kill_stay()
@@ -1359,12 +1387,31 @@ def gl_no_kill_stay():
 def path_back():
 	rooms_intro.path_back()
 
-	default_forest()
+	clearing_path()
 
 
 def clearing_path():
->>>>>>> master
-	pass
+    rooms_intro.clearing_path()
+
+    key1 = ['investigate', 'tree house', 'tree']
+    key2 = ['cave', 'trace', 'steps']
+    key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
+    key4 = ['no way'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        tree_house()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        path_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        still_on_dock()
+    else:
+        default_forest()  
 
 def gl_diary_show():
 	rooms_intro.gl_diary_show()
@@ -1612,7 +1659,6 @@ def faceless_sphinx_approach():
 
 def barracks_investigate():
 	fortress.barracks_investigate()
-	pass
 
 def sphinx_defer():
 	fortress.sphinx_defer()
@@ -1643,8 +1689,266 @@ def sphinx_defer():
 
 def pyramid_approach():
 	fortress.pyramid_approach()
+
+def sphinx_defer():
+	fortress.sphinx_defer()
+
+    key1 = ['taymor', 'grandfather', 'letter', 'ship']
+    key2 = ['murex', 'shining', 'shell']
+    key3 = ['diary', 'GL', 'treehouse']
+    key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
+    key5 = ['beach', 'rocky', 'shore']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        sphinx_taymor()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door2":
+        sphinx_murex()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door3":
+        sphinx_diary()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door4":
+        sphinx_beach()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door5":
+        sphinx_aggression()
+    else:
+        sphinx_taymor()
+
+def sphinx_murex():
+	fortress.sphinx_murex()
+	sphinx_default()
+
+def sphinx_diary():
+	fortress.sphinx_diary()
+	sphinx_default()
+
+def sphinx_beach():
+	fortress.sphinx_beach()
+	sphinx_default()
+
+def sphinx_taymor():
+	fortress.sphinx_taymor()
+	
+	key1 = ['taymor', 'yes', 'divinity', 'sacrifice']
+    key2 = ['no', 'kill', 'return']
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        fortress_reasses()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        sphinx_default()
+    else:
+        fortress_reasses()
+
+def sphinx_default():
+	pass
+	#ADD IN THE DEFAULT STUFF to the fortress.py file 
+
+	key1 = ['taymor', 'grandfather', 'letter', 'ship']
+    key2 = ['murex', 'shining', 'shell']
+    key3 = ['diary', 'GL', 'treehouse']
+    key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
+    key5 = ['beach', 'rocky', 'shore']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        sphinx_taymor()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door2":
+        sphinx_murex()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door3":
+        sphinx_diary()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door4":
+        sphinx_beach()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door5":
+        sphinx_aggression()
+    else:
+        fortress_reasses()
+
+def fortress_reasses():
+	fortress.fortress_reasses()
+
+	key1 = ['sphinx', 'question', 'creature', 'address', 'mythic creatrue']
+    key2 = ['investigate', 'marble structures', 'marble'] 
+    key3 = ['move', 'shining', 'shell', 'pyramid', 'press']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        sphinx_return()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        barracks_investigate()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        pyramid_approach()
+    else:
+        sphinx_return()
+
+def sphinx_return():
+	fortress.sphinx_return()
+	fortress_reasses()
+
+def barracks_investigate():
+	fortress.barracks_investigate()
+
+	choice = scan_input(raw_input("> "))
+
+	if int(choice) % 2 == 0:
+		barracks_even()
+	else:
+		barracks_odd()
+
+def barracks_odd():
+	fortress.barracks_odd()
+
+	key1 = ['chair', 'wooden', 'wall']
+    key2 = ['bed', 'single', 'neatly', 'under']
+    key3 = ['book', 'nightstand', 'purple']
+    key4 = ['chamber pot', 'glistening', 'copper']
+    key5 = ['window']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        odd_chair()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door2":
+        odd_under_bed()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door3":
+        odd_book()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door4":
+        odd_chamber_pot()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door5":
+        odd_bed()
+    else:
+        odd_default()
+
+def odd_chair():
+	fortress.odd_chair()
+	odd_default()
+
+def odd_under_bed():
+	fortress.odd_under_bed()
+	odd_default()
+
+def odd_bed():
+	fortress.odd_bed()
+	odd_default()
+
+def odd_chamber_bed():
+	fortress.odd_chamber_bed()
+	odd_default()
+
+def odd_book():
+	fortress.odd_book()
+
+	key1 = ['read', 'book', 'open', 'inside']
+    key2 = ['put it back', 'leave', 'return']
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        odd_book_read()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        odd_default()
+    else:
+        odd_book_read()
+
+def odd_default():
+
+	key1 = ['chair', 'wooden', 'wall']
+    key2 = ['bed', 'single', 'neatly', 'under']
+    key3 = ['book', 'nightstand', 'purple']
+    key4 = ['chamber pot', 'glistening', 'copper']
+    key5 = ['touch bed', 'lie', 'sleep']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        odd_chair()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door2":
+        odd_under_bed()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door3":
+        odd_book()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door4":
+        odd_chamber_pot()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4, key5) == "door5":
+        odd_bed()
+    else:
+        leave_barracks()
+
+
+def barracks_even():
+	fortress.barracks_even()
+
+	key1 = ['chair', 'overturned', 'right', 'sit']
+    key2 = ['bed', 'lie', 'sleep', 'mussed'] 
+    key3 = ['chamber pot', 'copper', 'under bed', 'crouch']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        even_upright_chair()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        even_bed()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        even_chamber_pot()
+    else:
+        even_default()
+
+def even_upright_chair():
+	fortress.even_upright_chair()
+	even_default()
+
+def even_bed():
+	fortress.even_bed()
+	even_default()
+
+def even_chamber_pot():
+	fortress.even_chamber_pot()
+	even_default()
+
+def even_default():
+	fortress.even_default()
+
+	key1 = ['chair', 'overturned', 'right', 'sit']
+    key2 = ['bed', 'lie', 'sleep', 'mussed'] 
+    key3 = ['chamber pot', 'copper', 'under bed', 'crouch']
+    key4 = ['leave', 'depart', 'pyramid']
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door1":
+        even_upright_chair()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door2":
+        even_bed()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door3":
+        even_chamber_pot()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door4":
+        even_default()
+    else:
+        even_default()
+
+def leave_barracks():
 	pass
 
-
+def pyramid_approach():
+	fortress.pyramid_approach()
+	pass
 
 start()
