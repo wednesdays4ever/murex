@@ -5,7 +5,7 @@
 clear_screen = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
 
 notebook = ""
-clue = 'Nothing of note.'
+clue_default = 'Nothing of note.'
 
 letter = """
 ELSA,
@@ -169,7 +169,10 @@ def ask_input():
 		ask_input()
 		return choice
 	elif choice == ['look','around']:
-		print clue
+		try:
+			print clue
+		except:
+			print clue_default
 		ask_input()
 		return choice
 	else: 
