@@ -6,6 +6,7 @@ import os
 import housekeeping
 import rooms_intro
 import fortress
+import endgame
 
 ################
 ##Start of Game#
@@ -863,8 +864,6 @@ def read_diary():
 def discard_diary():
 	rooms_intro.discard_diary()
 	rope_bridge()
-<<<<<<< HEAD
-	pass
 
 def rope_bridge():
 	rooms_intro.rope_bridge()
@@ -1560,9 +1559,203 @@ def clearing_path():
         default_forest()  
 
 def path_right():
-	rooms_intro.path_right()
+	saintsbeach.rocky_path()
 
-##Need to write a whole path to reach this door again.
+
+    key1 = ['yes', 'continue', 'path', 'walk']
+    key2 = ['no', 'go back', 'leave', 'warmth', 'docks'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        rocky_path_continue()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	rocky_path_return()
+    else:
+        rocky_path_continue
+
+def rocky_path_return():
+	saintsbeach.rocky_path_return()
+
+	key1 = ['pyramid', 'door', 'approach door', 'straight']
+    key2 = ['wooded path', 'left', 'woods'] 
+    key3 = ['return', 'cold damp', 'right']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        door_with_no_knob()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        path_left()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        rocky_path_continue()
+    else:
+        rocky_path_decide()
+
+def rocky_path_decide():
+	saintsbeach.rocky_path_decide()
+
+	key1 = ['pyramid', 'door', 'approach door', 'straight']
+    key2 = ['wooded path', 'left', 'woods'] 
+    key3 = ['return', 'cold damp', 'right']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        door_with_no_knob()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        path_left()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        rocky_path_continue()
+    else:
+        rocky_path_decide()
+
+
+def rocky_path_continue():
+	saintsbeach.rocky_path_continue()
+
+	key1 = ['yes', 'continue', 'path', 'walk', 'press on']
+    key2 = ['no', 'go back', 'leave', 'warmth', 'turn back'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        beach_enter()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	default_from_dock()
+    else:
+        rocky_path_decide()
+
+def beach_enter():
+	saintsbeach.beach_enter()
+
+	key1 = ['altar', 'obsidian block', 'stone', 'large']
+    key2 = ['path', 'cliffs', 'beach', 'narrow'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        altar_investigate()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	cliff_investigate()
+    else:
+        rocky_path_decide()
+
+def altar_investigate():
+	saintsbeach.altar_investigate()
+
+	key1 = ['return', 'head back', 'walk', 'way']
+    key2 = ['path', 'head down', 'beach', 'narrow', 'unknown'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        rocky_path_return()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	path_under_cliffs()
+    else:
+        cliff_investigate()
+
+def cliff_investigate():
+	saintsbeach.cliff_investigate()
+
+	path_under_cliffs()
+
+def path_under_cliffs():
+	saintsbeach.path_under_cliffs()
+
+	key1 = ['return', 'head back', 'walk', 'way', 'turn around']
+    key2 = ['look down', 'hand', 'broken', 'look', 'unknown'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        tunnel_turn_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	look_down()
+    else:
+        look_down()
+
+def look_down():
+	saintsbeach.look_down()
+
+	key1 = ['return', 'head back', 'walk', 'way', 'turn around']
+    key2 = ['investigate', 'stay', 'continue', 'dig'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        tunnel_turn_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	cave_stay()
+    else:
+        cave_stay()
+
+def tunnel_turn_back():
+	saintsbeach.tunnel_turn_back()
+
+	cliffs_path_return()
+
+def cave_stay():
+	key1 = ['return', 'head back', 'walk', 'way', 'turn around']
+    key2 = ['investigate', 'stay', 'continue', 'dig', 'take bone', 'pocket'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        tunnel_turn_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	take_bone()
+    else:
+        take_bone()
+
+def take_bone():
+	saintsbeach.take_bone()
+
+	saintsbeach.cliffs_path_return()
+
+def cliffs_path_return():
+	saintsbeach.cliffs_path_return()
+
+	key1 = ['return', 'head back', 'walk', 'way', 'turn around']
+    key2 = ['wallow', 'stay', 'beach', 'discomfort'] 
+    
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        rocky_path_return()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+    	beach_wallow()
+    else:
+        beach_wallow()
+
+def beach_wallow():
+	saintsbeach.beach_wallow()
+
+	rocky_path_return()
+
 def door_return_refuse():
     fortress.door_return_refuse()
     door_return()
@@ -1573,6 +1766,8 @@ def door_return():
     key1 = ['yes', 'yeah', 'ready', 'judgement']
     key2 = ['no', 'not ready', 'leave'] 
     
+    scanned_input = housekeeping.ask_input()
+
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
         door_return_yes()
@@ -1587,6 +1782,8 @@ def door_return_yes():
     
     key1 = ['yes', 'yeah', 'ready', 'succumb', 'desire']
     key2 = ['no', 'not ready', 'leave'] 
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
@@ -1606,6 +1803,8 @@ def door_judgement():
 
     key1 = ['yes', 'yeah', 'ready', 'enter', 'fortress']
     key2 = ['no', 'not ready', 'leave', 'dock'] 
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
@@ -1628,6 +1827,8 @@ def enter_fortress():
     key1 = ['yes', 'yeah', 'creature', 'address', 'mythic creatrue']
     key2 = ['investigate', 'marble buildings', 'marble'] 
     key3 = ['move', 'shining', 'shell']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2, key3) == "door1":
@@ -1647,6 +1848,8 @@ def faceless_sphinx_approach():
     
     key1 = ['question', 'ask', 'talk']
     key2 = ['presence', 'not ready', 'leave', 'dock'] 
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
@@ -1668,6 +1871,8 @@ def sphinx_defer():
     key3 = ['diary', 'GL', 'treehouse']
     key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
     key5 = ['beach', 'rocky', 'shore']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door1":
@@ -1687,9 +1892,6 @@ def sphinx_defer():
     else:
         sphinx_taymor()
 
-def pyramid_approach():
-	fortress.pyramid_approach()
-
 def sphinx_defer():
 	fortress.sphinx_defer()
 
@@ -1698,6 +1900,8 @@ def sphinx_defer():
     key3 = ['diary', 'GL', 'treehouse']
     key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
     key5 = ['beach', 'rocky', 'shore']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door1":
@@ -1735,6 +1939,8 @@ def sphinx_taymor():
 	key1 = ['taymor', 'yes', 'divinity', 'sacrifice']
     key2 = ['no', 'kill', 'return']
 
+    scanned_input = housekeeping.ask_input()
+
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
         fortress_reasses()
@@ -1753,6 +1959,8 @@ def sphinx_default():
     key3 = ['diary', 'GL', 'treehouse']
     key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
     key5 = ['beach', 'rocky', 'shore']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door1":
@@ -1778,6 +1986,8 @@ def fortress_reasses():
 	key1 = ['sphinx', 'question', 'creature', 'address', 'mythic creatrue']
     key2 = ['investigate', 'marble structures', 'marble'] 
     key3 = ['move', 'shining', 'shell', 'pyramid', 'press']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2, key3) == "door1":
@@ -1813,6 +2023,8 @@ def barracks_odd():
     key3 = ['book', 'nightstand', 'purple']
     key4 = ['chamber pot', 'glistening', 'copper']
     key5 = ['window']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door1":
@@ -1854,6 +2066,8 @@ def odd_book():
 	key1 = ['read', 'book', 'open', 'inside']
     key2 = ['put it back', 'leave', 'return']
 
+    scanned_input = housekeeping.ask_input()
+
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
         odd_book_read()
@@ -1870,6 +2084,8 @@ def odd_default():
     key3 = ['book', 'nightstand', 'purple']
     key4 = ['chamber pot', 'glistening', 'copper']
     key5 = ['touch bed', 'lie', 'sleep']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door1":
@@ -1896,6 +2112,8 @@ def barracks_even():
 	key1 = ['chair', 'overturned', 'right', 'sit']
     key2 = ['bed', 'lie', 'sleep', 'mussed'] 
     key3 = ['chamber pot', 'copper', 'under bed', 'crouch']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2, key3) == "door1":
@@ -1928,6 +2146,8 @@ def even_default():
     key2 = ['bed', 'lie', 'sleep', 'mussed'] 
     key3 = ['chamber pot', 'copper', 'under bed', 'crouch']
     key4 = ['leave', 'depart', 'pyramid']
+
+    scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4) == "door1":
@@ -1948,7 +2168,322 @@ def leave_barracks():
 	pass
 
 def pyramid_approach():
-	fortress.pyramid_approach()
-	pass
+	endgame.pyramid_approach()
+	
+	key1 = ['hit', 'attack', 'slap', 'hurt', 'kick', 'punch']
+    key2 = ['ask', 'question', 'investigate', 'why'] 
+    key3 = ['taymor', 'letter', 'grandfather', 'GL']
+    key4 = ['push', 'past', 'forward', 'pyramid']
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door1":
+        dobbins_attack()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door2":
+        dobbins_question()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door3":
+        dobbins_taymor()
+    elif housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4) == "door4":
+        dobbins_hurry_forward()
+    else:
+        dobbins_other()
+
+def dobbins_attack():
+	endgame.dobbins_attack()
+
+	key1 = ['yes', 'enter', 'pyramid', 'push past']
+    key2 = ['no', 'return', 'docks', 'do not', 'stay'] 
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        pyramid_enter()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        pyramid_other()
+    else:
+        pyramid_other()
+
+def dobbins_question():
+	endgame.dobbins_question()
+
+	key1 = ['slap', 'hit', 'strike', 'attack']
+    key2 = ['no', 'return', 'docks', 'do not', 'stay'] 
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        dobbins_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        pyramid_other()
+    else:
+        pyramid_other()
+
+
+def dobbins_taymor():
+	endgame.dobbins_taymor()
+
+	key1 = ['slap', 'hit', 'strike', 'attack']
+    key2 = ['apprach', 'move', 'forward', 'pyramid', 'walk'] 
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door1":
+        dobbins_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2) == "door2":
+        pyramid_second_approach()
+    else:
+        dobbins_hurry_forward()
+
+
+def dobbins_other():
+	endgame.dobbins_other()
+
+	pyramid_enter()
+
+def dobbins_hurry_forward():
+	endgame.dobbins_hurry_forward()
+	
+	pyramid_enter()
+
+def pyramid_second_approach():
+	endgame.pyramid_second_approach()
+
+	pyramid_enter()
+
+def pyramid_other():
+	endgame.pyramid_other()
+
+	pyramid_enter()
+
+def pyramid_enter():
+	endgame.pyramid_enter()
+
+	key1 = ['yes', 'hug', 'great-grandfather', 'embrace']
+    key2 = ['no', 'no way', 'leave', 'refuse'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['question', 'what', 'who', 'where']
+    key5 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        taymor_hug()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        hug_no()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        taymor_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_question()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door5":
+        taymor_speech()
+    else:
+        taymor_other())
+
+def taymor_hug():
+	endgame.taymor_hug()
+
+	key1 = ['yes', 'help', 'great-grandfather', 'embrace', 'divine work']
+    key2 = ['no', 'refuse', 'no way', 'leave', 'recoil'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['question', 'what', 'why', 'who', 'where']
+    key5 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        hug_yes()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        hug_no()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        taymor_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_question()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door5":
+        taymor_speech()
+    else:
+        taymor_other()
+
+def hug_yes():
+	endgame.hug_yes()
+
+	key1 = ['yes', 'hug', 'embrace', 'great one', 'give in']
+    key2 = ['no', 'refuse', 'no way', 'leave', 'recoil'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['question', 'what', 'who', 'where']
+    key5 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        hug_no()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        taymor_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_question()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_speech()
+    else:
+        taymor_other()
+
+def hug_no():
+	endgame.hug_no()
+
+	key1 = ['yes', 'hug', 'embrace', 'great one', 'give in']
+    key2 = ['no', 'refuse', 'attempt', 'escape', 'leave', 'recoil'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['question', 'what', 'who', 'where']
+    key5 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        hug_no_ascension()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        taymor_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_question()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_speech()
+    else:
+        taymor_other()
+
+def hug_no_ascension():
+	endgame.hug_no_ascension()
+
+def taymor_question():
+	endgame.taymor_question()
+
+	key1 = ['yes', 'hug', 'embrace', 'great one', 'give in']
+    key2 = ['no', 'refuse', 'attempt', 'escape', 'leave', 'recoil'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4) == "door2":
+        hug_no_ascension()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4) == "door3":
+        taymor_attack()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                   key2, key3, key4) == "door4":
+        taymor_speech()
+    else:
+        taymor_other()
+	
+
+def taymor_attack():
+	endgame.taymor_attack()
+
+	key1 = ['yes', 'hug', 'embrace', 'accept', 'take', 'hand']
+    key2 = ['no', 'refuse', 'attempt', 'escape', 'leave', 'recoil'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key4 = ['question', 'what', 'who', 'where']
+    key5 = ['why']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        hug_no_ascension()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        taymor_attack_again()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        taymor_question()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door5":
+        taymor_speech()
+    else:
+        taymor_attack_again()
+
+def taymor_speech():
+	endgame.taymor_speech()
+
+	key1 = ['accept', 'embrace', 'take', 'hold', 'hands']
+    key2 = ['refuse', 'recoil', 'leave'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door2":
+        hug_no_ascension()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door2":
+        taymor_attack()
+    else:
+        taymor_other()
+
+def taymor_other():
+	
+	key1 = ['accept', 'embrace', 'take', 'hold', 'hands']
+    key2 = ['refuse', 'recoil', 'leave'] 
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door1":
+        taymor_embrace_divinity()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door2":
+        taymor_attack_again()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                    key2, key3) == "door2":
+        taymor_attack()
+    else:
+        taymor_other()
+
+def taymor_embrace_divinity():
+	endgame.taymor_embrace_divinity()
+
 
 start()

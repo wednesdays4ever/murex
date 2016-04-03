@@ -17,7 +17,13 @@ def rocky_path_return():
 	The door lies ahead.
 	A wooded path leads off to the left,
 	and the cold damp way stretches back the way
-	you just returned from."""
+	you just returned from.
+	To where do you turn?"""
+
+def rocky_path_decide():
+	print """
+	You shiver as you stand stationary.
+	Continue to the right, go to the left, or head to the door?"""
 
 def rocky_path_continue():
 	print """ 
@@ -118,6 +124,8 @@ def look_down():
 	this cavern is littered with even more
 	human remains."""
 
+
+## This should be a Look Around. 
 def skeleton_investigate():
 	print """ 
 	You count seven skulls and assorted bones
