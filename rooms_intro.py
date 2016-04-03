@@ -654,8 +654,5 @@ def default_forest():
 	print """ The forest is beautiful but all-enveloping in its silence.
 You feel pressure to uncover something, but what? You head to the tree house."""
 
-def path_right():
-	pass
-	### do something at all with the right path
 
 

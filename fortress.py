@@ -472,9 +472,6 @@ def leave_barracks():
 	pass
 #feeds straight back to reassess
 
-def pyramid_approach():
-	pass
-
 def pyramid_enter():
 	pass
 

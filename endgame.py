@@ -4,19 +4,21 @@ def pyramid_approach():
 	but as you take your first decisive steps toward
 	this shining monument,
 	you wonder how you could ever have associated
-	small
-	with this pillar of wonder.
-
+	small with this pillar of wonder.\n \n"""
+	sleep(4)
+	print"""
 	You take slow, straight steps toward the shell.
 	It is the Murex now,
 	no longer just the shining spire.
-	You know because it whispers to you.
-	
+	You know because it whispers to you. \n\n"""
+	sleep(4)
+	print"""
 	You must get closer,
 	there is some great knowledge there,
 	inside the pyramid,
-	that you must encounter.
-
+	that you must encounter.\n\n"""
+	sleep(4)
+	print"""
 	As you approach,
 	a warm sensation,
 	hot even,
@@ -24,10 +26,12 @@ def pyramid_approach():
 	as if your blood was boiling over 
 	and spilling out through your pores.
 	It is an intense and unbearable feeling,
-	that you cannot imagine bearing for long.
-
-	Your concentration is broken with a sharp slap.
-
+	that you cannot imagine bearing for long.\n \n"""
+	sleep(3)
+	print"""
+	Your concentration is broken with a sharp slap.\n"""
+	sleep(3)
+	print"""
 	You look down for the first time in 
 	what might have been an hour
 	to see a tiny, sharp-faced man
@@ -37,6 +41,7 @@ def pyramid_approach():
 
 	How do you respond to this interruption?
 	"""
+
 def dobbins_attack():
 	print """ Whoever this small and insignificant creature was
 	has crumpled beneath a newly woken might.
@@ -63,7 +68,9 @@ def dobbins_question():
 	AND THE DESIRE TO STRIKE YOU ABOUT THE FACE
 	AND BACK
 	AND ANKLES
-	AND BUTTOCKS
+	AND BUTTOCKS"""
+	sleep(3)
+	print """
 	AS I HAVE BEEN STRUCK
 	ABOUT THE FACE AND BACK AND ANKLES AND BUTTOCKS.
 	BUT I WILL RESIST THE URGE
@@ -124,7 +131,7 @@ def dobbins_hurry_forward():
 	welcoming you home.
 	""" 
 
-def pyramid_approach():
+def pyramid_second_approach():
 	print """ 
 	You step past the dirty fool
 	towards destiny.
@@ -132,41 +139,6 @@ def pyramid_approach():
 	A large stone door to the pyramid
 	stands before you,
 	ajar.
-	"""
-
-def pyramid_enter():
-	print """ 
-	A skylight at the peak of the pyramid
-	exposes the inner labyrinth of the Murex,
-	twisting upwards
-	beyond comprehension,
-	and flooding the ritual chamber with a lavender light.
-
-	Taymor, no older than you remember him,
-	stands directly under the source of light,
-	surrounded by the mummified remains of eleven men
-	who hang suspended from the ceiling by silver chains.
-
-	He smiles at you with bright eyes
-	that remind you of a photo you remember from
-	a textbook in elementary school
-	of a young woman who has just seen her fiancee
-	returning from war, 
-	one of the old ones.
-	Her face is so full 
-	of confidence and relief and disbelief and love and hope.
-	It is right next to elation but also on the edge of tears.
-	Later in life you looked for the photo
-	and the book you found it in with no luck.
-	It was a beautiful expression
-	that you have always remembered and longed to see again,
-	and you are surpised to see it mirrored now.
-
-	MY BLOOD,
-	MY RELATION.
-	HERE YOU ARE,
-	AND JUST IN TIME TO WITNESS THE NEW WORLD.
-	WON'T YOU COME AND HUG YOUR GREAT-GRANDFATHER?
 	"""
 
 def pyramid_other():
@@ -179,14 +151,58 @@ def pyramid_other():
 	"""
 	#leads into pyramid entrance
 
+def pyramid_enter():
+	print """ 
+	A skylight at the peak of the pyramid
+	exposes the inner labyrinth of the Murex,
+	twisting upwards
+	beyond comprehension,
+	and flooding the ritual chamber with a lavender light."""
+	sleep(6)
+	print"""
+
+	Taymor, no older than you remember him,
+	stands directly under the source of light,
+	surrounded by the mummified remains of eleven men
+	who hang suspended from the ceiling by silver chains."""
+	sleep(4)
+	print"""
+
+	He smiles at you with bright eyes
+	that remind you of a photo you remember from
+	a textbook in elementary school
+	of a young woman who has just seen her fiancee
+	returning from war, 
+	one of the old ones."""
+	sleep(4)
+	print"""
+	Her face is so full 
+	of confidence and relief and disbelief and love and hope.
+	It is right next to elation but also on the edge of tears.
+	Later in life you looked for the photo
+	and the book you found it in with no luck.
+	It was a beautiful expression
+	that you have always remembered and longed to see again,
+	and you are surpised to see it mirrored now."""
+	sleep(6)
+	print"""
+
+	MY BLOOD,
+	MY RELATION.
+	HERE YOU ARE,
+	AND JUST IN TIME TO WITNESS THE NEW WORLD.
+	WON'T YOU COME AND HUG YOUR GREAT-GRANDFATHER?
+	"""
+
 def taymor_hug():
 	print """ 
 	His arms are tan and strong 
 	like Charlton Heston's in The Ten Commandments.
 	When they grip you tight you feel the endless potential
 	of your bloodline,
-	and briefly recall your mother's fear with scorn.
-
+	and briefly recall your mother's fear with scorn."""
+	sleep(5)
+	print"""
 	IT FEELS SO GOOD TO FINALLY TOUCH YOU.
 	I HAVE ALWAYS KNOWN THAT YOU WERE MEANT
 	FOR HIS GLORY.
@@ -209,7 +225,7 @@ def hug_yes():
 	TELL ME YOU WILL EMBRACE THE GREAT ONE.
 
 	Give in to Taymor's request,
-	or recoil from the warmth.
+	or recoil from the warmth?
 	His grip makes it apparent that the choice
 	is imminent.	
 	"""
@@ -224,10 +240,12 @@ def hug_no():
 	ON YOUR LIPS.
 	ARE YOU SURE YOU ARE NOT HERE TO FURTHER
 	THE SERVANTS' CAUSE?
+
+	Accept the embrace or attempt escape?
 	"""
 	#can lead to embrace divinity
 
-def hug_second_no():
+def hug_no_ascension():
 	print """ 
 	He sighs.
 	A lonely sound.
@@ -299,6 +317,8 @@ def taymor_attack():
 	but his smile lets you know that you must do more
 	serious damage
 	or bend your knee to a greater power.
+
+	Do you now accept his hand or turn from him?
 	"""
 	#can lead to embrace divinity
 
@@ -345,7 +365,7 @@ def taymor_speech(): #if why
 	TRUST ME, AND OUR LINE WILL LEAD
 	A NEW WORLD GREATER THAN ANY YOU CAN IMAGINE.
 
-	He holds his eyes out to you,
+	He holds his hands out to you,
 	and his pale eyes shine
 	with power and confidence.
 	"""
@@ -360,9 +380,11 @@ def taymor_other():
 	OR ACCEPT THE JUDGEMENT
 	HE PASSES THROUGH ME.
 
-	Taymore unsheathes a golden blade.
+	Taymor unsheathes a golden blade.
 	Its weight appears comfortable in his hand.
 	Make a choice now.
+
+	Do you now accept his embrace or turn to violence?
 	"""
 
 def taymor_embrace_divinity():
@@ -402,6 +424,7 @@ def taymor_embrace_divinity():
 	and nothing could make you happier.
 	"""
 
+#This should be in a Look Around when you first enter the pyramid.
 def pyramid_survey():
 	print """
 	Taymor's skin glows healthily,
