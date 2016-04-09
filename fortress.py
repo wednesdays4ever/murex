@@ -228,6 +228,23 @@ def sphinx_aggression_three():
 	You were meant for greater things,
 	but this is not the first time that 
 	stupidity has altered destiny. 
+		               ,.
+                      /-|
+                     (--;
+                    (,-';
+                  _/_.-';
+                _/-.__._<
+             .-'`-.__   '\
+           .'`---=___`===':
+          /_..---' ___.--.'
+         |` ___.--' __ .i|
+         |-' ___.--'_.8:E|
+         \,-'  __.-/88::E!
+          `-.,' _.'|88::E|
+             `;'../88:: E;
+              |.'!88::E"/
+             /.''!"iiE /
+             `--'`._.-' 
 	"""
 
 def sphinx_beach():
