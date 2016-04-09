@@ -491,4 +491,3 @@ def leave_barracks():
 	down on you all day?"""
 #feeds straight back to reassess
 
-
