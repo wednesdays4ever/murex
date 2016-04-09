@@ -173,12 +173,7 @@ def mother_story():
 
     DON'T MENTION HIM AGAIN.
     PLEASE.
-
-    You feel the ship's bow knock against the island's dock.
-    You've arrived, and there is nothing more she can tell you now.
     """
-    #THE LAST TWO LINES NEED TO BE FIXED. 
-    #THEY SAY THAT THE BOAT HAS ARRIVED, THEN IT SAYS THAT IT HASN'T YET.
 
 def wait_dock():
     print """ You stare at the island as the ship approaches.
@@ -189,7 +184,7 @@ def wait_dock():
     Before you realize what is happening, the crew has shuffled you off the deck, 
     thrown your bag at your feet, and set sail once more.\n"""
     sleep(5)
-    print """ The letter that sent you here in the first pokes 
+    print """ The letter that sent you here in the first place pokes 
     against your ribs from inside your pocket."""
     sleep(2)
     print """ A note is nailed to one of the posts on the dock.
@@ -237,7 +232,7 @@ def dock_arrivei():
 
 def still_on_dock():
     print """ You look around your new surroundings on the creeky dock. The path lies in front of you. 
-    Do you look back at the note or the letter or do you forge on ahead? """
+    Do you look back at the note, reread the letter or do you forge on ahead? """
 
 
 def path_from_dock():
@@ -351,7 +346,7 @@ def wait_after_door():
     and to the right, away from the walls and rocky cliffs."""
 
 def hopeless_wait():
-    print """Time feels to be stopped. You reawaken as if in a dream. 
+    print """Time seems stopped. You reawaken as if in a dream. 
     To which direction do you turn?"""
 
 def path_left():
@@ -392,7 +387,7 @@ def forest_enter():
 
 def forest_ruins():
     print """ Moments after it felt as though the path would end in overgrowth, 
-    it breaks open into a large, man made clearing.\n
+    it breaks open into a large, man-made clearing.\n
     A series of platforms and huts, elevated in the trees and strung together by rope bridges, 
     sit above a central fire pit.\n
     These signs of life bring you a moment of joy.\n
@@ -414,10 +409,55 @@ def tree_house():
     This place must somehow be related to the compound.
     Could this have been Taymor's den? \n"""
     sleep(4)
-    print """" Were you too late to respond to his letter?
+    print """ Were you too late to respond to his letter?
     The room fills you with sadness, but if you're here to learn about your relative, 
     this seems like a place to start."""
 
+def tree_house_default():
+    print """ Were you too late to respond to his letter?
+    The room fills you with sadness, but if you're here to learn about your relative, 
+    this seems like a place to start.
+    Leave out the opposite door, go back the way you came 
+    or rest in this chair?"""
+
+def inspect_books():
+    print """ 
+    You never learned to read Latin,
+    and even if you had these titles
+    are either water-damaged or
+    ripped to shreds.
+
+    You are aware of it as a gap in your knowledge,
+    but your lack of Latin and Greek have never presented
+    any real issue in your day to day existence,
+    and you do not regret the choices you made
+    during your school days."""
+
+def chair():
+    print """ 
+    The burgundy leather squeaks in a friendly
+    and elegant way as you slide into it.
+    To sit here is to feel regal,
+    even if the room has been destroyed.
+    An important feeling swells inside you
+    when you notice another book peeking out from underneath
+    your seat."""
+
+def pick_up_diary():
+    print """ 
+    The book is a diary. 
+    A fine one, with a golden embossed G.L. on the cover,
+    that has seen much wear and tear.
+    Whoever G.L. was and whatever happened to him here are questions that cannot have pleasant answers.
+    But how can you know unless you ask?
+    """
+
+def chess():
+    print """ 
+    You are no chess master, 
+    but it is apparent that this game
+    was going nowhere when it was interrupted.
+    Only pawns and a queen remain on the board."""
 
 def tree_house_inspect():
     print """ Upon closer inspection, you notice a few things that seem out of the ordinary:
@@ -425,7 +465,7 @@ def tree_house_inspect():
     The initials G.L. embossed on the back of the chair,
     and, gruesomely, scrawled in what looks like gore on the wall next to the opposite door
     THE END IS THE ONLY OUTCOME. WE WILL PREVAIL.\n"""
-    sleep(6)
+    sleep(4)
     print """ The book is a diary. 
     A fine one, with a golden embossed G.L. on the cover,
     that has seen much wear and tear.

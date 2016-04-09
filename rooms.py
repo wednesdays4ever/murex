@@ -344,8 +344,8 @@ def dock_arrivei():
 def still_on_dock(): 
     rooms_intro.still_on_dock()
 
-    key1 = ['note','nailed', 'read']
-    key2 = ['letter', 'open']
+    key1 = ['note', 'nailed', 'read', 'look', 'back']
+    key2 = ['letter', 'open', 'reread']
     key3 = ['forge on', 'forge', 'ahead', 'forward']
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -710,8 +710,8 @@ def hopeless_wait():
 def path_left():
     rooms_intro.path_left()
 
-    key1 = ['left', 'forest', 'dirt', 'forward','enter', 'further']
-    key2 = ['right', 'cliff', 'cliffs', 'rocks']
+    key1 = ['left', 'forest', 'dirt', 'forward','enter', 'further', 'yes']
+    key2 = ['right', 'cliff', 'cliffs', 'rocks', 'no']
     key3 = ['return to docks', 'docks']
     key4 = ['door','knock'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -794,8 +794,8 @@ def tree_house():
 
     key1 = ['start', 'walk around', 'inspect']
     key2 = ['clearing', 'leave tree house']
-    key3 = ['no way'] #add a key here?
-    key4 = ['no way'] #add a key here?
+    key3 = ['chess', 'set'] #add a key here?
+    key4 = ['chair', 'rest', 'sit'] #add a key here?
     key5 = ['no way'] #add a key here?
 
     clue = """Amid the chaos, one book remains mostly intact, 
@@ -809,8 +809,48 @@ def tree_house():
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
         clearing_path()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door2":
+        chess()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door2":
+        chair()
     else:
         tree_house_inspect()
+
+def tree_house_default():
+	rooms_intro.tree_house_default()
+
+	key1 = ['start', 'walk around', 'inspect', 'book', 'open']
+    key2 = ['clearing', 'leave tree house']
+    key3 = ['chess', 'set'] #add a key here?
+    key4 = ['chair', 'rest', 'sit'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+   	if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door1":
+        tree_house_inspect()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door2":
+        clearing_path()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door2":
+        chess()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door2":
+        chair()
+    else:
+        tree_house_inspect()
+
+def chair():
+	rooms_intro.chair()
+
+	tree_house_default()
+
+def chess():
+	rooms_intro.chess()
+
+	tree_house_default()
 
 def tree_house_inspect():
     rooms_intro.tree_house_inspect()
