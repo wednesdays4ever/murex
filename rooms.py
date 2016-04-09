@@ -1461,7 +1461,7 @@ def rocky_path_decide():
 def rocky_path_continue():
     saintsbeach.rocky_path_continue()
 
-    key1 = ['yes', 'continue', 'path', 'walk', 'press on']
+    key1 = ['yes', 'continue', 'path', 'right', 'walk', 'press on', 'press']
     key2 = ['no', 'go back', 'leave', 'warmth', 'turn back']
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
@@ -1481,7 +1481,7 @@ def rocky_path_continue():
 def beach_enter():
     saintsbeach.beach_enter()
 
-    key1 = ['altar', 'obsidian block', 'stone', 'large']
+    key1 = ['altar', 'obsidian', 'stone', 'large', 'block']
     key2 = ['path', 'cliffs', 'beach', 'narrow'] 
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
@@ -1566,7 +1566,7 @@ def look_down():
 def tunnel_turn_back():
     saintsbeach.tunnel_turn_back()
 
-    cliffs_path_return()
+    cliff_path_return()
 
 def cave_stay():
     key1 = ['return', 'head back', 'walk', 'way', 'turn around']
@@ -1584,15 +1584,15 @@ def cave_stay():
                                 key2, key3, key4, key5) == "door2":
         take_bone()
     else:
-        take_bone()
+        tunnel_turn_back()
 
 def take_bone():
     saintsbeach.take_bone()
 
-    saintsbeach.cliffs_path_return()
+    saintsbeach.cliff_path_return()
 
-def cliffs_path_return():
-    saintsbeach.cliffs_path_return()
+def cliff_path_return():
+    saintsbeach.cliff_path_return()
 
     key1 = ['return', 'head back', 'walk', 'way', 'turn around']
     key2 = ['wallow', 'stay', 'beach', 'discomfort'] 
