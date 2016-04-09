@@ -124,7 +124,6 @@ def look_down():
 	this cavern is littered with even more
 	human remains."""
 
-
 ## This should be a Look Around. 
 def skeleton_investigate():
 	print """ 

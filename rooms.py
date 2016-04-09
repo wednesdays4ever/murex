@@ -1065,6 +1065,29 @@ def gl_taymor():
 def gl_threaten():
     rooms_intro.gl_threaten()
 
+    key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'book']
+	key4 = ['servant', 'purity', 'serve'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_end_me()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key4) == "door4":
+		gl_purity()
+	else:
+		gl_taymor()
+
 def rope_bridge():
     rooms_intro.rope_bridge()
 
@@ -1264,7 +1287,78 @@ def gl_taymor():
 
 def gl_threaten():
     rooms_intro.gl_threaten()
-    pass
+	
+	key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'book']
+	key4 = ['taymor, letter, grandfather'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_threaten()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key4) == "door4":
+		gl_taymor()
+	else:
+		gl_no_patience()
+
+def gl_taymor():
+	rooms_intro.gl_taymor()
+
+	key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'book']
+	key4 = ['no way'] #add a key here?
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_threaten()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	else:
+		gl_no_patience()
+
+def gl_threaten():
+	rooms_intro.gl_threaten()
+	
+	key1 = ['stand', 'look','nothing']
+	key2 = ['punch', 'hit', 'slap', 'walk']
+	key3 = ['diary', 'book']
+	key4 = ['taymor, letter, grandfather']
+	key5 = ['no way'] #add a key here?
+
+	scanned_input = housekeeping.ask_input()
+	
+	if housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door1":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key2) == "door2":
+		gl_no_patience()
+	elif  housekeeping.match_input(scanned_input, key1, 
+									 key3) == "door3":
+		gl_diary_show()
+	elif housekeeping.match_input(scanned_input, key1, 
+									 key4) == "door4":
+		gl_taymor()
+	else:
+		gl_no_patience()
 
 def gl_diary_show():
     rooms_intro.gl_diary_show()
@@ -1302,7 +1396,6 @@ def gl_no_patience():
         gl_end_me()
     else:
         gl_no_kill()
-
 
 def gl_diary_show():
     rooms_intro.gl_diary_show()
@@ -1943,16 +2036,15 @@ def sphinx_taymor():
 
     if housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door1":
-        fortress_reasses()
+        sphinx_taymor_yes()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2) == "door2":
-        sphinx_default()
+        sphinx_taymor_no()
     else:
-        fortress_reasses()
+        sphinx_default()
 
 def sphinx_default():
-    pass
-    #ADD IN THE DEFAULT STUFF to the fortress.py file 
+	fortress.sphinx_default()
 
     key1 = ['taymor', 'grandfather', 'letter', 'ship']
     key2 = ['murex', 'shining', 'shell']
@@ -2165,7 +2257,25 @@ def even_default():
         even_default()
 
 def leave_barracks():
-    pass
+	fortress.leave_barracks()
+
+	key1 = ['sphinx', 'question', 'creature', 'address', 'mythic creatrue']
+    key2 = ['investigate', 'marble structures', 'marble'] 
+    key3 = ['move', 'shining', 'shell', 'pyramid', 'press']
+
+    scanned_input = housekeeping.ask_input()
+    
+    if housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door1":
+        sphinx_return()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door2":
+        barracks_investigate()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3) == "door3":
+        pyramid_approach()
+    else:
+        fortress_reasses()
 
 def pyramid_approach():
     endgame.pyramid_approach()
@@ -2462,6 +2572,7 @@ def taymor_speech():
         taymor_other()
 
 def taymor_other():
+    endgame.taymor_other()
     
     key1 = ['accept', 'embrace', 'take', 'hold', 'hands']
     key2 = ['refuse', 'recoil', 'leave'] 
