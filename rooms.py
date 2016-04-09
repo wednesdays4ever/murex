@@ -1120,10 +1120,10 @@ def ladder_down():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         follow_steps()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_back()
     else:
         follow_steps()
@@ -1140,10 +1140,10 @@ def follow_steps():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         cave_enter
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_back()
     else:
         cave_enter
@@ -1160,10 +1160,10 @@ def cave_enter():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         gl_introduce()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         gl_threaten()
     else:
         gl_introduce()
@@ -1181,13 +1181,13 @@ def gl_introduce():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         gl_threaten()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key3) == "door3":
+                                key2, key3, key4, key5) == "door3":
         gl_diary_show()
     else:
         gl_teymor()
@@ -1204,13 +1204,13 @@ def gl_taymor():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         gl_threaten()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key3) == "door3":
+                                key3, key3, key4, key5) == "door3":
         gl_diary_show()
     else:
         gl_no_patience()
@@ -1227,16 +1227,16 @@ def gl_threaten():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door1":
+                                key2, key3, key4, key5) == "door1":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2) == "door2":
+                                key2, key3, key4, key5) == "door2":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key3) == "door3":
+                                key2, key3, key4, key5) == "door3":
         gl_diary_show()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key4) == "door4":
+                                key2, key3, key4, key5) == "door4":
         gl_taymor()
     else:
         gl_no_patience() 
