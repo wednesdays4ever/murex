@@ -250,7 +250,7 @@ def fortress_reassess():
 	Or do you press on towards the pyramid? 
 	"""
 
-desphinx_return():
+def sphinx_return():
 	#after first round of talking
 	print """ 
 	GREATNESS OR DESTRUCTION AWAIT.
