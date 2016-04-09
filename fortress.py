@@ -228,6 +228,23 @@ def sphinx_aggression_three():
 	You were meant for greater things,
 	but this is not the first time that 
 	stupidity has altered destiny. 
+		               ,.
+                      /-|
+                     (--;
+                    (,-';
+                  _/_.-';
+                _/-.__._<
+             .-'`-.__   '\
+           .'`---=___`===':
+          /_..---' ___.--.'
+         |` ___.--' __ .i|
+         |-' ___.--'_.8:E|
+         \,-'  __.-/88::E!
+          `-.,' _.'|88::E|
+             `;'../88:: E;
+              |.'!88::E"/
+             /.''!"iiE /
+             `--'`._.-' 
 	"""
 
 def sphinx_beach():
@@ -250,7 +267,7 @@ def fortress_reassess():
 	Or do you press on towards the pyramid? 
 	"""
 
-desphinx_return():
+def sphinx_return():
 	#after first round of talking
 	print """ 
 	GREATNESS OR DESTRUCTION AWAIT.
@@ -384,9 +401,6 @@ def odd_book_read():
 	this, and if so, how he learned.
 	"""
 
-def odd_window():
-	pass
-
 def odd_bed():
 	print """ 
 	The mattress is stiff and the sheets are coarse.
@@ -469,23 +483,11 @@ def even_must_leave ():
 	#if you try to stay after puking
 
 def leave_barracks():
-	pass
+	print """
+	You are disturbed and feel less than enlightened.
+	Do you need to see the inside of another marble structure?
+	Do you investigate the sphinx further?
+	Do you approach the pyramid that has shone
+	down on you all day?"""
 #feeds straight back to reassess
 
-def pyramid_enter():
-	pass
-
-def dobbins_encounter():
-	pass
-
-def pyramid_survey():
-	pass
-
-def taymor_speech():
-	pass
-
-def ritual_begin():
-	pass
-
-def ritual_interrupt():
-	pass

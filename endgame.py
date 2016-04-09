@@ -272,6 +272,24 @@ def hug_no_ascension():
 	in far removed
 	and greater
 	worlds.
+
+		               ,.
+                      /-|
+                     (--;
+                    (,-';
+                  _/_.-';
+                _/-.__._<
+             .-'`-.__   '\
+           .'`---=___`===':
+          /_..---' ___.--.'
+         |` ___.--' __ .i|
+         |-' ___.--'_.8:E|
+         \,-'  __.-/88::E!
+          `-.,' _.'|88::E|
+             `;'../88:: E;
+              |.'!88::E"/
+             /.''!"iiE /
+             `--'`._.-'  
 	"""
 
 def taymor_question():
@@ -350,6 +368,24 @@ def taymor_attack_again():
 	Life slips from you in this unfriendly fashion.
 
 	You witness none of the glory.
+
+		               ,.
+                      /-|
+                     (--;
+                    (,-';
+                  _/_.-';
+                _/-.__._<
+             .-'`-.__   '\
+           .'`---=___`===':
+          /_..---' ___.--.'
+         |` ___.--' __ .i|
+         |-' ___.--'_.8:E|
+         \,-'  __.-/88::E!
+          `-.,' _.'|88::E|
+             `;'../88:: E;
+              |.'!88::E"/
+             /.''!"iiE /
+             `--'`._.-'  
 	"""
 
 def taymor_speech(): #if why
@@ -422,6 +458,23 @@ def taymor_embrace_divinity():
 
 	Soon you too will be consumed,
 	and nothing could make you happier.
+	                   ,.
+                      /-|
+                     (--;
+                    (,-';
+                  _/_.-';
+                _/-.__._<
+             .-'`-.__   '\
+           .'`---=___`===':
+          /_..---' ___.--.'
+         |` ___.--' __ .i|
+         |-' ___.--'_.8:E|
+         \,-'  __.-/88::E!
+          `-.,' _.'|88::E|
+             `;'../88:: E;
+              |.'!88::E"/
+             /.''!"iiE /
+             `--'`._.-'  
 	"""
 
 #This should be in a Look Around when you first enter the pyramid.
