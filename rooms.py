@@ -208,7 +208,7 @@ def visit_memory():
     rooms_intro.visit_memory()
 
     key1 = ["note","nailed", "read"]
-    key2 = ["path", "island"]
+    key2 = ["path", "island", 'forward', 'walk', 'start']
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -220,7 +220,7 @@ def visit_memory():
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
-        pathi()
+        path_from_dock()
     else:
         dock_fill()
 
@@ -282,7 +282,7 @@ def read_letteriii():
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
-        pathi()
+        path_from_dock()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
         visit_memory()
@@ -297,7 +297,7 @@ def dock_fill():
 
     key1 = ['note','nailed']
     key2 = ['letter','great-grandfather']
-    key3 = ['path','island']
+    key3 = ['path','island', 'go ahead', 'start']
     key4 = ['childhood','visit']
     key5 = ['stories','story','mother']
 
@@ -311,7 +311,7 @@ def dock_fill():
         read_letteriii()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
-        pathi()
+        patk_from_dock()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door4":
         visit_memory()
@@ -819,15 +819,15 @@ def tree_house():
         tree_house_inspect()
 
 def tree_house_default():
-	rooms_intro.tree_house_default()
+    rooms_intro.tree_house_default()
 
-	key1 = ['start', 'walk around', 'inspect', 'book', 'open']
+    key1 = ['start', 'walk around', 'inspect', 'book', 'open']
     key2 = ['clearing', 'leave tree house']
     key3 = ['chess', 'set'] #add a key here?
     key4 = ['chair', 'rest', 'sit'] #add a key here?
     key5 = ['no way'] #add a key here?
 
-   	if housekeeping.match_input(scanned_input, key1, 
+    if housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door1":
         tree_house_inspect()
     elif  housekeeping.match_input(scanned_input, key1, 
@@ -843,14 +843,14 @@ def tree_house_default():
         tree_house_inspect()
 
 def chair():
-	rooms_intro.chair()
+    rooms_intro.chair()
 
-	tree_house_default()
+    tree_house_default()
 
 def chess():
-	rooms_intro.chess()
+    rooms_intro.chess()
 
-	tree_house_default()
+    tree_house_default()
 
 def tree_house_inspect():
     rooms_intro.tree_house_inspect()
@@ -1329,10 +1329,10 @@ def gl_no_patience():
         gl_end_me()
     elif housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
-    	gl_threaten()
+        gl_threaten()
     elif housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
-    	gl_diary_show()
+        gl_diary_show()
     else:
         gl_no_kill()
 
@@ -1422,7 +1422,7 @@ def clearing_path():
         tree_house()
     elif  housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
-        path_back()
+        follow_steps()
     elif  housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
         still_on_dock()
@@ -1587,7 +1587,7 @@ def look_down():
     saintsbeach.look_down()
 
     key1 = ['return', 'head back', 'walk', 'way', 'turn around']
-    key2 = ['investigate', 'stay', 'continue', 'dig'] 
+    key2 = ['investigate', 'stay', 'continue', 'dig', 'gross'] 
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -1937,7 +1937,7 @@ def barracks_investigate():
 def barracks_odd():
     fortress.barracks_odd()
 
-    key1 = ['chair', 'wooden', 'wall']
+    key1 = ['chair', 'wooden', 'wall', 'cushion' 'sit']
     key2 = ['bed', 'single', 'neatly', 'under']
     key3 = ['book', 'nightstand', 'purple']
     key4 = ['chamber pot', 'glistening', 'copper']
