@@ -179,6 +179,7 @@ def read_letteri():
 
 def read_letterii():
     rooms_intro.read_letterii()
+
     print housekeeping.letter
     print housekeeping.reaction_to_letter
 
@@ -237,7 +238,7 @@ def mother_story():
 def wait_dock():
     rooms_intro.wait_dock()
 
-    key1 = ["note","nailed", "read"]
+    key1 = ["note", "nailed", "read"]
     key2 = ["letter", "revisit", "great-grandfather"]
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
@@ -269,9 +270,9 @@ def read_letteriii():
     print housekeeping.letter
     print housekeeping.reaction_to_letter
 
-    key1 = ["note","nailed"]
-    key2 = ["path","island"]
-    key3 = ["childhood","visit"]
+    key1 = ["note", "nailed"]
+    key2 = ["path", "island"]
+    key3 = ["childhood", "visit"]
     key4 = ["stories", "story", "mother"]
     key5 = ['no way'] #add a key here?
 
@@ -383,7 +384,11 @@ def path_from_dock():
         path_right()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
-        door_with_no_knob()
+        try:
+            blood
+            door_return_refuse()
+        except NameError: 
+            door_with_no_knob()
     else:
         default_from_dock()
 
@@ -407,7 +412,11 @@ def default_from_dock():
         path_right()
     elif housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
-        door_with_no_knob()
+        try:
+            blood
+            door_return_refuse()
+        except NameError: 
+            door_with_no_knob()
     else:
         default_from_dock()
 
@@ -688,11 +697,11 @@ def wait_after_door():
     else:
         hopeless_wait()
 
-#MISSING HOPELESS WAIT
+
 def hopeless_wait():
     rooms_intro.hopeless_wait()
 
-    key1 = ['left', 'forest']
+    key1 = ['left', 'forest', 'tree house']
     key2 = ['right', 'cliff', 'cliffs', 'rocks']
     key3 = ['door', 'knock', 'straight']
     key4 = ['no way'] #add a key here?
@@ -770,7 +779,7 @@ def forest_ruins():
     rooms_intro.forest_ruins()
 
     key1 = ['rope ladder', 'climb rope', 'tree house', 'approach tree']
-    key2 = ['clearing', 'head down path']
+    key2 = ['clearing', 'head down path', 'path']
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -866,7 +875,7 @@ def tree_house_inspect():
 
     key1 = ['read', 'open', 'diary']
     key2 = ['clearing', 'leave tree house']
-    key3 = ['no way'] #add a key here?
+    key3 = ['bridge', 'rope'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 
@@ -878,6 +887,9 @@ def tree_house_inspect():
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
         clearing_path()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door3":
+        cross_bridge()
     else:
         open_diary()
 
@@ -1119,8 +1131,8 @@ def ladder_down():
 def follow_steps():
     rooms_intro.follow_steps()
 
-    key1 = ['continue', 'enter', 'darkness']
-    key2 = ['path', 'return', 'clearing']
+    key1 = ['continue', 'enter', 'darkness', 'yes']
+    key2 = ['path', 'return', 'clearing', 'no']
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -1288,7 +1300,7 @@ def gl_no_patience():
 def gl_end_me():
     rooms_intro.gl_end_me()
 
-    key1 = ['yes', 'i do', 'kill', 'dead']
+    key1 = ['yes', 'i do', 'kill', 'dead', 'end']
     key2 = ['no', 'i don\'t', 'do not', 'will not']
     key3 = ['leave', 'turn back'] 
     key4 = ['no way'] #add a key here?
@@ -1311,7 +1323,31 @@ def gl_end_me():
 def gl_dead():
     rooms_intro.gl_dead()
 
-    rooms_intro.return_clearing()
+    gl_end = True
+
+    return_clearing()
+
+def return_clearing():
+
+    key1 = ['investigate', 'tree house', 'tree']
+    key2 = ['cave', 'trace', 'steps']
+    key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
+    key4 = ['no way'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        tree_house()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        follow_steps()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        still_on_dock()
+    else:
+        default_forest()  
 
 def gl_no_kill():
     rooms_intro.gl_no_kill()
@@ -1351,7 +1387,7 @@ def gl_no_kill_leave():
                                 key2, key3, key4, key5) == "door2":
         path_back()
     else:
-        gl_end_me   
+        gl_end_me()
 
 
 def clearing_path():

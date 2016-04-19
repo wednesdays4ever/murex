@@ -233,6 +233,12 @@ def dock_note():
 
     """
 
+def read_letterii():
+    print """
+    In a fog of confusion and sleep deprivation, 
+    you find yourself undoing the seal on the letter once again.
+    """
+
 def read_letteriii():
     print """
     Now that you're actually here, all alone, a small panic hits you.
@@ -266,13 +272,15 @@ def dock_arrivei():
     The letter that sent you here in the first 
     pokes against your ribs from inside your pocket.\n
     A note is nailed to one of the posts on the dock.
-    Do you read the note? Or revisit the letter from your great-grandfather? """
+    Do you read the note? Or revisit the letter from your great-grandfather?
+    """
 
 def still_on_dock():
     print """
     You look around your new surroundings on the creeky dock. 
     The path lies in front of you. 
-    Do you look back at the note, reread the letter or do you forge on ahead? """
+    Do you look back at the note, reread the letter or do you forge on ahead? 
+    """
 
 
 def path_from_dock():
@@ -650,7 +658,7 @@ def ladder_down():
     to be the direction of the first large forest clearing, 
     but there are also signs that someone has walked further into the forest, 
     footsteps through a thicket. 
-    
+
     Do you take the path, or continue your investigation?"""
 
 def path_back():
@@ -805,8 +813,12 @@ def gl_no_kill_stay():
     that you will never begin to understand."""
     #respawn at dock?
 
-def return_forest():
-    pass
+def return_clearing():
+    print """
+    The clearing is just as eerie as before, 
+    but the air, and you feel different.
+    Return to the tree house, or back to the dock?
+    """
 
 def clearing_path():
     print """
