@@ -21,7 +21,7 @@ def start_intro():
 
 def help_menu():
     print '*' * 15
-    print "\n Murex is a game of exploration and investigation."
+    print "\nMurex is a game of exploration and investigation."
     print "Type \'CHECK NOTEBOOK\' to review what you've learned."
     print "Remember to regularly survey your surroundings."
     print "     Secrets may be anywhere.     "
@@ -207,7 +207,7 @@ def wait_dock():
     Before you realize what is happening, 
     the crew has shuffled you off the deck, 
     thrown your bag at your feet, and set sail once more.\n"""
-    sleep(5)
+    sleep(3)
     print """
     The letter that sent you here in the first place pokes 
     against your ribs from inside your pocket."""
@@ -249,7 +249,8 @@ def dock_fill():
     Perhaps there is more information in the note on the dock 
     or something you missed in the letter you came with. 
     
-    Otherwise, blindly start over to the island."""
+    Or perhaps, feeling blind with confidence, 
+    start over to the island."""
 
 def dock_arrivei():
     print """
@@ -307,8 +308,10 @@ def push_or_pull_door():
     Beneath the stone lid, there is the real shining eye of some living creature.
     It glistens like a man's would in this light. 
     It reflects back the waves behind you, flipped and magnified.
-    You are in shock and lost in the world of the eye that is larger than the car you drive to work, 
-    when you see it narrow into a glare and hear a thin voice enter your mind from no obvious origin.
+    You are in shock and lost in the world of the eye 
+    that is larger than the car you drive to work, 
+    when you see it narrow into a glare 
+    and hear a thin voice enter your mind from no obvious origin.
 
     SMALL CREATURE. WHY DO YOU COME? """
 
@@ -319,7 +322,8 @@ def default_door():
 
 def door_eye_answer():
     print """
-    LONG AGO, ENTRANCE WAS FOR ALL, BUT HERETICS HAVE CLOSED OUR DOORS.
+    LONG AGO, ENTRANCE WAS FOR ALL, 
+    BUT HERETICS HAVE CLOSED OUR DOORS.
     THE SECRETS INSIDE ARE SAFE BEHIND ME. 
     I WILL OPEN ONLY FOR THE CHOSEN ONES AND THEIR SERVANTS.
     ARE YOU MEANT TO ENTER?"""
@@ -405,7 +409,8 @@ def wait_after_door():
     and to the right, away from the walls and rocky cliffs."""
 
 def hopeless_wait():
-    print """Time seems stopped. You reawaken as if in a dream. 
+    print """
+    Time seems stopped. You reawaken as if in a dream. 
     To which direction do you turn?"""
 
 def path_left():
@@ -473,7 +478,7 @@ def tree_house():
     than a makeshift building in the South Pacific.
     But the formerly beautiful room is in tatters.
     Some violence has happened here. \n"""
-    sleep(5)
+    sleep(2)
     print"""
     Leatherbound books lay ripped apart 
     and scorched on the dark, polished mahogany floor.
@@ -481,14 +486,16 @@ def tree_house():
     next to a finely upholstered chair.
     This place must somehow be related to the compound.
     Could this have been Taymor's den? \n"""
-    sleep(4)
-    print """ Were you too late to respond to his letter?
+    sleep(3)
+    print """
+    Were you too late to respond to his letter?
     The room fills you with sadness, 
     but if you're here to learn about your relative, 
     this seems like a place to start."""
 
 def tree_house_default():
-    print """ Were you too late to respond to his letter?
+    print """
+    Were you too late to respond to his letter?
     The room fills you with sadness, 
     but if you're here to learn about your relative, 
     this seems like a place to start.
@@ -538,7 +545,9 @@ def chess():
 
 def tree_house_inspect():
     print """
-    Upon closer inspection, you notice a few things that seem out of the ordinary:
+    Upon closer inspection, 
+    you notice a few things that seem out of the ordinary:
+
     The corner of a hardcover book peeking out from under the chair's cushion,
     The initials G.L. embossed on the back of the chair,
     and, gruesomely, scrawled in what looks like gore 
@@ -605,12 +614,15 @@ def cross_bridge():
 def second_sect_hq():
     print """
     This eye does not open as you enter.
+
     The interior of the thatched hut has a dark, musty gravity.
     Serious things were discussed here by sad men.
     Secrets have seeped into the dust.
+
     A long mahogany table sits in the center, 
     the image of a huge, spiny seashell
     carved crudely into the beautiful wood.
+
     A dozen chairs line its sides with 
     one, large commanding seat at the head of the table.
     Behind it, a handwritten piece of paper is tacked to the wall.
@@ -621,9 +633,9 @@ def second_sect_manifesto():
     print """
     You move across the room until you are close enough 
     to make out words on the tacked up page."""
-    sleep(3)
-    print housekeeping.manifesto
     sleep(2)
+    print housekeeping.manifesto
+    sleep(1)
     print """
     That is all you can make out, 
     as the bottom has been ripped away
@@ -638,6 +650,7 @@ def ladder_down():
     to be the direction of the first large forest clearing, 
     but there are also signs that someone has walked further into the forest, 
     footsteps through a thicket. 
+    
     Do you take the path, or continue your investigation?"""
 
 def path_back():

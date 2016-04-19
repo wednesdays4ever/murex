@@ -113,6 +113,7 @@ diary = """
 
 manifesto = """
 	SECOND SECT OF THE SERVANTS OF THE MUREX
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	A call to return to service.
 	The task of our brotherhood was always 
 	to invite divinity into our small and tainted world,
@@ -125,6 +126,7 @@ manifesto = """
 	he will taste the difference between 
 	the sour, vile and selfish opportunist 
 	and the sweet purity of the true believer.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	"""
 
 ###################
