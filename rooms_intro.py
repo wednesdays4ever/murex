@@ -176,7 +176,7 @@ def mother_story():
     HE'S AN EVIL MAN. \n
     WHEN I WAS A YOUNG GIRL, HE RAN OFF WITH A STRANGE GROUP OF PEOPLE.
     CULTISTS. DARK MESSENGERS.
-    PREACHING SOME NONSENSE ABOUT THE TRUTH BELOW. \n 
+    PREACHING ScOME NONSENSE ABOUT THE TRUTH BELOW. \n 
     HE ASKED US, OUR WHOLE FAMILY, TO JOIN HIM, AND WHEN WE SAID NO, 
     WHEN WE TOLD HIM HE WAS BEING RIDICULOUS,
     HE TOOK ME WITH HIM IN THE MIDDLE OF THE NIGHT.
@@ -277,7 +277,7 @@ def dock_arrivei():
 
 def still_on_dock():
     print """
-    You look around your new surroundings on the creeky dock. 
+    You look around your surroundings on the creeky dock. 
     The path lies in front of you. 
     Do you look back at the note, reread the letter or do you forge on ahead? 
     """
@@ -286,7 +286,7 @@ def still_on_dock():
 def path_from_dock():
     print """
     You can see the tip of what must be the Great Pyramid 
-    far off in the distance, beyond a giant stone wall.\n
+    far off in the  distance, beyond a giant stone wall.\n
     The path ahead leads away from the dock and splits in three directions.
     One straight ahead toward a door in the stone island fortress.
     Another forks to the left toward a sparse wood, 

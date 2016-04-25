@@ -386,7 +386,7 @@ def path_from_dock():
                                      key2, key3, key4, key5) == "door3":
         try:
             blood
-            door_return_refuse()
+            door_return()
         except NameError: 
             door_with_no_knob()
     else:
@@ -1250,7 +1250,32 @@ def gl_no_kill_stay():
 def path_back():
     rooms_intro.path_back()
 
-    clearing_path()
+    key1 = ['investigate', 'tree house', 'tree']
+    key2 = ['cave', 'trace', 'steps']
+    key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
+    key4 = ['pyramid', 'door', 'approach'] #add a key here?
+    key5 = ['no way'] #add a key here?
+
+    scanned_input = housekeeping.ask_input()
+
+    if housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door1":
+        tree_house()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        follow_steps()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door3":
+        still_on_dock()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door4":
+        try:
+            blood
+            door_return()
+        except NameError: 
+            door_return_refuse()
+    else:
+        default_forest()  
  
 
 def gl_diary_show():
@@ -1332,7 +1357,7 @@ def return_clearing():
     key1 = ['investigate', 'tree house', 'tree']
     key2 = ['cave', 'trace', 'steps']
     key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
-    key4 = ['no way'] #add a key here?
+    key4 = ['pyramid', 'door', 'approach'] #add a key here?
     key5 = ['no way'] #add a key here?
 
     scanned_input = housekeeping.ask_input()
