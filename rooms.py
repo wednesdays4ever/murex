@@ -806,7 +806,7 @@ def tree_house():
     rooms_intro.tree_house()
 
     key1 = ['start', 'walk around', 'inspect']
-    key2 = ['clearing', 'leave tree house']
+    key2 = ['clearing', 'leave', 'tree house', 'go back', 'docks' , 'ladder']
     key3 = ['chess', 'set'] #add a key here?
     key4 = ['chair', 'rest', 'sit'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -821,7 +821,7 @@ def tree_house():
         tree_house_inspect()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
-        clearing_path()
+        return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
         chess()
@@ -835,7 +835,7 @@ def tree_house_default():
     rooms_intro.tree_house_default()
 
     key1 = ['start', 'walk around', 'inspect', 'book', 'open']
-    key2 = ['clearing', 'leave tree house']
+    key2 = ['clearing', 'leave', 'tree house', 'go back', 'docks' , 'ladder']
     key3 = ['chess', 'set'] #add a key here?
     key4 = ['chair', 'rest', 'sit'] #add a key here?
     key5 = ['bridge', 'door', 'daylight', 'cross'] #add a key here?
@@ -847,7 +847,7 @@ def tree_house_default():
         tree_house_inspect()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
-        clearing_path()
+        return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
         chess()
@@ -874,7 +874,7 @@ def tree_house_inspect():
     rooms_intro.tree_house_inspect()
 
     key1 = ['read', 'open', 'diary']
-    key2 = ['clearing', 'leave tree house']
+    key2 = ['clearing', 'leave', 'tree house', 'go back', 'docks' , 'ladder']
     key3 = ['bridge', 'rope'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -886,7 +886,7 @@ def tree_house_inspect():
         open_diary()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
-        clearing_path()
+        return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door3":
         cross_bridge()
@@ -1081,9 +1081,9 @@ def cross_bridge():
 def second_sect_hq():
     rooms_intro.second_sect_hq()
 
-    key1 = ['read', 'paper', 'pick up']
-    key2 = ['ladder', 'down', 'ground']
-    key3 = ['no way'] #add a key here?
+    key1 = ['read', 'paper', 'pick up', 'table']
+    key2 = ['ladder', 'down', 'ground', 'ladder down']
+    key3 = ['leave', 'return', 'go back', 'tree house'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 
@@ -1095,6 +1095,9 @@ def second_sect_hq():
     elif  housekeeping.match_input(scanned_input, key1, 
                                      key2, key3, key4, key5) == "door2":
         ladder_down()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door3":
+        tree_house_inspect()
     else:
         second_sect_manifesto()
 
@@ -1111,9 +1114,9 @@ def second_sect_manifesto():
 def ladder_down():
     rooms_intro.ladder_down()
     
-    key1 = ['continue', 'investigation', 'forest', 'footsteps']
+    key1 = ['continue', 'investigation', 'forest', 'footsteps', 'take', 'path']
     key2 = ['path', 'return', 'clearing']
-    key3 = ['no way'] #add a key here?
+    key3 = ['leave', 'return', 'go back', 'tree house'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 
@@ -1125,6 +1128,9 @@ def ladder_down():
     elif  housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
         path_back()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                     key2, key3, key4, key5) == "door3":
+        tree_house_inspect()
     else:
         follow_steps()
 
@@ -1152,7 +1158,7 @@ def cave_enter():
     rooms_intro.cave_enter()
 
     key1 = ['hello', 'introduce', 'say hi', 'talk']
-    key2 = ['punch', 'hit']
+    key2 = ['punch', 'hit','kill', 'attack']
     key3 = ['no way']
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -1173,7 +1179,7 @@ def gl_introduce():
     rooms_intro.gl_introduce()
     
     key1 = ['stand', 'look','nothing']
-    key2 = ['punch', 'hit', 'slap', 'walk']
+    key2 = ['punch', 'hit', 'slap', 'walk', 'kill', 'attack']
     key3 = ['diary', 'show', 'letter']
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -1196,7 +1202,7 @@ def gl_taymor():
     rooms_intro.gl_taymor()
 
     key1 = ['stand', 'look','nothing']
-    key2 = ['punch', 'hit', 'slap', 'walk']
+    key2 = ['punch', 'hit', 'slap', 'walk', 'kill', 'attack']
     key3 = ['diary', 'book']
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
@@ -1219,7 +1225,7 @@ def gl_threaten():
     rooms_intro.gl_threaten()
     
     key1 = ['stand', 'look','nothing']
-    key2 = ['punch', 'hit', 'slap', 'walk']
+    key2 = ['punch', 'hit', 'slap', 'walk', 'kill', 'attack']
     key3 = ['diary', 'book']
     key4 = ['taymor, letter, grandfather']
     key5 = ['no way'] #add a key here?
@@ -1350,9 +1356,13 @@ def gl_dead():
 
     gl_end = True
 
+    blood = "blood"
+
     return_clearing()
 
 def return_clearing():
+
+    rooms_intro.return_clering()
 
     key1 = ['investigate', 'tree house', 'tree']
     key2 = ['cave', 'trace', 'steps']
@@ -1420,7 +1430,7 @@ def clearing_path():
 
     key1 = ['investigate', 'tree house', 'tree']
     key2 = ['cave', 'trace', 'steps']
-    key3 = ['dock', 'docks', 'ship', 'return'] #add a key here?
+    key3 = ['dock', 'docks', 'ship', 'return', 'leave'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 

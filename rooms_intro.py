@@ -817,7 +817,8 @@ def return_clearing():
     print """
     The clearing is just as eerie as before, 
     but the air, and you feel different.
-    Return to the tree house, or back to the dock?
+    Return to the tree house, or back to the dock, 
+    or head straight to the pyramid?
     """
 
 def clearing_path():
