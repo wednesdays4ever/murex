@@ -1,3 +1,7 @@
+### Hey reader! A note:
+## This is one of the four main files containing the text of the game.
+# The others are fortress.py, saintsbeach.py and endgame.py
+
 def rocky_path():
 	print """ 
 	You descend the rocky path. 

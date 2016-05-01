@@ -1,4 +1,9 @@
 ################
+### Hey reader! A note:
+## This is a file containing "items" found throughout the game.
+# This file also contains a simple function for processing the player's raw input.
+
+################
 #### Items #####
 ################
 

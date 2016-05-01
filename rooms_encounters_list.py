@@ -1,3 +1,5 @@
+###IGNORE. This was only a working file.
+
 def path_from_dock():
     print """ You can see the tip of what must be the Great Pyramid far off in the distance, beyond a giant stone wall. 
     The path ahead leads away from the dock and splits in three directions.

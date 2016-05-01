@@ -1,3 +1,8 @@
+### Hey reader! A note:
+## This is one of the four main files containing the text of the game.
+# The others are fortress.py, saintsbeach.py and endgame.py
+
+
 from time import sleep
 import housekeeping
 
@@ -533,17 +538,6 @@ def chair():
     when you notice another book peeking out from underneath
     your seat."""
 
-def pick_up_diary():
-    print """ 
-    The book is a diary. 
-    A fine one, with a golden embossed G.L. on the cover,
-    that has seen much wear and tear.
-
-    Whoever G.L. was and whatever happened to him 
-    here are questions that cannot have pleasant answers.
-    But how can you know unless you ask?
-    """
-
 def chess():
     print """ 
     You are no chess master, 
@@ -588,6 +582,10 @@ def read_diary ():
     are covered in illegible, bleeding ink, or been ripped out.
     The few pages you can make out can be folded into your notebook
     \n \n \n """
+    print """
+    ***** HINT *****
+    type "check notebook" to view the pages you have stuck in it.
+    ***** HINT *****"""
 
 def discard_diary ():
     print """
@@ -699,7 +697,10 @@ def gl_introduce():
     print """
     I AM GUY LEICESTER,
     HEAD OF THE ONE TRUE BROTHERHOOD OF THE MUREX. 
-    WHY HAVE YOU ENTERED MY CHAMBER?"""
+    WHY HAVE YOU ENTERED MY CHAMBER? \n
+
+    The elderly G.L looks like he would topple with the slightest attack.
+    """
 
 def gl_threaten():
     print """
@@ -793,7 +794,7 @@ def gl_no_kill_leave():
     you see it in his eyes and flee.
     You find yourself at the entrance to the cave,
     no closer to the truth. 
-    Return to the cave or walk back to the forest"""
+    Return to the cave or walk back to the forest?"""
 
 def gl_no_kill_stay():
     print """
@@ -810,13 +811,17 @@ def gl_no_kill_stay():
     in a language you do not recognize.
     So much knowledge.
     An endless universe of truths 
-    that you will never begin to understand."""
-    #respawn at dock?
+    that you will never begin to understand"""
+    sleep(4)
+    print """
+    You feel yourself respawning, emerging brandnew
+    and just as ignorant of the truth of this island."""
+
 
 def return_clearing():
     print """
     The clearing is just as eerie as before, 
-    but the air, and you feel different.
+    but the air, and you, feel different.
     Return to the tree house, or back to the dock, 
     or head straight to the pyramid?
     """
@@ -826,13 +831,12 @@ def clearing_path():
     The path is littered with fallen leaves from the unfamiliar
     trees above.\n 
     Investigate the tree house, 
-    trace the marked steps to the cave or return to the dock?"""
+    trace the marked steps to the cave, return to the dock?"""
 
 def default_forest():
     print """
     The forest is beautiful but all-enveloping in its silence.
-    You feel pressure to uncover something, but what? 
-    You head to the tree house."""
+    You feel pressure to uncover something, but what?"""
 
 
 

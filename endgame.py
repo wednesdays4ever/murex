@@ -1,3 +1,9 @@
+### Hey reader! A note:
+## This is one of the four main files containing the text of the game.
+# The others are fortress.py, saintsbeach.py and endgame.py
+
+from time import sleep
+
 def pyramid_approach():
 	print """
 	It felt like a small island when you arrived,
@@ -279,7 +285,7 @@ def hug_no_ascension():
                     (,-';
                   _/_.-';
                 _/-.__._<
-             .-'`-.__   '\
+             .-'`-.__   ';
            .'`---=___`===':
           /_..---' ___.--.'
          |` ___.--' __ .i|
@@ -375,7 +381,7 @@ def taymor_attack_again():
                     (,-';
                   _/_.-';
                 _/-.__._<
-             .-'`-.__   '\
+             .-'`-.__   ';
            .'`---=___`===':
           /_..---' ___.--.'
          |` ___.--' __ .i|
@@ -464,7 +470,7 @@ def taymor_embrace_divinity():
                     (,-';
                   _/_.-';
                 _/-.__._<
-             .-'`-.__   '\
+             .-'`-.__   ;
            .'`---=___`===':
           /_..---' ___.--.'
          |` ___.--' __ .i|

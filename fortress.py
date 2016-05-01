@@ -1,3 +1,9 @@
+### Hey reader! A note:
+## This is one of the four main files containing the text of the game.
+# The others are fortress.py, saintsbeach.py and endgame.py
+
+from time import sleep
+
 def door_return_refuse():
 	print """
 	TO RETURN UNCHANGED,
@@ -56,10 +62,10 @@ def door_judgement():
 	as the hurt floods your consciousness,
 	AH, YOU HAVE TASTED THE BLOOD. \n
 
-Your body screams at you to do something to get rid of the pain.
-But, something inside forces you to remain.
+	Your body screams at you to do something to get rid of the pain.
+	But, something inside forces you to remain.
 
-Enter the fortrees?
+	Enter the fortress?
 	"""
 	##maybe make this a choice instead of a straight up print.
 	#your body screams at you to do something to get rid of the pain
@@ -79,13 +85,17 @@ def enter_fortress():
 	print """ 
 	Your entirety tingles 
 	as you step onto hallowed ground
-	and your stone slams down behind you.\n
+	and your stone slams down behind you.\n"""
+	sleep(2)
+	print """
 	This is nothing like the 
 	primitive clearing you saw earlier, 
 	sapphire cobblestones line manicured paths,
 	it exudes a grand an ancient quality 
 	that makes your mind buzz, 
-	and it is difficult for you to take it all in at once.\n
+	and it is difficult for you to take it all in at once.\n"""
+	sleep(2)
+	print """
 	Once you have adjusted to glory,
 	you can comprehend your surroundings.
 	In the distance, the glinting spire 
@@ -93,14 +103,18 @@ def enter_fortress():
 	still shines bright and you 
 	notice for the first time that 
 	it is in the shape of an enormous spined seashell,
-	just like the one engraved above Yorham.\n\n
+	just like the one engraved above Yorham.\n\n"""
+	sleep(2)
+	print """
 	Closer, a line of white 
 	marble buildings with shining metal doors
 	labeled one through twelve sit just off the path.\n
 	Next to you, a giant stone sphinx sits. 
 	Its face has been destroyed,
 	where an expression should sit is just a jagged stump,
-	but still you feel as though it is staring at you.\n\n
+	but still you feel as though it is staring at you.\n\n"""
+	sleep(3)
+	print """
 	Do you address the mythic creature?
 	Or investigate the marble buildings?
 	Or move towards the bright shining shell,
@@ -133,7 +147,7 @@ def sphinx_defer():
 	UP QUICK AND ONWARD,
 	UNLESS THERE IS SOMETHING YOU WISH TO KNOW FROM ME.
 
-You rack your brain for the right response. What question do you ask?
+	You rack your brain for the right response. What question do you ask?
 	"""
 
 	#lead in bit - same thing with the rumbling -
@@ -234,7 +248,7 @@ def sphinx_aggression_three():
                     (,-';
                   _/_.-';
                 _/-.__._<
-             .-'`-.__   '\
+             .-'`-.__   ';
            .'`---=___`===':
           /_..---' ___.--.'
          |` ___.--' __ .i|
@@ -368,6 +382,7 @@ def odd_book_read():
 	print """ 
 	The first page reads:
 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	Welcome servant,
 	and congratulations.
 	The Murex tells the coming of the Great One.
@@ -394,6 +409,7 @@ def odd_book_read():
 	and dream of the greatness that awaits you beyond.
 
 	High Priest Taymor Huntingdon VII
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	Future pages are indeed in a looping, character-based
 	alphabet that you do not understand or even recognize.
