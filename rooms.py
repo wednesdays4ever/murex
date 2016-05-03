@@ -1881,9 +1881,9 @@ def sphinx_taymor_no():
 def sphinx_default():
     fortress.sphinx_default()
 
-    key1 = ['taymor', 'grandfather', 'letter', 'ship']
+    key1 = ['taymor', 'grandfather', 'letter', 'ship', 'mother']
     key2 = ['murex', 'shining', 'shell']
-    key3 = ['diary', 'GL', 'treehouse']
+    key3 = ['diary', 'GL', 'tree house']
     key4 = ['kill', 'punch', 'push', 'yell', 'aggression']
     key5 = ['beach', 'rocky', 'shore']
 
