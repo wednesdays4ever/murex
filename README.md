@@ -6,8 +6,7 @@ MUREX is an exploration of a mysterious island and the cult that used to run it.
 2. Robert: Fill out notebook commands for each room.
 3. Eve & Robert: Write clues for each room.
 4. Get the "Look around" command to work properly!
-5. Smoothe out the path from GL to the pyramid.
-6. Together build out this world of Murex!
+5. Together build out this world of Murex!
 
 # Known Issues
 1. The notebook commands need to be fleshed out.
