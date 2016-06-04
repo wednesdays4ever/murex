@@ -33,7 +33,7 @@ def start():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                  key2, key3, key4, key5) == "door1":
         help_menu()
     elif housekeeping.match_input(scanned_input, key1, 
                                   key2, key3, key4, key5) == "door2":
@@ -86,10 +86,10 @@ def ship_awaken():
     key5 = ['no way'] #add a key here?
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         captain_i()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         captain_ii()
     else:
         captain_iii()
@@ -111,10 +111,10 @@ def captain_i():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         read_letteri()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         wait_dock()
     else:
         read_letterii()
@@ -131,10 +131,10 @@ def captain_ii():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         read_letteri()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         wait_dock()
     else:
         read_letterii()
@@ -150,10 +150,10 @@ def captain_iii():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         read_letteri()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         wait_dock()
     else:
         read_letterii()
@@ -177,10 +177,10 @@ def read_letteri():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         visit_memory()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         mother_story()
     else:
         dock_arrivei()
@@ -205,10 +205,10 @@ def read_letterii():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         visit_memory()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         mother_story()
     else:
         dock_arrivei()
@@ -225,10 +225,10 @@ def visit_memory():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         path_from_dock()
     else:
         dock_fill()
@@ -261,10 +261,10 @@ def wait_dock():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         read_letteriii()
     else:
         dock_fill()
@@ -287,16 +287,16 @@ def read_letteriii():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         path_from_dock()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         visit_memory()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                    key2, key3, key4, key5) == "door4":
         mother_story()
     else:
         dock_fill()
@@ -313,19 +313,19 @@ def dock_fill():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         read_letteriii()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         path_from_dock()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                    key2, key3, key4, key5) == "door4":
         visit_memory()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door5":
+                                    key2, key3, key4, key5) == "door5":
         mother_story()
     else:
         dock_fill()
@@ -342,10 +342,10 @@ def dock_arrivei():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         read_letteriii()
     else:
         dock_fill()
@@ -362,13 +362,13 @@ def still_on_dock():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         dock_note()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         read_letteriii()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         path_from_dock()
     else:
         path_from_dock()
@@ -385,13 +385,13 @@ def path_from_dock():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         path_left()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         path_right()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         try:
             blood
             door_return()
@@ -413,13 +413,13 @@ def default_from_dock():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         path_left()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         path_right()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         try:
             blood
             door_return_refuse()
@@ -440,10 +440,10 @@ def door_with_no_knob():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         push_or_pull_door()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         leave_door()
     else:
         default_door()
@@ -459,14 +459,20 @@ def default_door():
 
     scanned_input = housekeeping.ask_input()
 
-    if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
-        push_or_pull_door()
-    elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
-        leave_door()
-    else:
-        default_door()
+    try:
+            blood
+            door_return()
+        except NameError: 
+            if housekeeping.match_input(scanned_input, key1, 
+                                            key2, key3, key4, key5) == "door1":
+                push_or_pull_door()
+            elif  housekeeping.match_input(scanned_input, key1, 
+                                            key2, key3, key4, key5) == "door2":
+                leave_door()
+            else:
+                default_door()
+
+
 
 def push_or_pull_door():
     rooms_intro.push_or_pull_door()
@@ -480,19 +486,19 @@ def push_or_pull_door():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         door_eye_other()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         door_eye_attempt_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         door_eye_name()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                    key2, key3, key4, key5) == "door4":
         door_eye_answer()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door5":
+                                    key2, key3, key4, key5) == "door5":
         leave_door()
     else:
         door_eye_answer()
@@ -513,13 +519,13 @@ def door_eye_answer():
     
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         door_eye_other()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         door_eye_attempt_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         leave_door()
     else:
         door_waits()
@@ -536,13 +542,13 @@ def door_eye_other():
 
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         door_eye_attempt_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         door_eye_not_chosen()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         leave_door()
     else:
         door_waits()
@@ -558,13 +564,13 @@ def door_eye_name():
 
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                    key2, key3, key4, key5) == "door1":
         door_eye_attempt_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                    key2, key3, key4, key5) == "door2":
         door_eye_not_chosen()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                    key2, key3, key4, key5) == "door3":
         leave_door()
     else:
         door_waits()
@@ -580,13 +586,13 @@ def door_eye_attempt_enter():
 
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         wait_after_door()
@@ -603,13 +609,13 @@ def door_eye_not_chosen():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         wait_after_door()
@@ -626,13 +632,13 @@ def door_waits():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         door_eye_attempt_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         door_eye_not_chosen()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         leave_door()
     else:
         door_eye_not_chosen()
@@ -649,13 +655,13 @@ def leave_door():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         wait_after_door()
@@ -672,13 +678,13 @@ def door_shut_eye():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         wait_after_door()
@@ -694,13 +700,13 @@ def wait_after_door():
 
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         hopeless_wait()
@@ -717,13 +723,13 @@ def hopeless_wait():
 
     scanned_input = housekeeping.ask_input()
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         door_shut_eye()
     else:
         hopeless_wait()
@@ -746,16 +752,16 @@ def path_left():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         forest_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_right()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         path_from_dock()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                key2, key3, key4, key5) == "door4":
         default_door()
     else:
         hopeless_wait()
@@ -772,16 +778,16 @@ def forest_enter():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         forest_ruins()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         path_from_dock()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         default_from_dock()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                key2, key3, key4, key5) == "door4":
         tree_house()
     else:
         forest_ruins()
@@ -798,13 +804,13 @@ def forest_ruins():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tree_house()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         clearing_path()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         path_from_dock()
     else:
         default_forest()
@@ -821,16 +827,16 @@ def default_forest():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tree_house()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         clearing_path()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         path_from_dock()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         follow_steps()
     else: 
         return_clearing()
@@ -850,16 +856,16 @@ def tree_house():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tree_house_inspect()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         chess()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         chair()
     else:
         tree_house_default()
@@ -876,19 +882,19 @@ def tree_house_default():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tree_house_inspect()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         chess()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         chair()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door5":
+                            key2, key3, key4, key5) == "door5":
         rope_bridge()
     else:
         tree_house_inspect()
@@ -915,13 +921,13 @@ def tree_house_inspect():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         open_diary()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         return_clearing()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         rope_bridge()
     else:
         tree_house_default()
@@ -938,10 +944,10 @@ def open_diary():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         read_diary()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         discard_diary()
     else:
         read_diary()
@@ -973,10 +979,10 @@ def rope_bridge():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         cross_bridge()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         no_bridge()
     else:
         cross_bridge()
@@ -993,13 +999,13 @@ def no_bridge():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         cross_bridge()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         clearing_path()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         tree_house()
     else:
         cross_bridge()
@@ -1016,13 +1022,13 @@ def cross_bridge():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         second_sect_hq()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         clearing_path()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         tree_house_default()
     else:
         second_sect_hq()
@@ -1039,13 +1045,13 @@ def second_sect_hq():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         second_sect_manifesto()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         ladder_down()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         cross_bridge()
     else:
         second_sect_manifesto()
@@ -1072,16 +1078,16 @@ def ladder_down():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         follow_steps()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         path_back()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         second_sect_hq()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         tree_house_default()
     else:
         follow_steps()
@@ -1098,13 +1104,13 @@ def follow_steps():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         cave_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         path_back()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         second_sect_hq()
     else:
         cave_enter()
@@ -1191,16 +1197,16 @@ def gl_threaten():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         gl_no_patience()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         gl_diary_show()
     elif housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         gl_taymor()
     else:
         gl_no_patience() 
@@ -1223,10 +1229,10 @@ def gl_diary_show():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                        key2, key3, key4, key5) == "door1":
         gl_purity()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                        key2, key3, key4, key5) == "door2":
         gl_no_patience()
     else:
         gl_no_patience()
@@ -1243,10 +1249,10 @@ def gl_purity():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_end_me()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         gl_end_me()
     else:
         gl_end_me()
@@ -1263,13 +1269,13 @@ def gl_no_patience():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_end_me()
     elif housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         gl_threaten()
     elif housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door3":
         gl_diary_show()
     else:
         gl_no_kill()
@@ -1287,13 +1293,13 @@ def gl_end_me():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_dead()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         gl_no_kill()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key3, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         gl_no_kill_leave()
     else:
         gl_no_kill_stay()
@@ -1350,10 +1356,10 @@ def gl_no_kill():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_no_kill_stay()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         gl_no_kill_leave()
     else:
         gl_no_kill_leave()
@@ -1370,10 +1376,10 @@ def gl_no_kill_leave():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         gl_end_me()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         path_back()
     else:
         gl_end_me()
@@ -1420,13 +1426,13 @@ def clearing_path():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tree_house()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         follow_steps()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         still_on_dock()
     else:
         default_forest()  
@@ -1488,13 +1494,13 @@ def rocky_path_decide():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         door_with_no_knob()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         path_left()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         rocky_path_continue()
     else:
         rocky_path_decide()
@@ -1577,10 +1583,10 @@ def path_under_cliffs():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         tunnel_turn_back()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         look_down()
     else:
         look_down()
@@ -1597,10 +1603,10 @@ def look_down():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tunnel_turn_back()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         cave_stay()
     else:
         cave_stay()
@@ -1620,10 +1626,10 @@ def cave_stay():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         tunnel_turn_back()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         take_bone()
     else:
         tunnel_turn_back()
@@ -1645,10 +1651,10 @@ def cliff_path_return():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         rocky_path_return()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         beach_wallow()
     else:
         beach_wallow()
@@ -1674,10 +1680,10 @@ def door_return():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         door_return_yes()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         door_return_no()
     else:
         door_return_no()
@@ -1694,10 +1700,10 @@ def door_return_yes():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                  key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         door_judgement()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                  key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         door_judgement_resist()
     else:
         door_judgement()
@@ -1718,10 +1724,10 @@ def door_judgement():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         enter_fortress()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         door_judgement_resist()
     else:
         enter_fortress()
@@ -1745,13 +1751,13 @@ def enter_fortress():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         faceless_sphinx_approach()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         barracks_investigate()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         pyramid_approach()
     else:
         faceless_sphinx_approach()
@@ -1769,10 +1775,10 @@ def faceless_sphinx_approach():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         sphinx_defer()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                 key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         sphinx_defer()
     else:
         sphinx_defer()
@@ -1793,16 +1799,16 @@ def sphinx_defer():
                                 key2, key3, key4, key5) == "door1":
         sphinx_taymor()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         sphinx_murex()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         sphinx_diary()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door4":
+                                key2, key3, key4, key5) == "door4":
         sphinx_beach()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door5":
+                                key2, key3, key4, key5) == "door5":
         sphinx_aggression()
     else:
         sphinx_taymor()
@@ -1819,19 +1825,19 @@ def sphinx_defer():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         sphinx_taymor()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         sphinx_murex()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         sphinx_diary()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         sphinx_beach()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door5":
+                            key2, key3, key4, key5) == "door5":
         sphinx_aggression()
     else:
         sphinx_taymor()
@@ -1866,7 +1872,7 @@ def sphinx_taymor():
                                 key2, key3, key4, key5) == "door2":
         sphinx_taymor_no()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door3":
         sphinx_unsure()
     else:
         sphinx_default()
@@ -1927,13 +1933,13 @@ def fortress_reassess():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         sphinx_return()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         barracks_investigate()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         pyramid_approach()
     else:
         sphinx_return()
@@ -1964,19 +1970,19 @@ def barracks_odd():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         odd_chair()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         odd_under_bed()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         odd_book()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         odd_chamber_pot()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door5":
+                            key2, key3, key4, key5) == "door5":
         odd_bed()
     else:
         odd_default()
@@ -2009,13 +2015,13 @@ def odd_book():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         odd_book_read()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         odd_default()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         leave_barracks()
     else:
         odd_book_read()
@@ -2036,19 +2042,19 @@ def odd_default():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         odd_chair()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         odd_under_bed()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         odd_book()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         odd_chamber_pot()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door5":
+                            key2, key3, key4, key5) == "door5":
         odd_bed()
     else:
         leave_barracks()
@@ -2107,16 +2113,16 @@ def even_default():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         even_upright_chair()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         even_bed()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         even_chamber_pot()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                                key2, key3, key4, key5) == "door4":
         leave_barracks()
     else:
         even_default()
@@ -2133,13 +2139,13 @@ def leave_barracks():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door1":
+                                key2, key3, key4, key5) == "door1":
         sphinx_return()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                                key2, key3, key4, key5) == "door2":
         barracks_investigate()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door3":
+                                key2, key3, key4, key5) == "door3":
         pyramid_approach()
     else:
         fortress_reassess()
@@ -2156,16 +2162,16 @@ def pyramid_approach():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         dobbins_attack()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         dobbins_question()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door3":
+                            key2, key3, key4, key5) == "door3":
         dobbins_taymor()
     elif housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door4":
+                            key2, key3, key4, key5) == "door4":
         dobbins_hurry_forward()
     else:
         dobbins_other()
@@ -2183,10 +2189,10 @@ def dobbins_attack():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         pyramid_enter()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         pyramid_other()
     else:
         pyramid_other()
@@ -2203,10 +2209,10 @@ def dobbins_question():
     scanned_input = housekeeping.ask_input()
 
     if housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         dobbins_attack()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                     key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         pyramid_other()
     else:
         pyramid_other()
@@ -2262,19 +2268,19 @@ def pyramid_enter():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                        key2, key3, key4, key5) == "door1":
         taymor_hug()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                        key2, key3, key4, key5) == "door2":
         hug_no()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                        key2, key3, key4, key5) == "door3":
         taymor_attack()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door4":
+                        key2, key3, key4, key5) == "door4":
         taymor_question()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door5":
+                        key2, key3, key4, key5) == "door5":
         taymor_speech()
     else:
         taymor_other()
@@ -2291,19 +2297,19 @@ def taymor_hug():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                        key2, key3, key4, key5) == "door1":
         hug_yes()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                        key2, key3, key4, key5) == "door2":
         hug_no()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                        key2, key3, key4, key5) == "door3":
         taymor_attack()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door4":
+                        key2, key3, key4, key5) == "door4":
         taymor_question()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door5":
+                        key2, key3, key4, key5) == "door5":
         taymor_speech()
     else:
         taymor_other()
@@ -2320,19 +2326,19 @@ def hug_yes():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door1":
+                        key2, key3, key4, key5) == "door1":
         taymor_embrace_divinity()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door2":
+                        key2, key3, key4, key5) == "door2":
         hug_no()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door3":
+                        key2, key3, key4, key5) == "door3":
         taymor_attack()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door4":
+                        key2, key3, key4, key5) == "door4":
         taymor_question()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                key2, key3, key4, key5) == "door4":
+                        key2, key3, key4, key5) == "door4":
         taymor_speech()
     else:
         taymor_other()
@@ -2381,16 +2387,16 @@ def taymor_question():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door1":
+                        key2, key3, key4, key5) == "door1":
         taymor_embrace_divinity()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door2":
+                        key2, key3, key4, key5) == "door2":
         hug_no_ascension()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door3":
+                        key2, key3, key4, key5) == "door3":
         taymor_attack()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                   key2, key3, key4, key5) == "door4":
+                        key2, key3, key4, key5) == "door4":
         taymor_speech()
     else:
         taymor_other()
@@ -2438,13 +2444,13 @@ def taymor_speech():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         taymor_embrace_divinity()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         hug_no_ascension()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door3":
         taymor_attack()
     else:
         taymor_other()
@@ -2462,13 +2468,13 @@ def taymor_other():
     scanned_input = housekeeping.ask_input()
     
     if housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door1":
+                            key2, key3, key4, key5) == "door1":
         taymor_embrace_divinity()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door2":
         taymor_attack_again()
     elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
+                            key2, key3, key4, key5) == "door3":
         taymor_attack()
     else:
         taymor_other()
