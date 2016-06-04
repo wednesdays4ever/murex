@@ -460,17 +460,17 @@ def default_door():
     scanned_input = housekeeping.ask_input()
 
     try:
-            blood
-            door_return()
-        except NameError: 
-            if housekeeping.match_input(scanned_input, key1, 
+        blood
+        door_return()
+    except NameError: 
+        if housekeeping.match_input(scanned_input, key1, 
                                             key2, key3, key4, key5) == "door1":
-                push_or_pull_door()
-            elif  housekeeping.match_input(scanned_input, key1, 
+            push_or_pull_door()
+        elif  housekeeping.match_input(scanned_input, key1, 
                                             key2, key3, key4, key5) == "door2":
-                leave_door()
-            else:
-                default_door()
+            leave_door()
+        else:
+            default_door()
 
 
 
