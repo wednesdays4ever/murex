@@ -422,7 +422,7 @@ def default_from_dock():
                                     key2, key3, key4, key5) == "door3":
         try:
             blood
-            door_return_refuse()
+            door_return()
         except NameError: 
             door_with_no_knob()
     else:
@@ -439,14 +439,18 @@ def door_with_no_knob():
 
     scanned_input = housekeeping.ask_input()
 
-    if housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door1":
-        push_or_pull_door()
-    elif  housekeeping.match_input(scanned_input, key1, 
-                                    key2, key3, key4, key5) == "door2":
-        leave_door()
-    else:
-        default_door()
+    try:
+        blood
+        door_return()
+    except NameError:     
+        if housekeeping.match_input(scanned_input, key1, 
+                                        key2, key3, key4, key5) == "door1":
+            push_or_pull_door()
+        elif  housekeeping.match_input(scanned_input, key1, 
+                                        key2, key3, key4, key5) == "door2":
+            leave_door()
+        else:
+            default_door()
 
 def default_door():
     rooms_intro.default_door()
