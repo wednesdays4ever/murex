@@ -223,7 +223,7 @@ def wait_dock():
 
 def dock_note():
     print """
-    The paper is damp and slick and the ink is faded.
+    The paper is damp and slick; the ink is faded.
     It peels away from the wooden post and rips easily from the nail.
     It can't have been left recently, but it reads:
 
@@ -450,17 +450,17 @@ def forest_enter():
     expounding on the countless 
     layers of animal mystery in every centimeter of these 
     remote areas of the world.\n"""
-    sleep(9)
+    sleep(4)
     print """
     He encouraged you, while out in the world, 
     to take a moment and listen to all that surrounds you.\n\n"""
-    sleep(5)
+    sleep(2)
     print """
     You do this now, and your stomach sinks."""
-    sleep(5)
+    sleep(3)
     print """
     This is a silent forest.\n\n"""
-    sleep(5)
+    sleep(3)
     print """
     You have left behind even the sound of the waves.
     It lacks the life of your nature tape, 

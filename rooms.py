@@ -1851,9 +1851,9 @@ def sphinx_beach():
 def sphinx_taymor():
     fortress.sphinx_taymor()
     
-    key1 = ['taymor', 'yes', 'divinity', 'sacrifice']
+    key1 = ['taymor', 'yes', 'divinity', 'sacrifice', 'prepared']
     key2 = ['no', 'kill', 'return']
-    key3 = ['no way'] #add a key here?
+    key3 = ['do not know', 'don\'t know'] #add a key here?
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 
@@ -1865,8 +1865,16 @@ def sphinx_taymor():
     elif  housekeeping.match_input(scanned_input, key1, 
                                 key2, key3, key4, key5) == "door2":
         sphinx_taymor_no()
+    elif  housekeeping.match_input(scanned_input, key1, 
+                                key2, key3, key4, key5) == "door2":
+        sphinx_unsure()
     else:
         sphinx_default()
+
+def sphinx_taymor_yes():
+    fortress.sphinx_unsure()
+
+    fortress_reassess()       
 
 def sphinx_taymor_yes():
     fortress.sphinx_taymor_yes()
@@ -2186,7 +2194,7 @@ def dobbins_attack():
 def dobbins_question():
     endgame.dobbins_question()
 
-    key1 = ['slap', 'hit', 'strike', 'attack']
+    key1 = ['slap', 'hit', 'strike', 'attack', 'violence']
     key2 = ['no', 'return', 'docks', 'do not', 'stay'] 
     key3 = ['no way'] #add a key here?
     key4 = ['no way'] #add a key here?
@@ -2334,7 +2342,7 @@ def hug_no():
 
     key1 = ['yes', 'hug', 'embrace', 'great one', 'give in']
     key2 = ['no', 'refuse', 'attempt', 'escape', 'leave', 'recoil'] 
-    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap', 'violence']
     key4 = ['question', 'what', 'who', 'where']
     key5 = ['why']
 
@@ -2446,7 +2454,7 @@ def taymor_other():
     
     key1 = ['accept', 'embrace', 'take', 'hold', 'hands']
     key2 = ['refuse', 'recoil', 'leave'] 
-    key3 = ['attack', 'kill', 'stab', 'punch', 'hit', 'slap']
+    key3 = ['violence', 'attack', 'kill', 'stab', 'punch', 'hit', 'slap']
     key4 = ['no way'] #add a key here?
     key5 = ['no way'] #add a key here?
 

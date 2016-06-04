@@ -182,7 +182,12 @@ def sphinx_taymor_no():
 	FATE AWAITS.
 	"""
 	#after either of these it feeds back into def fortress_reassess
-	
+
+def sphinx_unsure():
+	print """
+	YOUR INDECISION IS DANGEROUS. 
+	CARRY ON AND COME WHAT MAY."""
+
 def sphinx_murex():
 	print """
 	THE SHELL IS DAZZLING,
@@ -260,6 +265,13 @@ def sphinx_aggression_three():
              /.''!"iiE /
              `--'`._.-' 
 	"""
+
+def sphinx_default():
+	print """
+	The sphinx stares intently at you, 
+	poised for what, you cannot tell. 
+
+	What do you say next to the creature?"""
 
 def sphinx_beach():
 	print """ 
