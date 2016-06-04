@@ -202,7 +202,7 @@ def sphinx_murex():
 	THEN CHOOSE TO BEND THE KNEE
 	IS THE ONLY PATH TO ASCENSION.
 	 """
-	#mention of shell or the actual words murex or order of
+	
 def sphinx_diary():
 	print """ 
 	HERETICS BURN LIKE RAGS DOUSED IN OIL.
@@ -311,6 +311,8 @@ def barracks_investigate():
 	identical aside from the numbers 
 	ascending from one to twelve.
 	Which do you decide to enter? 
+
+	Type in a number 1-12.
 	"""
 #if you decide to investigate barracks, you are asked which number you choose, 
 	#outcome is decided on whether you select an even or odd number
