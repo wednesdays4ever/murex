@@ -843,7 +843,7 @@ def default_forest():
                             key2, key3, key4, key5) == "door4":
         follow_steps()
     else: 
-        return_clearing()
+        default_forest()
 
 def tree_house():
     rooms_intro.tree_house()
