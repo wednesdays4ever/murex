@@ -1,14 +1,27 @@
+#MUREX 
+
 MUREX is an exploration of a mysterious island and the cult that used to run it. 
 
-# To Do!
+# What's the deal here? 
+It's not perfect, we know that. We had some plans for this proj that got way-laid by summer weather. 
 
-1. Eve: better implement rooms class.
-2. Robert: Fill out notebook commands for each room.
-3. Eve & Robert: Write clues for each room.
-4. Get the "Look around" command to work properly!
-5. Together build out this world of Murex!
+Then we got excited for another project and...you know how that goes. Started that before we tied up _any_ ends at all here. 
 
-# Known Issues
-1. The notebook commands need to be fleshed out.
-2. The look around command does not work properly.
-3. Clues need to then be added to rooms.
+That being said, please! Play MUREX! Explore MUREX! Here's a few things to know: 
+
+* The whole clues/notebook gameplay thing doesn't exactly work. 
+* Forgive us for any repeititive loops you might find yourself trapped in. 
+
+# How to play? 
+Open up terminal (hey experts! don't knock the people who don't know what that is). Then, type in the following: 
+```
+git clone https://github.com/wednesdays4ever/murex.git
+```
+Once the file has downloaded, then type in: 
+```python rooms.py```
+
+If you find a bug, tell us. If you have fun, tell us. If you hate it, keep it to yourself, you know? 
+
+# For the future? 
+Next up: the bogs. 
+
